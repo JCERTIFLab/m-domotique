@@ -1,10 +1,10 @@
-package com.jcertif.mdomotique.ihm.activity;
+package com.jcertif.mdomotique.android.ihm;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 
-import com.jcertif.mdomotique.R;
+import com.jcertif.mdomotique.android.R;
 
 public class MainActivity extends Activity {
 

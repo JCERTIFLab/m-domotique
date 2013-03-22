@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jcertif.mdomotique</groupId>
+    <artifactId>mdomotique-parent</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>M-Domotique Parent</name>
+
+    <modules>
+        <module>mdomotique-android</module>
+        <module>mdomotique-desktop</module>
+        <module>mdomotique-ws</module>
+    </modules>
+
+    <properties>
+        <!-- Project properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <android.platform>14</android.platform>
+        <java.version>1.6</java.version>
+
+        <!-- Dependencies -->
+        <android.version>4.0.1.2</android.version>
+        <javaee-api.version>7.0-b81</javaee-api.version>
+        <junit.version>4.10</junit.version>
+
+        <!-- Plugins -->
+        <maven.compiler.version>2.3.2</maven.compiler.version>
+        <maven.war.version>2.1.1</maven.war.version>
+        <android.maven.version>3.4.0</android.maven.version>
+        <javafx.maven.version>1.5</javafx.maven.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>Java EE 7</id>
+            <url>https://maven.java.net/content/groups/promoted/</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>${android.maven.version}</version>
+                    <configuration>
+                        <sdk>
+                            <platform>${android.platform}</platform>
+                        </sdk>
+                        <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.version}</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven.war.version}</version>
+                    <configuration>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.zenjava</groupId>
+                    <artifactId>javafx-maven-plugin</artifactId>
+                    <version>${javafx.maven.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+    </build>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.android</groupId>
+                <artifactId>android</artifactId>
+                <version>${android.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javaee-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
