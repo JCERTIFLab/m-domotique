@@ -14,10 +14,6 @@
     <name>M-Domotique Desktop</name>
     <url>http://maven.apache.org</url>
 
-    <scm>
-        <url>scm:git@github.com:JCERTIFLab/m-domotique.git</url>
-    </scm>
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>

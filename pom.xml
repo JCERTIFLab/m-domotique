@@ -7,7 +7,12 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>M-Domotique Parent</name>
+    <name>M-Domotique</name>
+
+
+    <scm>
+        <url>scm:git@github.com:JCERTIFLab/m-domotique.git</url>
+    </scm>
 
     <modules>
         <module>mdomotique-android</module>
