@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.jcertif.mdomotique</groupId>
-        <artifactId>mdomotique-parent</artifactId>
-        <version>0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+	<parent>
+		<groupId>com.jcertif.mdomotique</groupId>
+		<artifactId>mdomotique-parent</artifactId>
+		<version>0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 
 	<groupId>com.jcertif.mdomotique</groupId>
 	<artifactId>mdomotique-android</artifactId>
@@ -20,8 +20,15 @@
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
 		</dependency>
-	</dependencies>
 
+		<dependency>
+			<groupId>com.actionbarsherlock</groupId>
+			<artifactId>actionbarsherlock</artifactId>
+			<version>4.2.0</version>
+			<type>apklib</type>
+		</dependency>
+
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
