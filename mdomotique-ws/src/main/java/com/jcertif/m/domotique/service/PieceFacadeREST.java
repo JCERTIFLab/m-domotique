@@ -6,9 +6,6 @@ package com.jcertif.m.domotique.service;
 
 import com.jcertif.m.domotique.entities.Piece;
 import java.util.List;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -18,11 +15,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-/**
- *
- * @author bashizip
- */
-@Stateless
 @Path("pieces")
 public class PieceFacadeREST extends AbstractFacade<Piece> {
   
