@@ -69,5 +69,12 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
         return String.valueOf(super.count());
     }
 
+    @GET
+    @Path("{idPiece}")
+    @Produces({"application/xml", "application/json"})
+    public List<Equipement> findByPiece(@PathParam("idPiece") Integer idPiece) {
+       javax.persistence.Query cq = getEntityManager().createNamedQuery("Equipement.findByPiece").setParameter("idPiece", idPiece);
+        return (List<Equipement>)cq.getResultList();
+    }
     
 }
