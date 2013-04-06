@@ -6,6 +6,7 @@ package com.jcertif.m.domotique.service;
 
 import com.jcertif.m.domotique.entities.User;
 import java.util.List;
+import javax.persistence.NoResultException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -68,6 +69,18 @@ public class UserFacadeREST extends AbstractFacade<User> {
     @Produces("text/plain")
     public String countREST() {
         return String.valueOf(super.count());
+    }
+    
+    @POST
+    @Path("{username}/{password}")
+    @Produces({"application/xml", "application/json"})
+    public String authentificate(@PathParam("username") String username,@PathParam("password") String password) {
+      try{
+        javax.persistence.Query cq = getEntityManager().createNamedQuery("User.findByLoginPassword").setParameter("login", username).setParameter("password", password);
+        return ((User)cq.getSingleResult()).getInfo();
+      }catch(Exception e){
+          return e.toString();
+      }
     }
 
   

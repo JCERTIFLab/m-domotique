@@ -35,6 +35,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
     @NamedQuery(name = "User.findByNom", query = "SELECT u FROM User u WHERE u.nom = :nom"),
     @NamedQuery(name = "User.findByPrenom", query = "SELECT u FROM User u WHERE u.prenom = :prenom"),
     @NamedQuery(name = "User.findByLogin", query = "SELECT u FROM User u WHERE u.login = :login"),
+    @NamedQuery(name = "User.findByLoginPassword", query = "SELECT u FROM User u WHERE u.login = :login AND u.password = :password"),
     @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password")})
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -141,6 +142,10 @@ public class User implements Serializable {
     public void setGroupeId(Groupe groupeId) {
         this.groupeId = groupeId;
     }
+    
+    public String getInfo(){
+        return "User[ id=" + id + ",nom=" + nom + ",prenom=" + prenom + ",login=" + login + "  ]";
+    }
 
     @Override
     public int hashCode() {
@@ -166,5 +171,7 @@ public class User implements Serializable {
     public String toString() {
         return "com.jcertif.m.domotique.entities.User[ id=" + id + " ]";
     }
+    
+    
     
 }
