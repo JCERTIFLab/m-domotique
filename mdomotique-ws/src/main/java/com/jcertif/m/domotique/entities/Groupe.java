@@ -20,10 +20,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
-/**
- *
- * @author bashizip
- */
 @Entity
 @Table(name = "GROUPE")
 @XmlRootElement

@@ -6,10 +6,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-/**
- *
- * @author bashizip
- */
 public abstract class AbstractFacade<T> {
     
     private Class<T> entityClass;
