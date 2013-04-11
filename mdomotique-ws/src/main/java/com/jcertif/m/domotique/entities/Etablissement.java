@@ -30,6 +30,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
     @NamedQuery(name = "Etablissement.findById", query = "SELECT e FROM Etablissement e WHERE e.id = :id"),
     @NamedQuery(name = "Etablissement.findByNom", query = "SELECT e FROM Etablissement e WHERE e.nom = :nom"),
     @NamedQuery(name = "Etablissement.findByTel", query = "SELECT e FROM Etablissement e WHERE e.tel = :tel"),
+    @NamedQuery(name = "Etablissement.findByUserId", query = "SELECT e FROM Etablissement e WHERE e.user_id = :user_id"),
     @NamedQuery(name = "Etablissement.findByAdresse", query = "SELECT e FROM Etablissement e WHERE e.adresse = :adresse")})
 public class Etablissement implements Serializable {
     private static final long serialVersionUID = 1L;

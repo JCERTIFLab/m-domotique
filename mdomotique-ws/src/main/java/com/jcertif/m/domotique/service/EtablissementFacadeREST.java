@@ -72,6 +72,12 @@ public class EtablissementFacadeREST extends AbstractFacade<Etablissement> {
         return String.valueOf(super.count());
     }
 
-  
+    @POST
+    @Path("{user_id}")
+    @Produces({"application/xml","application/json"})
+    public List<Etablissement> getByUser(@PathParam("user_id")Integer user_id){
+        javax.persistence.Query us=getEntityManager().createNamedQuery("Etablissement.findByUsedId").setParameter("user_id", user_id);
+        return(List<Etablissement>)us.getResultList();
+    }
     
 }
