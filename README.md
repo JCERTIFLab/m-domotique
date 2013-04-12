@@ -15,7 +15,7 @@ personnes en perte d'autonomie avec des solutions facilitant leur quotidien… Q
 avec confort, sécurité et communication et que son avenir s'annonce fleurissant, il est stratégique
 que les professionnels se positionnent sur ce marché pour décrocher de nouveaux marchés.
 
-Notre proposition consiste à : Concevoir et implémenter une application qui apporte une autre
+JCertif prend l'initiative dans ce domaine et propose de concevoir et implémenter une application qui apporte une autre
 solution plus efficace, simple à utiliser et moins coûteuse que celles commercialisées actuellement.
 Cette dernière offre la passibilité à son utilisateur d’administrer et de gérer n’importe quelle surface
 de son choix (son domicile, son usine ou même un ensemble de bâtiments). Ce contrôle peut être
