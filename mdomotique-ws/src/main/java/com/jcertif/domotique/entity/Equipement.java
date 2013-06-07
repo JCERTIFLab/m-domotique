@@ -2,22 +2,27 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jcertif.m.domotique.entities;
+package com.jcertif.domotique.entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ *
+ * @author FirasGabsi
+ */
 @Entity
 @Table(name = "EQUIPEMENT")
 @XmlRootElement
@@ -32,21 +37,24 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Equipement implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @NotNull
-    @Column(name = "ID", nullable = false)
+    @Column(name = "ID")
     private Integer id;
     @Size(max = 30)
-    @Column(name = "NOM", length = 30)
+    @Column(name = "NOM")
     private String nom;
     @Size(max = 50)
-    @Column(name = "DESCRIPTION", length = 50)
+    @Column(name = "DESCRIPTION")
     private String description;
     @Column(name = "ETAT")
-    private Boolean etat;
+    private Serializable etat;
     @Size(max = 30)
-    @Column(name = "RELAY", length = 30)
+    @Column(name = "RELAY")
     private String relay;
+    @JoinColumn(name = "TYPE_ID", referencedColumnName = "ID")
+    @ManyToOne
+    private TypeEquipement typeId;
     @JoinColumn(name = "PIECE_ID", referencedColumnName = "ID")
     @ManyToOne
     private Piece pieceId;
@@ -82,11 +90,11 @@ public class Equipement implements Serializable {
         this.description = description;
     }
 
-    public Boolean getEtat() {
+    public Serializable getEtat() {
         return etat;
     }
 
-    public void setEtat(Boolean etat) {
+    public void setEtat(Serializable etat) {
         this.etat = etat;
     }
 
@@ -96,6 +104,14 @@ public class Equipement implements Serializable {
 
     public void setRelay(String relay) {
         this.relay = relay;
+    }
+
+    public TypeEquipement getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(TypeEquipement typeId) {
+        this.typeId = typeId;
     }
 
     public Piece getPieceId() {
@@ -128,7 +144,7 @@ public class Equipement implements Serializable {
 
     @Override
     public String toString() {
-        return "com.jcertif.m.domotique.entities.Equipement[ id=" + id + " ]";
+        return "com.jcertif.domotique.entity.Equipement[ id=" + id + " ]";
     }
     
 }

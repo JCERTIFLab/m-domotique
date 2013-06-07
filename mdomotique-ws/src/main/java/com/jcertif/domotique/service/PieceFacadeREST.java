@@ -2,10 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jcertif.m.domotique.service;
+package com.jcertif.domotique.service;
 
-import com.jcertif.m.domotique.entities.Piece;
+import com.jcertif.domotique.entity.Piece;
 import java.util.List;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -15,9 +18,15 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
+/**
+ *
+ * @author FirasGabsi
+ */
+@Stateless
 @Path("pieces")
 public class PieceFacadeREST extends AbstractFacade<Piece> {
-  
+    @PersistenceContext(unitName = "com.jcertif_M-DomotiqueWS_war_1.0-SNAPSHOTPU")
+    private EntityManager em;
 
     public PieceFacadeREST() {
         super(Piece.class);
@@ -32,7 +41,7 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
 
     @PUT
     @Override
-    @Consumes({ "application/json"})
+    @Consumes({"application/xml", "application/json"})
     public void edit(Piece entity) {
         super.edit(entity);
     }
@@ -45,21 +54,21 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
 
     @GET
     @Path("{id}")
-    @Produces({"application/json"})
+    @Produces({"application/xml", "application/json"})
     public Piece find(@PathParam("id") Integer id) {
         return super.find(id);
     }
 
     @GET
     @Override
-    @Produces({ "application/json"})
+    @Produces({"application/xml", "application/json"})
     public List<Piece> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
-    @Produces({"application/json"})
+    @Produces({"application/xml", "application/json"})
     public List<Piece> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
@@ -71,5 +80,9 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
         return String.valueOf(super.count());
     }
 
-   
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
+    }
+    
 }
