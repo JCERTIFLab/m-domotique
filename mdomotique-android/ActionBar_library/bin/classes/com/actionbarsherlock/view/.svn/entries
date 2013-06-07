@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/src/com/actionbarsherlock/view"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="ActionMode.java"
+   text-time="2013-01-10T09:33:47.347639Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="fb69e0250007bcdba7b237cda24cfa24"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.051622Z"/>
+<entry
+   committed-rev="2"
+   name="CollapsibleActionView.java"
+   text-time="2013-01-10T09:33:47.350639Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="f2fd31fe15a3cf845fb65f1b3018bb2f"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.054622Z"/>
+<entry
+   committed-rev="2"
+   name="MenuItem.java"
+   text-time="2013-01-10T09:33:47.354639Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="5e50f7de1dd5eb80e5523e48ad6b5412"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.148627Z"/>
+<entry
+   committed-rev="2"
+   name="Menu.java"
+   text-time="2013-01-10T09:33:47.358639Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="88b63d3f28a43b9aa0e40987f437c424"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.212631Z"/>
+<entry
+   committed-rev="2"
+   name="Window.java"
+   text-time="2013-01-10T09:33:47.361640Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="0f90c394db1e4ef938127db0c9a3d537"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.218631Z"/>
+<entry
+   committed-rev="2"
+   name="ActionProvider.java"
+   text-time="2013-01-10T09:33:47.364640Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="0b51291265d81f1e6054078d6185cfd1"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.248633Z"/>
+<entry
+   committed-rev="2"
+   name="MenuInflater.java"
+   text-time="2013-01-10T09:33:47.367640Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a647d9de1d27fabe4dbcc3ffa1ff08c9"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.340638Z"/>
+<entry
+   committed-rev="2"
+   name="SubMenu.java"
+   text-time="2013-01-10T09:33:47.370640Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="7dbecf77c3889477fb46b272e4e3e702"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.344639Z"/>
+</wc-entries>

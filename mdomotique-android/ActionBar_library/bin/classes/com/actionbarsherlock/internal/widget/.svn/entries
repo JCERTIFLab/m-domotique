@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/src/com/actionbarsherlock/internal/widget"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="ActionBarContextView.java"
+   text-time="2013-01-10T09:33:48.816723Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="eddae7b6d245e72d703117c3d105dc57"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.747662Z"/>
+<entry
+   committed-rev="2"
+   name="IcsAbsSpinner.java"
+   text-time="2013-01-10T09:33:48.821723Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e002d568d1f2964d59eefb3e96a6c7b4"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.792664Z"/>
+<entry
+   committed-rev="2"
+   name="ActionBarContainer.java"
+   text-time="2013-01-10T09:33:48.828723Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="32dbee6ec6cac5b662bbf97cdd25ab4f"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.798665Z"/>
+<entry
+   committed-rev="2"
+   name="IcsLinearLayout.java"
+   text-time="2013-01-10T09:33:48.834724Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e397cac6f7512db26036550970af8e70"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.853668Z"/>
+<entry
+   committed-rev="2"
+   name="FakeDialogPhoneWindow.java"
+   text-time="2013-01-10T09:33:48.839724Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="7f5a422bf06720d510be7ba20ce8a6c7"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.873669Z"/>
+<entry
+   committed-rev="2"
+   name="IcsView.java"
+   text-time="2013-01-10T09:33:48.844724Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a9c526ab449b52a7e98d64cd994ca58d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.876669Z"/>
+<entry
+   committed-rev="2"
+   name="IcsAdapterView.java"
+   text-time="2013-01-10T09:33:48.851725Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b27f627bf3b98cb5aeeb040aeb2a53f4"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.021677Z"/>
+<entry
+   committed-rev="2"
+   name="CapitalizingButton.java"
+   text-time="2013-01-10T09:33:48.848725Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="7be6ee6f43d1455144681812b15eaea8"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.909671Z"/>
+<entry
+   committed-rev="2"
+   name="IcsSpinner.java"
+   text-time="2013-01-10T09:33:48.854725Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e9361e603ca6c229564b14e604d4b9b2"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.111682Z"/>
+<entry
+   committed-rev="2"
+   name="CapitalizingTextView.java"
+   text-time="2013-01-10T09:33:48.857725Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="1cb05c3de052982ac937eae59df14647"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.114683Z"/>
+<entry
+   committed-rev="2"
+   name="IcsColorDrawable.java"
+   text-time="2013-01-10T09:33:48.860725Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="57446502936fdcd7edad5150daef6cf9"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.123683Z"/>
+<entry
+   committed-rev="2"
+   name="ScrollingTabContainerView.java"
+   text-time="2013-01-10T09:33:48.864726Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="882a75cbcdca7654b7bf31be89f917e9"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.181686Z"/>
+<entry
+   committed-rev="2"
+   name="CollapsibleActionViewWrapper.java"
+   text-time="2013-01-10T09:33:48.870726Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="db5ebca897bf6658220eca079e1350a7"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.198687Z"/>
+<entry
+   committed-rev="2"
+   name="AbsActionBarView.java"
+   text-time="2013-01-10T09:33:48.867726Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="6ca1904fa393c90fb832ce7cb245b924"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.193687Z"/>
+<entry
+   committed-rev="2"
+   name="IcsListPopupWindow.java"
+   text-time="2013-01-10T09:33:48.873726Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="86ff46a045b9f5d882476faa03796ffa"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.289693Z"/>
+<entry
+   committed-rev="2"
+   name="IcsProgressBar.java"
+   text-time="2013-01-10T09:33:48.878726Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="f51084e032ed0bf5fca6e64d58a31d8e"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.436701Z"/>
+<entry
+   committed-rev="2"
+   name="ActionBarView.java"
+   text-time="2013-01-10T09:33:48.882727Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="2e61b7ba078be3f21e6e622e31303ef9"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:48.808722Z"/>
+</wc-entries>

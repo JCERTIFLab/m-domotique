@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/src/com/actionbarsherlock/app"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="ActionBar.java"
+   text-time="2013-01-10T09:33:45.969560Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="0d086ad3f9557b1f4f7f787669c7c8e6"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.743547Z"/>
+<entry
+   committed-rev="2"
+   name="SherlockListActivity.java"
+   text-time="2013-01-10T09:33:45.972560Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="5ffac4a934cf4517530c4d602e6855b8"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.751547Z"/>
+<entry
+   committed-rev="2"
+   name="SherlockPreferenceActivity.java"
+   text-time="2013-01-10T09:33:45.976560Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="f835245a4f3c3e6cbc08ec29b3476758"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.926557Z"/>
+<entry
+   committed-rev="2"
+   name="SherlockActivity.java"
+   text-time="2013-01-10T09:33:45.979561Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="2a970accd06b48b1568d0b97667f230f"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.935558Z"/>
+<entry
+   committed-rev="2"
+   name="SherlockExpandableListActivity.java"
+   text-time="2013-01-10T09:33:45.983561Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="95a74846d6f606345ff506e4e2563058"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.942558Z"/>
+<entry
+   committed-rev="2"
+   name="SherlockListFragment.java"
+   text-time="2013-01-10T09:33:45.986561Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="378b11351ea7c4b7c0f76c9e101c0bf0"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.947559Z"/>
+<entry
+   committed-rev="2"
+   name="SherlockFragmentActivity.java"
+   text-time="2013-01-10T09:33:45.989561Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b36f5203f5d74a87e713132d973a4fbe"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.954559Z"/>
+<entry
+   committed-rev="2"
+   name="SherlockDialogFragment.java"
+   text-time="2013-01-10T09:33:46.022563Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="99bf9252106db34000bec6d0b92f0817"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.959559Z"/>
+<entry
+   committed-rev="2"
+   name="SherlockFragment.java"
+   text-time="2013-01-10T09:33:46.026563Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="f65a82d9346a5f94a6e9e145c3a1b415"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.963560Z"/>
+</wc-entries>

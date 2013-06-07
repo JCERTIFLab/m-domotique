@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/res/values-w480dp"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="abs__bools.xml"
+   text-time="2013-01-10T09:34:09.493905Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="f5afa056337f1e66b38105689c756a3b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.488905Z"/>
+<entry
+   committed-rev="2"
+   name="abs__config.xml"
+   text-time="2013-01-10T09:34:09.497906Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="5e0ed897df05cc74010b7146ed81a086"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.490905Z"/>
+</wc-entries>

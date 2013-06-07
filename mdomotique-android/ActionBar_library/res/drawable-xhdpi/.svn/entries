@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/res/drawable-xhdpi"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="abs__btn_cab_done_pressed_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.810924Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b79a7b0b3d14abc88f5e5a87198659ba"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.568910Z"/>
+<entry
+   committed-rev="2"
+   name="abs__menu_dropdown_panel_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.817924Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="9b5c2f961c1e84143d3c7e2908ab6845"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.575910Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_clear_search_api_disabled_holo_light.png"
+   text-time="2013-01-10T09:34:09.814924Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="c6a3d6498eb4640ac914e9503118679b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.571910Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_go.png"
+   text-time="2013-01-10T09:34:09.822924Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="29df15fbb706fd54183e202d2ae3dfc6"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.580910Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_stacked_transparent_light_holo.9.png"
+   text-time="2013-01-10T09:34:09.820924Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="3f29abeeb12a631edf8f5d2af1bdf2b6"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.577910Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_share_pack_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.825924Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e1034e25fb9fbd96dc7b2621a0eb6480"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.583911Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_ab_back_holo_light.png"
+   text-time="2013-01-10T09:34:09.828925Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a2cb321391f353ba4acf116263a88f8b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.586911Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_activated_holo.9.png"
+   text-time="2013-01-10T09:34:09.831925Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b8de0bdb151678a7cb04d3bf32c805e8"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.588911Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_bottom_solid_dark_holo.9.png"
+   text-time="2013-01-10T09:34:09.833925Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="29892f316dcb5ba016a245dffdd24486"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.591911Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_stacked_transparent_dark_holo.9.png"
+   text-time="2013-01-10T09:34:09.836925Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a8f7e87be002d1cd3a0c2f594b3d54e7"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.593911Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_share_pack_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.838925Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e192212322091695c311a3004d95fdbe"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.596911Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_divider_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.841925Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="482b6f6816760f50a74be232e9b4d0c5"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.598911Z"/>
+<entry
+   committed-rev="2"
+   name="abs__textfield_search_selected_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.844926Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="bb25edfb8d47a33181cdab945ce6fc9a"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.601912Z"/>
+<entry
+   committed-rev="2"
+   name="abs__progress_bg_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.850926Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="90f59764c7942855cf005295a414d8e3"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.606912Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_solid_dark_holo.9.png"
+   text-time="2013-01-10T09:34:09.847926Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="399cdd0946147fa3ceefd57010fa014c"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.603912Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_bottom_transparent_light_holo.9.png"
+   text-time="2013-01-10T09:34:09.854926Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="909f55f7bb52966be2205d5e1a216c6e"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.609912Z"/>
+<entry
+   committed-rev="2"
+   name="abs__tab_selected_holo.9.png"
+   text-time="2013-01-10T09:34:09.857926Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="8a9a120531ad1bdbc58749187e06b8a7"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.611912Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_longpressed_holo.9.png"
+   text-time="2013-01-10T09:34:09.860926Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b8de0bdb151678a7cb04d3bf32c805e8"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.614912Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_solid_shadow_holo.9.png"
+   text-time="2013-01-10T09:34:09.862927Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="2e0fab5a799ef1e479346a21a5b73201"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.618913Z"/>
+<entry
+   committed-rev="2"
+   name="abs__dialog_full_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.865927Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="15ae19d9ad72ad2db912a7c20f0154d6"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.622913Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_cab_done_holo_light.png"
+   text-time="2013-01-10T09:34:09.868927Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="c1392de806425b267a0295630d4554d2"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.625913Z"/>
+<entry
+   committed-rev="2"
+   name="abs__tab_selected_focused_holo.9.png"
+   text-time="2013-01-10T09:34:09.871927Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="fdcaf07d33111dba4da244178a165785"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.627913Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_pressed_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.873927Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a0b74c5aa51341d03aca9da22b05dc3b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.629913Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_menu_moreoverflow_normal_holo_dark.png"
+   text-time="2013-01-10T09:34:09.877927Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="264e73e36b14ad57da9adee7307948dc"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.632913Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_search_api_holo_light.png"
+   text-time="2013-01-10T09:34:09.881928Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="3f2dced8660a0ce9b5869f4364c36dcd"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.636914Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_ab_focused_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.883928Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="dbba55210a7f9db1d280c48c7bcc75e8"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.639914Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_transparent_light_holo.9.png"
+   text-time="2013-01-10T09:34:09.887928Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="f7792046111b0b0da701feb269c6af50"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.641914Z"/>
+<entry
+   committed-rev="2"
+   name="abs__btn_cab_done_focused_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.890928Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="dfbf8f4fc388d6c9b9868b18e345e317"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.644914Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_ab_pressed_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.893928Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="1a1d4bf42dede5e36899e0ff53249588"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.646914Z"/>
+<entry
+   committed-rev="2"
+   name="abs__cab_background_top_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.896929Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="ff93560f85076f13414ce15e628a463b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.649914Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_clear_disabled.png"
+   text-time="2013-01-10T09:34:09.899929Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="2e1c9aa4e1e2361543b6b054372d744b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.654915Z"/>
+<entry
+   committed-rev="2"
+   name="abs__tab_selected_pressed_holo.9.png"
+   text-time="2013-01-10T09:34:09.902929Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="257ac2237f3bf75fbe8cec729572fbcb"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.656915Z"/>
+<entry
+   committed-rev="2"
+   name="abs__cab_background_top_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.907929Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="223cf84247cd863692cb53f21308616a"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.661915Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_ab_back_holo_dark.png"
+   text-time="2013-01-10T09:34:09.904929Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e21a989c3bfee9b531156b1aea4d285f"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.658915Z"/>
+<entry
+   committed-rev="2"
+   name="abs__progress_primary_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.912929Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="02f91d897363e5592365aa5f4883f776"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.667915Z"/>
+<entry
+   committed-rev="2"
+   name="abs__textfield_search_default_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.910929Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="eda790163a0d054d95235048fdbfcf4a"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.664915Z"/>
+<entry
+   committed-rev="2"
+   name="abs__cab_background_bottom_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.915930Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="ad5d8038c00cafc9a992447427a4ead5"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.670916Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_stacked_solid_dark_holo.9.png"
+   text-time="2013-01-10T09:34:09.918930Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="68c6c87a83ee200402646a256b82f8f3"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.672916Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_48_inner_holo.png"
+   text-time="2013-01-10T09:34:09.920930Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="001cd44d2a8a5dc66dd3e218423bb0bc"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.675916Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_go_search_api_holo_light.png"
+   text-time="2013-01-10T09:34:09.923930Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="2bb50f902e34c05d885410025bafd855"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.677916Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_menu_share_holo_light.png"
+   text-time="2013-01-10T09:34:09.927930Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e74d165fe413c08adf2a09c116257c5b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.681916Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_divider_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.931931Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a8b562f254bcc103d11d47b206ecdd46"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.685916Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_ab_default_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.935931Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="623550ba0056a3f262cbde6aa5a4223d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.689917Z"/>
+<entry
+   committed-rev="2"
+   name="abs__textfield_search_selected_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.937931Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="0bf418bb1bf944e02c81042b3c1d3073"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.692917Z"/>
+<entry
+   committed-rev="2"
+   name="abs__btn_cab_done_default_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.940931Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="3d177f9546b81fc09681f8e6680022fb"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.694917Z"/>
+<entry
+   committed-rev="2"
+   name="abs__progress_primary_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.944931Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="02f91d897363e5592365aa5f4883f776"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.698917Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_clear_search_api_holo_light.png"
+   text-time="2013-01-10T09:34:09.951932Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="edf047e7ad9803be7d57231d052831f9"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.704918Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_cab_done_holo_dark.png"
+   text-time="2013-01-10T09:34:09.948931Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="6aca6607030f8fc5282ab5a976f41f09"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.701917Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_48_outer_holo.png"
+   text-time="2013-01-10T09:34:09.953932Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="f32aa478ecd04f61db3b95b8ab37b3ad"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.707918Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_stacked_solid_light_holo.9.png"
+   text-time="2013-01-10T09:34:09.957932Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b178b3317d90e85834bfcf262863d66c"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.710918Z"/>
+<entry
+   committed-rev="2"
+   name="abs__progress_bg_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.960932Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="1eb69fa80b58a27413c0e9eb715c3691"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.714918Z"/>
+<entry
+   committed-rev="2"
+   name="abs__textfield_search_right_default_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.962932Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="dce3841890e615827caabe6b7c16a7e5"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.716918Z"/>
+<entry
+   committed-rev="2"
+   name="abs__btn_cab_done_focused_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.971933Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="ee96058dfb8e6f777d0108b5e8328320"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.725919Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_ab_pressed_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.968933Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="30e09df1080b76589ca90e5add456acf"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.722919Z"/>
+<entry
+   committed-rev="2"
+   name="abs__tab_unselected_pressed_holo.9.png"
+   text-time="2013-01-10T09:34:09.965932Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="dcc7c1f65d4aa4bc79d780de5fa926e5"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.719918Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_ab_disabled_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.974933Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="4e4eff57154f1f2d6608f5c71ffe15f9"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.727919Z"/>
+<entry
+   committed-rev="2"
+   name="abs__textfield_search_right_selected_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.977933Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a4077351093a8878b6b2082290f6f38a"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.730919Z"/>
+<entry
+   committed-rev="2"
+   name="abs__progress_secondary_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.980933Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="18c8ccefb15c271322c99169caaf87e2"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.733919Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_voice_search.png"
+   text-time="2013-01-10T09:34:09.983933Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="0a7b6bf3e34857daed11545686d3be5c"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.736919Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_ab_focused_holo_light.9.png"
+   text-time="2013-01-10T09:34:09.988934Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="6300747d0d16e0ff6b7891eee6d6a177"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.741920Z"/>
+<entry
+   committed-rev="2"
+   name="abs__textfield_search_right_default_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.985934Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="c4ee24bcb9f6638ab6d42f2c4db49ad3"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.738919Z"/>
+<entry
+   committed-rev="2"
+   name="abs__textfield_search_default_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.991934Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="c652e3ef8cb10241e113620883c60ac1"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.743920Z"/>
+<entry
+   committed-rev="2"
+   name="abs__textfield_search_right_selected_holo_dark.9.png"
+   text-time="2013-01-10T09:34:09.994934Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a4077351093a8878b6b2082290f6f38a"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.745920Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_focused_holo.9.png"
+   text-time="2013-01-10T09:34:09.997934Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="4240feb9cd82adb96e37490205b4ea76"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.748920Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_bottom_solid_light_holo.9.png"
+   text-time="2013-01-10T09:34:10.003935Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="d5aa8cbb23f4b0b0e3dc581388fac8e8"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.752920Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_search.png"
+   text-time="2013-01-10T09:34:10.006935Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="9f36ba376e16665743c3375bd1caa543"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.755920Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_bottom_transparent_dark_holo.9.png"
+   text-time="2013-01-10T09:34:10.009935Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="719467a47eb27d82fa3ad91a34b9accc"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.757921Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_selector_disabled_holo_light.9.png"
+   text-time="2013-01-10T09:34:10.012935Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="55ed1be32f71a8240cead3cd9722d2ce"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.760921Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_menu_share_holo_dark.png"
+   text-time="2013-01-10T09:34:10.015935Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="ac794ee9077062c1b01500229c422977"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.763921Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_bottom_solid_inverse_holo.9.png"
+   text-time="2013-01-10T09:34:10.018936Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="bdc01543675e3f311cf5644ab1221d54"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.766921Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_ab_disabled_holo_light.9.png"
+   text-time="2013-01-10T09:34:10.020936Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b2a6d928b817c59033e20272e2f99b27"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.768921Z"/>
+<entry
+   committed-rev="2"
+   name="abs__cab_background_bottom_holo_light.9.png"
+   text-time="2013-01-10T09:34:10.023936Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="52c3860bedb9c25b33e0693d7f88cd69"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.771921Z"/>
+<entry
+   committed-rev="2"
+   name="abs__menu_dropdown_panel_holo_dark.9.png"
+   text-time="2013-01-10T09:34:10.026936Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="9a49f717fcf81b35595fac0895d191c1"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.774922Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_pressed_holo_dark.9.png"
+   text-time="2013-01-10T09:34:10.029936Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a0b74c5aa51341d03aca9da22b05dc3b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.777922Z"/>
+<entry
+   committed-rev="2"
+   name="abs__progress_secondary_holo_light.9.png"
+   text-time="2013-01-10T09:34:10.033936Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="18c8ccefb15c271322c99169caaf87e2"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.780922Z"/>
+<entry
+   committed-rev="2"
+   name="abs__btn_cab_done_default_holo_dark.9.png"
+   text-time="2013-01-10T09:34:10.036937Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="0ec3b8786a7ad35d3292dd5332ba7fda"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.784922Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_selector_disabled_holo_dark.9.png"
+   text-time="2013-01-10T09:34:10.039937Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="3ad4737d26f1e61e07663bed1253fe79"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.788922Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_solid_light_holo.9.png"
+   text-time="2013-01-10T09:34:10.042937Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="8015097250e3fb43d35be72d5730f4c1"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.791923Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ab_transparent_dark_holo.9.png"
+   text-time="2013-01-10T09:34:10.045937Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="6f72c374772bd755982aed0a37d6f61e"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.794923Z"/>
+<entry
+   committed-rev="2"
+   name="abs__dialog_full_holo_light.9.png"
+   text-time="2013-01-10T09:34:10.048937Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="70ea095348af675d19f78edaf91cac53"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.797923Z"/>
+<entry
+   committed-rev="2"
+   name="abs__btn_cab_done_pressed_holo_light.9.png"
+   text-time="2013-01-10T09:34:10.051937Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="810a0c7fec6a846a8b5d1f838846ea7b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.799923Z"/>
+<entry
+   committed-rev="2"
+   name="abs__spinner_ab_default_holo_light.9.png"
+   text-time="2013-01-10T09:34:10.054938Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="36e618e5dc5098592c7aa8a728bdbbdd"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.802923Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_menu_moreoverflow_normal_holo_light.png"
+   text-time="2013-01-10T09:34:10.056938Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="83cb3b7df1c533c7f71ada5d4a70ebcd"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.804923Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ic_voice_search_api_holo_light.png"
+   text-time="2013-01-10T09:34:10.162944Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="4cc51bf87ae37a94ca93cfa46a66add4"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:09.807923Z"/>
+</wc-entries>

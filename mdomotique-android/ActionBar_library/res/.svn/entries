@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/res"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   name="values-xlarge"
+   kind="dir"/>
+<entry
+   name="values-large-mdpi-1024x600"
+   kind="dir"/>
+<entry
+   name="values-w360dp"
+   kind="dir"/>
+<entry
+   name="drawable"
+   kind="dir"/>
+<entry
+   name="values-w480dp"
+   kind="dir"/>
+<entry
+   name="layout-v14"
+   kind="dir"/>
+<entry
+   name="drawable-v11"
+   kind="dir"/>
+<entry
+   name="values-large-land-hdpi-1024x600"
+   kind="dir"/>
+<entry
+   name="values-large"
+   kind="dir"/>
+<entry
+   name="drawable-xhdpi"
+   kind="dir"/>
+<entry
+   name="values-large-land-mdpi-1024x600"
+   kind="dir"/>
+<entry
+   name="layout-xlarge"
+   kind="dir"/>
+<entry
+   name="values"
+   kind="dir"/>
+<entry
+   name="values-sw600dp"
+   kind="dir"/>
+<entry
+   name="drawable-hdpi"
+   kind="dir"/>
+<entry
+   name="values-v11"
+   kind="dir"/>
+<entry
+   name="layout-large"
+   kind="dir"/>
+<entry
+   name="drawable-ldpi"
+   kind="dir"/>
+<entry
+   name="values-v14"
+   kind="dir"/>
+<entry
+   name="drawable-mdpi"
+   kind="dir"/>
+<entry
+   name="values-large-hdpi-1024x600"
+   kind="dir"/>
+<entry
+   name="values-land"
+   kind="dir"/>
+<entry
+   name="values-w500dp"
+   kind="dir"/>
+<entry
+   name="layout"
+   kind="dir"/>
+<entry
+   name="values-w600dp"
+   kind="dir"/>
+<entry
+   name="color"
+   kind="dir"/>
+</wc-entries>

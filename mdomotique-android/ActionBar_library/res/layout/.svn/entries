@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/res/layout"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="abs__action_menu_layout.xml"
+   text-time="2013-01-10T09:34:13.515135Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="9e05cee9a31fec1782c6d8aa0b1fb507"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.444131Z"/>
+<entry
+   committed-rev="2"
+   name="abs__search_view.xml"
+   text-time="2013-01-10T09:34:13.519136Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="125c3c4c0fed3c2afe7a99c093faefc6"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.447132Z"/>
+<entry
+   committed-rev="2"
+   name="abs__screen_action_bar.xml"
+   text-time="2013-01-10T09:34:13.522136Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b6955e82c00c709d19da63a01b636f0a"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.450132Z"/>
+<entry
+   committed-rev="2"
+   name="abs__screen_action_bar_overlay.xml"
+   text-time="2013-01-10T09:34:13.526136Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="d1faa57467be640a3c686d5174c5a84a"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.454132Z"/>
+<entry
+   committed-rev="2"
+   name="abs__popup_menu_item_layout.xml"
+   text-time="2013-01-10T09:34:13.531136Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="4655b2473e165cb8a902eb6e8e78391d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.459132Z"/>
+<entry
+   committed-rev="2"
+   name="sherlock_spinner_item.xml"
+   text-time="2013-01-10T09:34:13.528136Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="262a0c4a410496300dc7025fcd64a508"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.456132Z"/>
+<entry
+   committed-rev="2"
+   name="abs__action_mode_bar.xml"
+   text-time="2013-01-10T09:34:13.537137Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="60bd5e43badad955b0eae50cbd19e390"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.464133Z"/>
+<entry
+   committed-rev="2"
+   name="abs__action_bar_tab_bar_view.xml"
+   text-time="2013-01-10T09:34:13.534137Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="8edcd6e4318687c281b6a936865e0866"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.461132Z"/>
+<entry
+   committed-rev="2"
+   name="abs__activity_chooser_view.xml"
+   text-time="2013-01-10T09:34:13.541137Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="54069880cf6ef06080e610ee97fba6ee"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.466133Z"/>
+<entry
+   committed-rev="2"
+   name="abs__action_bar_home.xml"
+   text-time="2013-01-10T09:34:13.544137Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a9ccd82e5c7ab693814e381bd82fafa1"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.469133Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_menu_item_layout.xml"
+   text-time="2013-01-10T09:34:13.547137Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="a96be0ba1f3ec4b66764c5a9cb61f498"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.471133Z"/>
+<entry
+   committed-rev="2"
+   name="abs__action_menu_item_layout.xml"
+   text-time="2013-01-10T09:34:13.550137Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="9c60c7d2f0afa3a5b0467c2e474b927c"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.475133Z"/>
+<entry
+   committed-rev="2"
+   name="sherlock_spinner_dropdown_item.xml"
+   text-time="2013-01-10T09:34:13.554138Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="32617976f05f7656aea2ea50bec2bbaf"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.480133Z"/>
+<entry
+   committed-rev="2"
+   name="abs__action_bar_title_item.xml"
+   text-time="2013-01-10T09:34:13.557138Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="76acc56cfe6b00776256b3d0f3589bda"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.482134Z"/>
+<entry
+   committed-rev="2"
+   name="abs__activity_chooser_view_list_item.xml"
+   text-time="2013-01-10T09:34:13.561138Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="1220ec2596cdac41f9d56cb3900fa2df"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.486134Z"/>
+<entry
+   committed-rev="2"
+   name="abs__dialog_title_holo.xml"
+   text-time="2013-01-10T09:34:13.564138Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="0bcc8be6344f0f5ca0b21b1fb1fd0afa"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.489134Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_menu_item_checkbox.xml"
+   text-time="2013-01-10T09:34:13.567138Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="9b53270e7f5d5870fcb6609c969ac24d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.491134Z"/>
+<entry
+   committed-rev="2"
+   name="abs__search_dropdown_item_icons_2line.xml"
+   text-time="2013-01-10T09:34:13.570139Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="5b4eb21ea4c0e43419745baeb7d282c0"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.494134Z"/>
+<entry
+   committed-rev="2"
+   name="abs__action_mode_close_item.xml"
+   text-time="2013-01-10T09:34:13.573139Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="694ed57d0f7018a408a6b80125544c71"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.497134Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_menu_item_icon.xml"
+   text-time="2013-01-10T09:34:13.576139Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="6067823a2587147f11164a203250ae1e"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.499135Z"/>
+<entry
+   committed-rev="2"
+   name="abs__action_bar_tab.xml"
+   text-time="2013-01-10T09:34:13.579139Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="906c789ce6d2d045af07c30f04534188"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.502135Z"/>
+<entry
+   committed-rev="2"
+   name="abs__simple_dropdown_hint.xml"
+   text-time="2013-01-10T09:34:13.583139Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b7bcc8424549d047b4a014f869819458"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.504135Z"/>
+<entry
+   committed-rev="2"
+   name="abs__screen_simple.xml"
+   text-time="2013-01-10T09:34:13.586140Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e3c423f2fe4dbb05c78c4f614a7a8bed"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.507135Z"/>
+<entry
+   committed-rev="2"
+   name="abs__screen_simple_overlay_action_mode.xml"
+   text-time="2013-01-10T09:34:13.589140Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="921cb213be8aed5d5759a7a12537e533"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.510135Z"/>
+<entry
+   committed-rev="2"
+   name="abs__list_menu_item_radio.xml"
+   text-time="2013-01-10T09:34:13.592140Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="1a83da517de159567b9f99952c7602fa"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.512135Z"/>
+</wc-entries>

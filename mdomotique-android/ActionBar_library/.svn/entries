@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   name="test"
+   kind="dir"/>
+<entry
+   committed-rev="2"
+   name=".project"
+   text-time="2013-01-10T09:34:13.690145Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="7f12436f6936d83e2375b6c16f772c2b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.304522Z"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   name="res"
+   kind="dir"/>
+<entry
+   name="libs"
+   kind="dir"/>
+<entry
+   committed-rev="2"
+   name="pom.xml"
+   text-time="2013-01-10T09:34:13.699146Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="fa48e5b9612d8a53dc13b9e61d45cbb9"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.663144Z"/>
+<entry
+   committed-rev="2"
+   name="README.md"
+   text-time="2013-01-10T09:34:13.702146Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="791b4fef63079c022998b128b44da5eb"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.666144Z"/>
+<entry
+   committed-rev="2"
+   name=".classpath"
+   text-time="2013-01-10T09:34:13.682145Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b545785a6330009c1cc11f8299192bb2"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.290521Z"/>
+<entry
+   committed-rev="2"
+   name="project.properties"
+   text-time="2013-01-10T09:34:13.686145Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="302e7e36829d2e14fbed0aeded5143c5"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.293521Z"/>
+<entry
+   name="assets"
+   kind="dir"/>
+<entry
+   committed-rev="2"
+   name="lint.xml"
+   text-time="2013-01-10T09:34:13.693146Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="1ce274a186a2afb9f76542702f6ecc4d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.307522Z"/>
+<entry
+   committed-rev="2"
+   name="AndroidManifest.xml"
+   text-time="2013-01-10T09:34:13.696146Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="52ae428c1fdec8ce802347495bded6c8"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:45.310522Z"/>
+<entry
+   name="bin"
+   kind="dir"/>
+<entry
+   name="gen"
+   kind="dir"/>
+<entry
+   name=".settings"
+   kind="dir"/>
+</wc-entries>

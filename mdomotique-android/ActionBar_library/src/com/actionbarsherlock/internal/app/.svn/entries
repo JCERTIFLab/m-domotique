@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/src/com/actionbarsherlock/internal/app"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="ActionBarWrapper.java"
+   text-time="2013-01-10T09:33:47.714660Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="38215dbc2314c8b4c966c78c818b1b21"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.404642Z"/>
+<entry
+   committed-rev="2"
+   name="ActionBarImpl.java"
+   text-time="2013-01-10T09:33:47.719660Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="6e19d1b72b77d7419576e011ee17f798"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:47.709659Z"/>
+</wc-entries>

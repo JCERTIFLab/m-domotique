@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/res/values-large-hdpi-1024x600"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="abs__dimens.xml"
+   text-time="2013-01-10T09:34:13.406129Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="9f13b53c154ed49e97856449bc4889da"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.402129Z"/>
+</wc-entries>

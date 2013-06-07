@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JCertif Home</string>
+    <string name="login">Login:</string>
+    <string name="password">Password:</string>
+    <string name="connexion">Se connecter</string>
+    <string name="quitter">Quitter</string>
+    <string name="menu_settings">Settings</string>
+    <string name="add_room">Ajouter un piéce</string>
+    <string name="update_room">Modifier piéce</string>
+    <string name="delete_room">Supprimer piéce</string>
+    <string name="logout">Déconnexion</string>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/src/com/actionbarsherlock/internal/nineoldandroids/animation"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="KeyframeSet.java"
+   text-time="2013-01-10T09:33:49.997790Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="ca5c48615f1926f19c1a8563cb5f52da"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.304751Z"/>
+<entry
+   committed-rev="2"
+   name="AnimatorListenerAdapter.java"
+   text-time="2013-01-10T09:33:50.002791Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e087a467f5d9709348880b505168e9a2"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.307751Z"/>
+<entry
+   committed-rev="2"
+   name="ObjectAnimator.java"
+   text-time="2013-01-10T09:33:50.007791Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="705933ec7187d991de395e306b21a636"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.312751Z"/>
+<entry
+   committed-rev="2"
+   name="PropertyValuesHolder.java"
+   text-time="2013-01-10T09:33:50.013791Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="70b39f00e599c0bc17500a269b58ade6"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.370754Z"/>
+<entry
+   committed-rev="2"
+   name="Keyframe.java"
+   text-time="2013-01-10T09:33:50.017792Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="85cac3fe7aa3b14eccc2ace0a885432d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.418757Z"/>
+<entry
+   committed-rev="2"
+   name="TypeEvaluator.java"
+   text-time="2013-01-10T09:33:50.020792Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="42c668493e1a8e3563753e1e663dd355"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.427758Z"/>
+<entry
+   committed-rev="2"
+   name="FloatKeyframeSet.java"
+   text-time="2013-01-10T09:33:50.023792Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="75b30c5c435e83877aad557d5b97dc7d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.450759Z"/>
+<entry
+   committed-rev="2"
+   name="AnimatorSet.java"
+   text-time="2013-01-10T09:33:50.027792Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="663c10002e69946cd28607c89801a73f"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.618769Z"/>
+<entry
+   committed-rev="2"
+   name="ValueAnimator.java"
+   text-time="2013-01-10T09:33:50.030792Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="c6d46aa03112393ecf6ef03782703986"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.968789Z"/>
+<entry
+   committed-rev="2"
+   name="FloatEvaluator.java"
+   text-time="2013-01-10T09:33:50.034792Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="2cdc341b20a0757081e3fe46fa0e7bac"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.974789Z"/>
+<entry
+   committed-rev="2"
+   name="Animator.java"
+   text-time="2013-01-10T09:33:50.037793Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="17d7de8b93804319cc0c89ef4cd98a4f"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.983790Z"/>
+<entry
+   committed-rev="2"
+   name="IntKeyframeSet.java"
+   text-time="2013-01-10T09:33:50.040793Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="8c3049dc88708c51beb7b76d570b4d1b"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.989790Z"/>
+<entry
+   committed-rev="2"
+   name="IntEvaluator.java"
+   text-time="2013-01-10T09:33:50.043793Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="00aa39cac862d40a9846a8b89e18231e"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.993790Z"/>
+</wc-entries>

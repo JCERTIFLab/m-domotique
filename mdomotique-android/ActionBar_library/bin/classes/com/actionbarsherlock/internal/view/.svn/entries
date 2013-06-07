@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/src/com/actionbarsherlock/internal/view"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   name="menu"
+   kind="dir"/>
+<entry
+   committed-rev="2"
+   name="View_OnAttachStateChangeListener.java"
+   text-time="2013-01-10T09:33:49.274749Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="e968c5881d38fc46d8e40b46cb4538f2"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.262748Z"/>
+<entry
+   committed-rev="2"
+   name="ActionProviderWrapper.java"
+   text-time="2013-01-10T09:33:49.278749Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="5d3584707ec57b367834151504a75cbf"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.264748Z"/>
+<entry
+   committed-rev="2"
+   name="View_HasStateListenerSupport.java"
+   text-time="2013-01-10T09:33:49.282749Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="70f6bc9378c984ffaf6c6f188a9ddf6d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.267749Z"/>
+<entry
+   committed-rev="2"
+   name="StandaloneActionMode.java"
+   text-time="2013-01-10T09:33:49.286750Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="f5ee6a1dd5b8b63c589af3fb340ba671"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:49.271749Z"/>
+</wc-entries>

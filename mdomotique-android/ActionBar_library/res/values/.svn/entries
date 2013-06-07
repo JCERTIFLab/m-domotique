@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/res/values"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="abs__attrs.xml"
+   text-time="2013-01-10T09:34:10.365955Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="6ec6b9b92e144d4fac6f8cf531301003"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.240948Z"/>
+<entry
+   committed-rev="2"
+   name="abs__bools.xml"
+   text-time="2013-01-10T09:34:10.368956Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="0491258b42df7b0399333445c91ba15f"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.243948Z"/>
+<entry
+   committed-rev="2"
+   name="abs__dimens.xml"
+   text-time="2013-01-10T09:34:10.373956Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="2448297b106ec00b042ccdbc818643e2"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.246949Z"/>
+<entry
+   committed-rev="2"
+   name="abs__ids.xml"
+   text-time="2013-01-10T09:34:10.377956Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="81de8b0bdfa98856da05a32949acfb85"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.249949Z"/>
+<entry
+   committed-rev="2"
+   name="abs__colors.xml"
+   text-time="2013-01-10T09:34:10.380956Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="2a542e0e46219575beaacebb69f28961"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.251949Z"/>
+<entry
+   committed-rev="2"
+   name="abs__styles.xml"
+   text-time="2013-01-10T09:34:10.384956Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="ce9deab0e379f7d6af5d8f200c17e13c"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.257949Z"/>
+<entry
+   committed-rev="2"
+   name="abs__config.xml"
+   text-time="2013-01-10T09:34:10.388957Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="64f2f65152e614b7b2484651ecf461fa"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.259949Z"/>
+<entry
+   committed-rev="2"
+   name="abs__themes.xml"
+   text-time="2013-01-10T09:34:10.391957Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="3a1e32706debc9d310b99a6f54dffd90"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.264950Z"/>
+<entry
+   committed-rev="2"
+   name="abs__strings.xml"
+   text-time="2013-01-10T09:34:10.394957Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="00a0ad6c94ddfc1adc03c7384a48f6c6"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:10.360955Z"/>
+</wc-entries>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/res/color"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="abs__primary_text_disable_only_holo_dark.xml"
+   text-time="2013-01-10T09:34:13.641143Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="b5aa6202155ba5f4ad488ea2ca1aa89d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.624142Z"/>
+<entry
+   committed-rev="2"
+   name="abs__primary_text_holo_light.xml"
+   text-time="2013-01-10T09:34:13.645143Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="76410bd9d31f54db7f5a056455890fd1"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.627142Z"/>
+<entry
+   committed-rev="2"
+   name="abs__primary_text_disable_only_holo_light.xml"
+   text-time="2013-01-10T09:34:13.650143Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="83afd8d170c726227f09c15012c4777d"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.631142Z"/>
+<entry
+   committed-rev="2"
+   name="abs__primary_text_holo_dark.xml"
+   text-time="2013-01-10T09:34:13.653143Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="476281471ee5ff23195e4087e0bf0e60"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:34:13.638143Z"/>
+</wc-entries>

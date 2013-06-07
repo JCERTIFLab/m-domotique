@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2013-01-09T11:30:11.876147Z"
+   url="http://svnmanager.dotit-labs.com/svn/footCan2013/trunk/Android/ActionBar_library/src/com/actionbarsherlock/internal/nineoldandroids/widget"
+   last-author="rami"
+   kind="dir"
+   uuid="427a45c0-7701-491c-8d1e-ab1b464d91c0"
+   repos="http://svnmanager.dotit-labs.com/svn/footCan2013"
+   revision="4"/>
+<entry
+   committed-rev="2"
+   name="NineFrameLayout.java"
+   text-time="2013-01-10T09:33:50.082795Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="8af8517faff277ab60816e60179c3fc8"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:50.072795Z"/>
+<entry
+   committed-rev="2"
+   name="NineLinearLayout.java"
+   text-time="2013-01-10T09:33:50.085795Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="7ae1c5f91c8ba84c2bab446147ab84de"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:50.075795Z"/>
+<entry
+   committed-rev="2"
+   name="NineHorizontalScrollView.java"
+   text-time="2013-01-10T09:33:50.089796Z"
+   committed-date="2013-01-09T11:30:11.876147Z"
+   checksum="7a202f09213ea648090d712ab0600f34"
+   last-author="rami"
+   kind="file"
+   prop-time="2013-01-10T09:33:50.078795Z"/>
+</wc-entries>
