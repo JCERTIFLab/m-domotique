@@ -15,7 +15,6 @@
     </scm>
 
     <modules>
-        <module>mdomotique-android</module>
         <module>mdomotique-desktop</module>
         <module>mdomotique-ws</module>
     </modules>
