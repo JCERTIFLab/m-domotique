@@ -30,14 +30,14 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
 
     @POST
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({ "application/json"})
     public void create(TypePiece entity) {
         super.create(entity);
     }
 
     @PUT
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({ "application/json"})
     public void edit(TypePiece entity) {
         super.edit(entity);
     }
@@ -50,21 +50,21 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
 
     @GET
     @Path("{id}")
-    @Produces({"application/xml", "application/json"})
+    @Produces({ "application/json"})
     public TypePiece find(@PathParam("id") Integer id) {
         return super.find(id);
     }
 
     @GET
     @Override
-    @Produces({"application/xml", "application/json"})
+    @Produces({ "application/json"})
     public List<TypePiece> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
-    @Produces({"application/xml", "application/json"})
+    @Produces({ "application/json"})
     public List<TypePiece> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }

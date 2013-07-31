@@ -126,6 +126,11 @@ public class User implements Serializable {
     public String getInfo(){
         return "User[ id=" + id + ",nom=" + nom + ",prenom=" + prenom + ",login=" + login + "  ]";
     }
+    
+    public User getUser(){
+        this.setPassword("");
+        return this;
+    }
 
     @Override
     public boolean equals(Object object) {

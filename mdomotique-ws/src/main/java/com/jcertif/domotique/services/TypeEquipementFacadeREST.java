@@ -31,14 +31,14 @@ public class TypeEquipementFacadeREST extends AbstractFacade<TypeEquipement> {
 
     @POST
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({ "application/json"})
     public void create(TypeEquipement entity) {
         super.create(entity);
     }
 
     @PUT
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({ "application/json"})
     public void edit(TypeEquipement entity) {
         super.edit(entity);
     }
@@ -51,21 +51,21 @@ public class TypeEquipementFacadeREST extends AbstractFacade<TypeEquipement> {
 
     @GET
     @Path("{id}")
-    @Produces({"application/xml", "application/json"})
+    @Produces({ "application/json"})
     public TypeEquipement find(@PathParam("id") Integer id) {
         return super.find(id);
     }
 
     @GET
     @Override
-    @Produces({"application/xml", "application/json"})
+    @Produces({ "application/json"})
     public List<TypeEquipement> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
-    @Produces({"application/xml", "application/json"})
+    @Produces({ "application/json"})
     public List<TypeEquipement> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
