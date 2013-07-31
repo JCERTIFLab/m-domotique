@@ -25,8 +25,6 @@ import javax.ws.rs.Produces;
 @Stateless
 @Path("equipements")
 public class EquipementFacadeREST extends AbstractFacade<Equipement> {
-    @PersistenceContext(unitName = "com.jcertif_M-DomotiqueWS_war_1.0-SNAPSHOTPU")
-    private EntityManager em;
 
     public EquipementFacadeREST() {
         super(Equipement.class);
@@ -80,10 +78,6 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
         return String.valueOf(super.count());
     }
 
-    @Override
-    protected EntityManager getEntityManager() {
-        return em;
-    }
     
     @POST
     @Path("{piece_id}")

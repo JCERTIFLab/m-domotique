@@ -25,8 +25,6 @@ import javax.ws.rs.Produces;
 @Stateless
 @Path("typepiece")
 public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
-    @PersistenceContext(unitName = "com.jcertif_M-DomotiqueWS_war_1.0-SNAPSHOTPU")
-    private EntityManager em;
 
     public TypePieceFacadeREST() {
         super(TypePiece.class);
@@ -80,9 +78,5 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
         return String.valueOf(super.count());
     }
 
-    @Override
-    protected EntityManager getEntityManager() {
-        return em;
-    }
     
 }
