@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jcertif.domotique.service;
+package com.jcertif.domotique.services;
 
 import java.util.List;
 import javax.persistence.EntityManager;

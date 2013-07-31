@@ -2,13 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jcertif.domotique.service;
+package com.jcertif.domotique.services;
 
-import com.jcertif.domotique.entity.Piece;
+import com.jcertif.domotique.entities.TypeEquipement;
 import java.util.List;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -23,24 +21,25 @@ import javax.ws.rs.Produces;
  * @author FirasGabsi
  */
 @Stateless
-@Path("pieces")
-public class PieceFacadeREST extends AbstractFacade<Piece> {
+@Path("com.jcertif.domotique.entity.typeequipement")
+public class TypeEquipementFacadeREST extends AbstractFacade<TypeEquipement> {
 
-    public PieceFacadeREST() {
-        super(Piece.class);
+
+    public TypeEquipementFacadeREST() {
+        super(TypeEquipement.class);
     }
 
     @POST
     @Override
     @Consumes({"application/xml", "application/json"})
-    public void create(Piece entity) {
+    public void create(TypeEquipement entity) {
         super.create(entity);
     }
 
     @PUT
     @Override
     @Consumes({"application/xml", "application/json"})
-    public void edit(Piece entity) {
+    public void edit(TypeEquipement entity) {
         super.edit(entity);
     }
 
@@ -53,21 +52,21 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
     @GET
     @Path("{id}")
     @Produces({"application/xml", "application/json"})
-    public Piece find(@PathParam("id") Integer id) {
+    public TypeEquipement find(@PathParam("id") Integer id) {
         return super.find(id);
     }
 
     @GET
     @Override
     @Produces({"application/xml", "application/json"})
-    public List<Piece> findAll() {
+    public List<TypeEquipement> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
     @Produces({"application/xml", "application/json"})
-    public List<Piece> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
+    public List<TypeEquipement> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
 

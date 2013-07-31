@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jcertif.domotique.entity;
+package com.jcertif.domotique.entities;
 
 import java.io.Serializable;
 import java.util.Collection;

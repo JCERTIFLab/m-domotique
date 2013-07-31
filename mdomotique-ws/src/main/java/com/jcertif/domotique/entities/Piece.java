@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jcertif.domotique.entity;
+package com.jcertif.domotique.entities;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -26,13 +28,13 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author FirasGabsi
  */
 @Entity
-@Table(name = "TYPE_EQUIPEMENT")
+@Table(name = "PIECE")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "TypeEquipement.findAll", query = "SELECT t FROM TypeEquipement t"),
-    @NamedQuery(name = "TypeEquipement.findById", query = "SELECT t FROM TypeEquipement t WHERE t.id = :id"),
-    @NamedQuery(name = "TypeEquipement.findByNom", query = "SELECT t FROM TypeEquipement t WHERE t.nom = :nom")})
-public class TypeEquipement implements Serializable {
+    @NamedQuery(name = "Piece.findAll", query = "SELECT p FROM Piece p"),
+    @NamedQuery(name = "Piece.findById", query = "SELECT p FROM Piece p WHERE p.id = :id"),
+    @NamedQuery(name = "Piece.findByNom", query = "SELECT p FROM Piece p WHERE p.nom = :nom")})
+public class Piece implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,17 +46,20 @@ public class TypeEquipement implements Serializable {
     @Size(min = 1, max = 30)
     @Column(name = "NOM")
     private String nom;
-    @OneToMany(mappedBy = "typeId")
+    @JoinColumn(name = "TYPE_PIECE_ID", referencedColumnName = "ID")
+    @ManyToOne
+    private TypePiece typePieceId;
+    @OneToMany(mappedBy = "pieceId")
     private Collection<Equipement> equipementCollection;
 
-    public TypeEquipement() {
+    public Piece() {
     }
 
-    public TypeEquipement(Integer id) {
+    public Piece(Integer id) {
         this.id = id;
     }
 
-    public TypeEquipement(Integer id, String nom) {
+    public Piece(Integer id, String nom) {
         this.id = id;
         this.nom = nom;
     }
@@ -73,6 +78,14 @@ public class TypeEquipement implements Serializable {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public TypePiece getTypePieceId() {
+        return typePieceId;
+    }
+
+    public void setTypePieceId(TypePiece typePieceId) {
+        this.typePieceId = typePieceId;
     }
 
     @XmlTransient
@@ -94,10 +107,10 @@ public class TypeEquipement implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof TypeEquipement)) {
+        if (!(object instanceof Piece)) {
             return false;
         }
-        TypeEquipement other = (TypeEquipement) object;
+        Piece other = (Piece) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -106,7 +119,7 @@ public class TypeEquipement implements Serializable {
 
     @Override
     public String toString() {
-        return "com.jcertif.domotique.entity.TypeEquipement[ id=" + id + " ]";
+        return "com.jcertif.domotique.entity.Piece[ id=" + id + " ]";
     }
     
 }

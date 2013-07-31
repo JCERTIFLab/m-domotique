@@ -2,13 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jcertif.domotique.service;
+package com.jcertif.domotique.services;
 
-import com.jcertif.domotique.entity.Users;
+import com.jcertif.domotique.entities.Piece;
 import java.util.List;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -23,24 +21,24 @@ import javax.ws.rs.Produces;
  * @author FirasGabsi
  */
 @Stateless
-@Path("users")
-public class UsersFacadeREST extends AbstractFacade<Users> {
+@Path("pieces")
+public class PieceFacadeREST extends AbstractFacade<Piece> {
 
-    public UsersFacadeREST() {
-        super(Users.class);
+    public PieceFacadeREST() {
+        super(Piece.class);
     }
 
     @POST
     @Override
     @Consumes({"application/xml", "application/json"})
-    public void create(Users entity) {
+    public void create(Piece entity) {
         super.create(entity);
     }
 
     @PUT
     @Override
     @Consumes({"application/xml", "application/json"})
-    public void edit(Users entity) {
+    public void edit(Piece entity) {
         super.edit(entity);
     }
 
@@ -53,21 +51,21 @@ public class UsersFacadeREST extends AbstractFacade<Users> {
     @GET
     @Path("{id}")
     @Produces({"application/xml", "application/json"})
-    public Users find(@PathParam("id") Integer id) {
+    public Piece find(@PathParam("id") Integer id) {
         return super.find(id);
     }
 
     @GET
     @Override
     @Produces({"application/xml", "application/json"})
-    public List<Users> findAll() {
+    public List<Piece> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
     @Produces({"application/xml", "application/json"})
-    public List<Users> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
+    public List<Piece> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
 
@@ -78,15 +76,5 @@ public class UsersFacadeREST extends AbstractFacade<Users> {
         return String.valueOf(super.count());
     }
 
-    
-    @POST
-    @Path("{username}/{password}")
-    @Produces({"application/xml", "application/json"})
-    public String authentificate(@PathParam("username") String username, @PathParam("password") String password) {
-       
-            javax.persistence.Query cq = getEntityManager().createNamedQuery("Users.findByLoginPassword").setParameter("login", username).setParameter("password", password);
-            return ((Users) cq.getSingleResult()).getInfo();
-       
-    }
     
 }
