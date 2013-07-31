@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="160dp"
+    android:orientation="vertical" 
+    android:gravity="center_vertical"
+    android:padding="3dp"
+    android:layout_margin="3dp"
+    android:background="@drawable/bg">
+    
+    <LinearLayout 
+        android:id="@+id/edit"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal">
+	    
+        <LinearLayout 
+		    android:layout_width="50dp"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center">
+
+	        <ImageView
+	            android:layout_width="35dp"
+	            android:layout_height="35dp"
+	            android:src="@drawable/edit"
+	            android:contentDescription="@string/app_name" />
+	        
+	    </LinearLayout>
+
+        <TextView
+            android:id="@+id/edit_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/update_room"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+	    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/del"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal">
+	    
+        <LinearLayout 
+		    android:layout_width="50dp"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center">
+
+	        <ImageView
+	            android:layout_width="37dp"
+	            android:layout_height="37dp"
+	            android:contentDescription="@string/app_name"
+	            android:src="@drawable/delete_file" />
+	        
+	    </LinearLayout>
+
+        <TextView
+            android:id="@+id/del_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/delete_room"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+	    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/exit"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal">
+	    
+        <LinearLayout 
+		    android:layout_width="50dp"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center">
+
+	        <ImageView
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:src="@drawable/delete"
+	            android:contentDescription="@string/app_name" />
+	        
+	    </LinearLayout>
+
+        <TextView
+            android:id="@+id/exit_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+	    
+    </LinearLayout>
+
+</LinearLayout>
