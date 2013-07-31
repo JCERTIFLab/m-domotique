@@ -29,21 +29,23 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
     }
 
     @POST
+    @Path("add")
     @Override
     @Consumes({ "application/json"})
     public void create(Piece entity) {
         super.create(entity);
     }
 
-    @PUT
+    @POST
+    @Path("update")
     @Override
     @Consumes({ "application/json"})
     public void edit(Piece entity) {
         super.edit(entity);
     }
 
-    @DELETE
-    @Path("{id}")
+    @POST
+    @Path("delete/{id}")
     public void remove(@PathParam("id") Integer id) {
         super.remove(super.find(id));
     }

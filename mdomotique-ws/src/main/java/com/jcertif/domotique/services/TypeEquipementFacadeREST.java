@@ -21,7 +21,7 @@ import javax.ws.rs.Produces;
  * @author FirasGabsi
  */
 @Stateless
-@Path("com.jcertif.domotique.entity.typeequipement")
+@Path("typeequipements")
 public class TypeEquipementFacadeREST extends AbstractFacade<TypeEquipement> {
 
 

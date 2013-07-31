@@ -8,10 +8,8 @@ import com.jcertif.domotique.entities.TypePiece;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -21,7 +19,7 @@ import javax.ws.rs.Produces;
  * @author FirasGabsi
  */
 @Stateless
-@Path("typepiece")
+@Path("typepieces")
 public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
 
     public TypePieceFacadeREST() {
@@ -29,21 +27,23 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
     }
 
     @POST
+    @Path("add")
     @Override
     @Consumes({ "application/json"})
     public void create(TypePiece entity) {
         super.create(entity);
     }
 
-    @PUT
+    @POST
+    @Path("update")
     @Override
     @Consumes({ "application/json"})
     public void edit(TypePiece entity) {
         super.edit(entity);
     }
 
-    @DELETE
-    @Path("{id}")
+    @POST
+    @Path("delete/{id}")
     public void remove(@PathParam("id") Integer id) {
         super.remove(super.find(id));
     }

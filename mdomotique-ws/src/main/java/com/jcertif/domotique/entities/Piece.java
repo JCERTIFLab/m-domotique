@@ -7,6 +7,7 @@ package com.jcertif.domotique.entities;
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -59,9 +60,11 @@ public class Piece implements Serializable {
         this.id = id;
     }
 
-    public Piece(Integer id, String nom) {
+   
+    public Piece(Integer id, String nom, TypePiece typePieceId) {
         this.id = id;
         this.nom = nom;
+        this.typePieceId = typePieceId;
     }
 
     public Integer getId() {
