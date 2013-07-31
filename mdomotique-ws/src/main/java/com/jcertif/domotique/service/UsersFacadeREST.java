@@ -25,8 +25,6 @@ import javax.ws.rs.Produces;
 @Stateless
 @Path("users")
 public class UsersFacadeREST extends AbstractFacade<Users> {
-    @PersistenceContext(unitName = "com.jcertif_M-DomotiqueWS_war_1.0-SNAPSHOTPU")
-    private EntityManager em;
 
     public UsersFacadeREST() {
         super(Users.class);
@@ -80,10 +78,6 @@ public class UsersFacadeREST extends AbstractFacade<Users> {
         return String.valueOf(super.count());
     }
 
-    @Override
-    protected EntityManager getEntityManager() {
-        return em;
-    }
     
     @POST
     @Path("{username}/{password}")
