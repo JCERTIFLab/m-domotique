@@ -50,7 +50,7 @@ public class Piece implements Serializable {
     @JoinColumn(name = "TYPE_PIECE_ID", referencedColumnName = "ID")
     @ManyToOne
     private TypePiece typePieceId;
-    @OneToMany(mappedBy = "pieceId")
+    @OneToMany(mappedBy = "pieceId",cascade = CascadeType.REMOVE)
     private Collection<Equipement> equipementCollection;
 
     public Piece() {

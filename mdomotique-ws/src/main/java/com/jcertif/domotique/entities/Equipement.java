@@ -48,7 +48,7 @@ public class Equipement implements Serializable {
     @Column(name = "DESCRIPTION")
     private String description;
     @Column(name = "ETAT")
-    private Serializable etat;
+    private Boolean etat;
     @Size(max = 30)
     @Column(name = "RELAY")
     private String relay;
@@ -64,6 +64,16 @@ public class Equipement implements Serializable {
 
     public Equipement(Integer id) {
         this.id = id;
+    }
+    
+    public Equipement(Integer id,String nom,String description,Boolean etat,String relay,Piece pieceId,TypeEquipement typeId) {
+        this.id = id;
+        this.nom = nom;
+        this.description = description;
+        this.etat = etat;
+        this.relay = relay;
+        this.pieceId = pieceId;
+        this.typeId = typeId;
     }
 
     public Integer getId() {
@@ -90,11 +100,11 @@ public class Equipement implements Serializable {
         this.description = description;
     }
 
-    public Serializable getEtat() {
+    public Boolean getEtat() {
         return etat;
     }
 
-    public void setEtat(Serializable etat) {
+    public void setEtat(Boolean etat) {
         this.etat = etat;
     }
 

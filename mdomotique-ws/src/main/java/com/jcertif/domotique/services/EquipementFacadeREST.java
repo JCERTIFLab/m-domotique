@@ -8,10 +8,8 @@ import com.jcertif.domotique.entities.Equipement;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -29,21 +27,23 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
     }
 
     @POST
+    @Path("add")
     @Override
     @Consumes({ "application/json"})
     public void create(Equipement entity) {
         super.create(entity);
     }
 
-    @PUT
+    @POST
+    @Path("update")
     @Override
     @Consumes({ "application/json"})
     public void edit(Equipement entity) {
         super.edit(entity);
     }
 
-    @DELETE
-    @Path("{id}")
+    @POST
+    @Path("delete/{id}")
     public void remove(@PathParam("id") Integer id) {
         super.remove(super.find(id));
     }
