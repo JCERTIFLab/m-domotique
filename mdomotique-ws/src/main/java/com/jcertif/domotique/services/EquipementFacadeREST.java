@@ -85,4 +85,12 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
         return (List<Equipement>)cq.getResultList();
     }
     
+    @POST
+    @Path("action/{id}/{etat}")
+    @Produces({"application/json"})
+    public void edit(@PathParam("id") Integer id, @PathParam("etat") String etat) {
+        Equipement equipement = super.find(id);
+        equipement.setEtat(Boolean.valueOf(etat));
+        super.edit(equipement);
+    }
 }
