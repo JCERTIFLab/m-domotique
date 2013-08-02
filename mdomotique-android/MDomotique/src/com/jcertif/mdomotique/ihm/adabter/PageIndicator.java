@@ -17,6 +17,7 @@
 
 package com.jcertif.mdomotique.ihm.adabter;
 
+
 import android.support.v4.view.ViewPager;
 
 /**
