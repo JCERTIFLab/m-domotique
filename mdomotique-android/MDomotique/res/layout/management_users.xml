@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/news_cellule_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+		android:layout_height="60dp"
+		android:orientation="horizontal"
+		android:background="@drawable/bar_navigation"
+		android:paddingBottom="10dp">
+	
+	    <LinearLayout
+	        android:id="@+id/back"
+	        android:layout_width="50dp"
+			android:layout_height="fill_parent"
+			android:gravity="center">
+		
+		    <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/back" 
+		        android:contentDescription="@string/app_name"/>
+		
+		</LinearLayout>
+   
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="horizontal">
+		        
+	        <TextView
+	            android:id="@+id/name"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="0.8"
+		        android:gravity="center"
+		        android:paddingLeft="5dp"
+		        android:textColor="#FFFFFF"
+		        android:textSize="16sp"
+		        android:textStyle="bold"
+		        android:singleLine="true"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+	            
+		   	<LinearLayout
+				android:id="@+id/add"
+		   	    android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="0.2"
+				android:gravity="center">
+				
+				<ImageView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/add" 
+				    android:contentDescription="@string/app_name"/>
+					    
+			</LinearLayout>
+		        
+		</LinearLayout>
+		
+	</LinearLayout>
+	
+    <LinearLayout
+        android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_marginTop="52dp"
+		android:gravity="center"
+		android:orientation="vertical">
+		
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="35dp"
+	        android:layout_height="35dp"
+	        android:indeterminateDrawable="@drawable/loading_progress" />
+
+        <ListView
+            android:id="@+id/list_users"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+        
+        <LinearLayout
+            android:id="@+id/info_user"
+	        android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical" 
+			android:background="@drawable/bg"
+			android:visibility="gone">
+		   	
+            <LinearLayout
+		        android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical" 
+				android:background="@drawable/inside_bg">
+            
+	            <LinearLayout
+			        android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:orientation="horizontal"
+					android:paddingLeft="20dp"
+					android:paddingRight="20dp"
+					android:layout_marginTop="30dp"
+	                android:focusableInTouchMode="true">
+	
+	                <TextView
+	                    android:layout_width="100dp"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical"
+	                    android:text="@string/name"
+	                    android:textAppearance="?android:attr/textAppearanceMedium"
+	                    android:textColor="@color/blue"
+	                    android:textSize="18sp"
+	                    android:textStyle="bold" />
+	
+	                <EditText
+	                    android:id="@+id/nameUser"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:ems="10" 
+	                    android:paddingLeft="5dp"
+	                    android:inputType="text"
+	                    android:background="@drawable/search"/>
+					
+	            </LinearLayout>
+            
+	            <LinearLayout
+			        android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:layout_marginTop="10dp"
+					android:orientation="horizontal"
+					android:paddingLeft="20dp"
+					android:paddingRight="20dp">
+	
+	                <TextView
+	                    android:layout_width="100dp"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical"
+	                    android:text="@string/firstname"
+	                    android:textAppearance="?android:attr/textAppearanceMedium"
+	                    android:textColor="@color/blue"
+	                    android:textSize="18sp"
+	                    android:textStyle="bold" />
+	
+	                <EditText
+	                    android:id="@+id/firstUser"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:ems="10" 
+	                    android:paddingLeft="5dp"
+	                    android:inputType="text"
+	                    android:background="@drawable/search"/>
+					
+	            </LinearLayout>
+            
+	            <LinearLayout
+			        android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:layout_marginTop="10dp"
+					android:orientation="horizontal"
+					android:paddingLeft="20dp"
+					android:paddingRight="20dp">
+	
+	                <TextView
+	                    android:layout_width="100dp"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical"
+	                    android:text="@string/login"
+	                    android:textAppearance="?android:attr/textAppearanceMedium"
+	                    android:textColor="@color/blue"
+	                    android:textSize="18sp"
+	                    android:textStyle="bold" />
+	
+	                <EditText
+	                    android:id="@+id/loginUser"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:ems="10" 
+	                    android:paddingLeft="5dp"
+	                    android:inputType="text"
+	                    android:background="@drawable/search"/>
+					
+	            </LinearLayout>
+            
+	            <LinearLayout
+			        android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:layout_marginTop="10dp"
+					android:orientation="horizontal"
+					android:paddingLeft="20dp"
+					android:paddingRight="20dp">
+	
+	                <TextView
+	                    android:layout_width="100dp"
+	                    android:layout_height="fill_parent"
+	                    android:gravity="center_vertical"
+	                    android:text="@string/password"
+	                    android:textAppearance="?android:attr/textAppearanceMedium"
+	                    android:textColor="@color/blue"
+	                    android:textSize="18sp"
+	                    android:textStyle="bold" />
+	
+	                <EditText
+	                    android:id="@+id/passwordUser"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:ems="10" 
+	                    android:paddingLeft="5dp"
+	                    android:inputType="textPassword"
+	                    android:background="@drawable/search"/>
+					
+	            </LinearLayout>
+            
+	            <LinearLayout
+			        android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:layout_marginTop="20dp"
+					android:orientation="horizontal"
+					android:gravity="center">
+	
+	                <Button
+	                    android:id="@+id/addUser"
+	                    android:layout_width="100dp"
+	                    android:layout_height="fill_parent"
+	                    android:text="@string/add" />
+	                
+	           	</LinearLayout>
+	           	
+	       	</LinearLayout>
+		   	
+      	</LinearLayout>
+		
+    </LinearLayout>
+
+</RelativeLayout>

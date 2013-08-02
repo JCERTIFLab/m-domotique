@@ -60,9 +60,10 @@ public class TypeEquipement implements Serializable {
         this.id = id;
     }
 
-    public TypeEquipement(Integer id, String nom) {
+    public TypeEquipement(Integer id, String nom,String img) {
         this.id = id;
         this.nom = nom;
+        this.img = img;
     }
 
     public Integer getId() {
@@ -80,6 +81,16 @@ public class TypeEquipement implements Serializable {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
+    
 
     @XmlTransient
     public Collection<Equipement> getEquipementCollection() {

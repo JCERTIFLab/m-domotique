@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="color_names">
+        <item>Acceuil</item>
+        <item>Actualités</item>
+        <item>Evenement</item>
+        <item>Forums</item>
+        <item>Chats</item>
+        <item>Localiser Voiture</item>
+        <item>Photos</item>
+        <item>Vidéos</item>
+        <item>Réseau JCertif</item>
+    </string-array>
+  
+</resources>

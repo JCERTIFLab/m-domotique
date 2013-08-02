@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/news_cellule_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="53dp" >
+    
+    <TextView
+        android:id="@+id/title"
+        style="HelveticaNeue"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:gravity="center_vertical"
+		android:paddingLeft="7dp"
+		android:textColor="@color/blue"
+		android:textSize="17sp"/>
+
+</LinearLayout>
