@@ -45,6 +45,11 @@ public class TypeEquipement implements Serializable {
     @Size(min = 1, max = 30)
     @Column(name = "NOM")
     private String nom;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 60)
+    @Column(name = "IMG")
+    private String img;
     @OneToMany(mappedBy = "typeId",cascade = CascadeType.REMOVE)
     private Collection<Equipement> equipementCollection;
 
@@ -83,6 +88,14 @@ public class TypeEquipement implements Serializable {
 
     public void setEquipementCollection(Collection<Equipement> equipementCollection) {
         this.equipementCollection = equipementCollection;
+    }
+    
+    public String getImf() {
+        return img;
+    }
+
+    public void setImf(String img) {
+        this.img = img;
     }
 
     @Override

@@ -14,10 +14,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-/**
- *
- * @author FirasGabsi
- */
 @Stateless
 @Path("equipements")
 public class EquipementFacadeREST extends AbstractFacade<Equipement> {
@@ -29,23 +25,23 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
     @POST
     @Path("add")
     @Override
-    @Consumes({ "application/json"})
-    public void create(Equipement entity) {
-        super.create(entity);
+    @Consumes({"application/xml", "application/json"})
+    public String create(Equipement entity) {
+        return super.create(entity);
     }
 
     @POST
     @Path("update")
     @Override
-    @Consumes({ "application/json"})
-    public void edit(Equipement entity) {
-        super.edit(entity);
+    @Consumes({"application/xml", "application/json"})
+    public String edit(Equipement entity) {
+        return super.edit(entity);
     }
 
     @POST
     @Path("delete/{id}")
-    public void remove(@PathParam("id") Integer id) {
-        super.remove(super.find(id));
+    public String remove(@PathParam("id") Integer id) {
+        return super.remove(super.find(id));
     }
 
     @GET
@@ -57,7 +53,8 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
 
     @GET
     @Override
-    @Produces({ "application/json"})
+    @Path("getAllEquipements")
+    @Produces({"application/json"})
     public List<Equipement> findAll() {
         return super.findAll();
     }
@@ -78,8 +75,8 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
 
     
     @POST
-    @Path("{piece_id}")
-    @Produces({ "application/json"})
+    @Path("getEquipementsByRoom/{piece_id}")
+    @Produces({"application/json"})
     public List<Equipement> findByPiece(@PathParam("piece_id") Integer piece_id) {
        javax.persistence.Query cq = getEntityManager().createNamedQuery("Equipement.findByPiece").setParameter("piece_id", piece_id);
         return (List<Equipement>)cq.getResultList();

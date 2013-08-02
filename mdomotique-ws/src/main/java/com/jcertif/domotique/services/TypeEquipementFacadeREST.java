@@ -14,10 +14,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-/**
- *
- * @author FirasGabsi
- */
+
 @Stateless
 @Path("typeequipements")
 public class TypeEquipementFacadeREST extends AbstractFacade<TypeEquipement> {
@@ -30,23 +27,23 @@ public class TypeEquipementFacadeREST extends AbstractFacade<TypeEquipement> {
     @POST
     @Path("add")
     @Override
-    @Consumes({ "application/json"})
-    public void create(TypeEquipement entity) {
-        super.create(entity);
+    @Consumes({"application/xml", "application/json"})
+    public String create(TypeEquipement entity) {
+        return super.create(entity);
     }
 
     @POST
     @Path("update")
     @Override
-    @Consumes({ "application/json"})
-    public void edit(TypeEquipement entity) {
-        super.edit(entity);
+    @Consumes({"application/xml", "application/json"})
+    public String edit(TypeEquipement entity) {
+        return super.edit(entity);
     }
 
     @POST
     @Path("delete/{id}")
-    public void remove(@PathParam("id") Integer id) {
-        super.remove(super.find(id));
+    public String remove(@PathParam("id") Integer id) {
+        return super.remove(super.find(id));
     }
 
     @GET
@@ -58,6 +55,7 @@ public class TypeEquipementFacadeREST extends AbstractFacade<TypeEquipement> {
 
     @GET
     @Override
+    @Path("getAllTypesEquipements")
     @Produces({ "application/json"})
     public List<TypeEquipement> findAll() {
         return super.findAll();

@@ -9,50 +9,62 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-/**
- *
- * @author FirasGabsi
- */
 public abstract class AbstractFacade<T> {
-    
+
     private Class<T> entityClass;
     private EntityManager em;
     private EntityManagerFactory emf;
 
     public AbstractFacade(Class<T> entityClass) {
         this.entityClass = entityClass;
-         this.emf= Persistence.createEntityManagerFactory("mdomotiquewsPU");
+        this.emf = Persistence.createEntityManagerFactory("mdomotiquewsPU");
     }
-    
- protected  EntityManager getEntityManager(){
-       
-      if(em==null){
-          em=emf.createEntityManager();
-      }
+
+    protected EntityManager getEntityManager() {
+
+        if (em == null) {
+            em = emf.createEntityManager();
+        }
         return em;
     }
 
- public void create(T entity) {
-        getEntityManager().getTransaction().begin();
-        getEntityManager().persist(entity);
-        getEntityManager().getTransaction().commit();
+    public String create(T entity) {
+        try {
+            getEntityManager().getTransaction().begin();
+            getEntityManager().persist(entity);
+            getEntityManager().getTransaction().commit();
+            return "{\"state\":\"ok\"}";
+        } catch (Exception e) {
+            return "{\"state\":\"erreur\"}";
+        }
     }
 
-    public void edit(T entity) {
-        getEntityManager().getTransaction().begin();
-        getEntityManager().merge(entity);
-        getEntityManager().getTransaction().commit();
+    public String edit(T entity) {
+        try {
+            getEntityManager().getTransaction().begin();
+            getEntityManager().merge(entity);
+            getEntityManager().getTransaction().commit();
+            return "{\"state\":\"ok\"}";
+        } catch (Exception e) {
+            return "{\"state\":\"erreur\"}";
+        }
     }
 
-    public void remove(T entity) {
-        getEntityManager().getTransaction().begin();
-        getEntityManager().remove(getEntityManager().merge(entity));
-        getEntityManager().getTransaction().commit();
+    public String remove(T entity) {
+        try {
+            getEntityManager().getTransaction().begin();
+            getEntityManager().remove(getEntityManager().merge(entity));
+            getEntityManager().getTransaction().commit();
+            return "{\"state\":\"ok\"}";
+        } catch (Exception e) {
+            return "{\"state\":\"erreur\"}";
+        }
     }
 
     public T find(Object id) {
         return getEntityManager().find(entityClass, id);
     }
+
     public List<T> findAll() {
         javax.persistence.criteria.CriteriaQuery cq = getEntityManager().getCriteriaBuilder().createQuery();
         cq.select(cq.from(entityClass));
@@ -75,5 +87,4 @@ public abstract class AbstractFacade<T> {
         javax.persistence.Query q = getEntityManager().createQuery(cq);
         return ((Long) q.getSingleResult()).intValue();
     }
-    
 }

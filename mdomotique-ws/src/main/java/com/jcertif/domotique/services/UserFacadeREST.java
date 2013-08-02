@@ -14,10 +14,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-/**
- *
- * @author FirasGabsi
- */
+
 @Stateless
 @Path("users")
 public class UserFacadeREST extends AbstractFacade<User> {
@@ -29,23 +26,23 @@ public class UserFacadeREST extends AbstractFacade<User> {
     @POST
     @Path("add")
     @Override
-    @Consumes({"application/json"})
-    public void create(User entity) {
-        super.create(entity);
+    @Consumes({"application/xml", "application/json"})
+    public String create(User entity) {
+        return super.create(entity);
     }
 
     @POST
     @Path("update")
     @Override
-    @Consumes({"application/json"})
-    public void edit(User entity) {
-        super.edit(entity);
+    @Consumes({"application/xml", "application/json"})
+    public String edit(User entity) {
+        return super.edit(entity);
     }
 
     @POST
     @Path("delete/{id}")
-    public void remove(@PathParam("id") Integer id) {
-        super.remove(super.find(id));
+    public String remove(@PathParam("id") Integer id) {
+        return super.remove(super.find(id));
     }
 
     @GET
@@ -56,6 +53,7 @@ public class UserFacadeREST extends AbstractFacade<User> {
     }
 
     @GET
+    @Path("getAllUsers")
     @Override
     @Produces({"application/json"})
     public List<User> findAll() {

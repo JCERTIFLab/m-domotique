@@ -45,6 +45,11 @@ public class TypePiece implements Serializable {
     @Size(min = 1, max = 30)
     @Column(name = "NOM")
     private String nom;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 60)
+    @Column(name = "IMG")
+    private String img;
     @OneToMany(mappedBy = "typePieceId",cascade = CascadeType.REMOVE)
     private Collection<Piece> pieceCollection;
 
@@ -74,6 +79,14 @@ public class TypePiece implements Serializable {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+    
+    public String getImf() {
+        return img;
+    }
+
+    public void setImf(String img) {
+        this.img = img;
     }
 
     @XmlTransient
