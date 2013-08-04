@@ -467,7 +467,7 @@ public class ListEquipements extends Activity{
 		
 		progressDialog=new ProgressDialog(this);
 		progressDialog.setCancelable(true);
-		progressDialog.setMessage("Exécution ....");
+		progressDialog.setMessage("Exï¿½cution ....");
 		progressDialog.show();
 		
     	new Thread(){
@@ -477,7 +477,7 @@ public class ListEquipements extends Activity{
     	    		new EquipementsParseur().updateEquipement(equipementSelected);
     	    		ListEquipements.this.runOnUiThread(new Runnable() {
 	 					@Override public void run(){
-	 	    	    		showMessage(equipementSelected.getName()+" activé"); 
+	 	    	    		showMessage(equipementSelected.getName()+" active");
 	 					}
     	    		});
     	    	}else{
@@ -512,7 +512,7 @@ public class ListEquipements extends Activity{
 		
 		progressDialog=new ProgressDialog(this);
 		progressDialog.setCancelable(true);
-		progressDialog.setMessage("Exécution ....");
+		progressDialog.setMessage("Execution ....");
 		progressDialog.show();
 
     	new Thread(){
@@ -522,7 +522,7 @@ public class ListEquipements extends Activity{
     	    		new EquipementsParseur().updateEquipement(equipementSelected);
     	    		ListEquipements.this.runOnUiThread(new Runnable() {
 	 					@Override public void run(){
-	 	    	    		showMessage(equipementSelected.getName()+" desactivé"); 
+	 	    	    		showMessage(equipementSelected.getName()+" desactivï¿½"); 
 	 					}
     	    		});
     	    	}else{

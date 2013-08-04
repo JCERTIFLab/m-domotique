@@ -2,40 +2,44 @@ package com.jcertif.mdomotique.com.parseurs;
 
 import java.util.ArrayList;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import android.util.Log;
-
-import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.RoomCategory;
 import com.jcertif.mdomotique.services.Parametres;
+import com.jcertif.mdomotique.com.RESTRequets;
 
-public class RoomCategoriesParseur {
+public class RoomCategoriesParseur extends RESTRequets{
 
 	public ArrayList<RoomCategory> getRoomCategories(){
-		Log.i("test","URL : "+Parametres.getAllRoomsCategories);
-		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.getAllRoomsCategories));              
-                
-		NodeList nodes = doc.getElementsByTagName("RoomCategory");
-		
-		ArrayList<RoomCategory> listRoomCategory = new ArrayList<RoomCategory>();
-					
-		for (int i = 0; i < nodes.getLength(); i++) {						
-			
-			Element e = (Element)nodes.item(i);
-			
-			RoomCategory roomCategory = new RoomCategory();
 
-			roomCategory.setId(Integer.parseInt(XMLfunctions.getValue(e, "id")));
-			roomCategory.setName(XMLfunctions.getValue(e, "name"));
-			roomCategory.setImg(XMLfunctions.getValue(e, "img"));
-			
-			listRoomCategory.add(roomCategory);
-		}	
-		
-		return listRoomCategory;
+        JSONArray categories = null;
+        JSONObject json = doGet(Parametres.getAllRoomsCategories);
+
+        ArrayList<RoomCategory> listRoomCategories = new ArrayList<RoomCategory>();
+
+        try {
+            categories = json.getJSONArray("typePiece");
+            int sizeCategories = categories.length();
+
+            for(int i = 0; i < sizeCategories; i++){
+                JSONObject jsonObject = categories.getJSONObject(i);
+
+                RoomCategory roomCategory = new RoomCategory();
+
+                roomCategory.setId(jsonObject.getInt("id"));
+                roomCategory.setName(jsonObject.getString("nom"));
+                roomCategory.setImg(jsonObject.getString("imf"));
+
+                listRoomCategories.add(roomCategory);
+
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return listRoomCategories;
 		
 	}
 

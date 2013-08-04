@@ -16,7 +16,6 @@
 
     <modules>
         <module>mdomotique-desktop</module>
-        <module>mdomotique-ws</module>
     </modules>
 
     <properties>

@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="MDomotique" />
+        <module name="mdomotique-android" />
       </profile>
     </annotationProcessing>
   </component>

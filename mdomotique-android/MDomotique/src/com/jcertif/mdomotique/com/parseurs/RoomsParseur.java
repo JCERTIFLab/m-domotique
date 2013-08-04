@@ -3,8 +3,12 @@ package com.jcertif.mdomotique.com.parseurs;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.jcertif.mdomotique.com.RESTRequets;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -14,46 +18,41 @@ import com.jcertif.mdomotique.persistance.Room;
 import com.jcertif.mdomotique.persistance.RoomCategory;
 import com.jcertif.mdomotique.services.Parametres;
 
-public class RoomsParseur {
+public class RoomsParseur extends RESTRequets{
 
 	public ArrayList<Room> getRooms(){
-		
-		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.getAllRooms));              
-                
-		NodeList nodes = doc.getElementsByTagName("Room");
-		
-		ArrayList<Room> listRooms = new ArrayList<Room>();
-					
-		for (int i = 0; i < nodes.getLength(); i++) {						
-			
-			Element e = (Element)nodes.item(i);
-			
-			Room room = new Room();
 
-			room.setId(Integer.parseInt(XMLfunctions.getValue(e, "id")));
-			room.setName(XMLfunctions.getValue(e, "name"));
-			room.setTypeId(XMLfunctions.getValue(e, "room_type_id"));
-			
-			listRooms.add(room);
-		}	
-		
-		nodes = doc.getElementsByTagName("RoomType");
-		
-		for (int i = 0; i < nodes.getLength(); i++) {
-			
-			Element e = (Element)nodes.item(i);
-			
-			RoomCategory roomCategory = new RoomCategory();
+        JSONArray categories = null;
+        JSONObject json = doGet(Parametres.getAllRooms);
 
-			roomCategory.setId(Integer.parseInt(XMLfunctions.getValue(e, "id")));
-			roomCategory.setName(XMLfunctions.getValue(e, "name"));
-			roomCategory.setImg(XMLfunctions.getValue(e, "img"));				
-			
-			listRooms.get(i).setRoomCategory(roomCategory);
-			
-		}
-		
-		return listRooms;
+        ArrayList<Room> listRooms = new ArrayList<Room>();
+
+        try {
+            categories = json.getJSONArray("piece");
+            int sizeRooms = categories.length();
+
+            for(int i = 0; i < sizeRooms; i++){
+
+                JSONObject jsonObject = categories.getJSONObject(i);
+                Room room = new Room();
+                room.setId(jsonObject.getInt("id"));
+                room.setName(jsonObject.getString("nom"));
+
+                JSONObject category = jsonObject.getJSONObject("typePieceId");
+                RoomCategory roomCategory = new RoomCategory();
+                roomCategory.setId(category.getInt("id"));
+                roomCategory.setName(category.getString("nom"));
+                roomCategory.setImg(category.getString("imf"));
+                room.setRoomCategory(roomCategory);
+
+                listRooms.add(room);
+
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return listRooms;
 		
 	}
 	

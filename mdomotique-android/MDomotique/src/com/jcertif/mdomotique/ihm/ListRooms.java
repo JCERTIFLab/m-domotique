@@ -160,7 +160,7 @@ public class ListRooms extends FragmentActivity{
 		final Dialog dialog = new Dialog(ListRooms.this);
 		dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 		dialog.setContentView(R.layout.menu_add_adresse);
-		dialog.setTitle("Parmétre du serveur");
+		dialog.setTitle("Parmetre du serveur");
 		
 		adresse = (EditText) dialog.findViewById(R.id.adresse);
 		 
@@ -180,7 +180,7 @@ public class ListRooms extends FragmentActivity{
 						AlertDialog alertDialog = new AlertDialog.Builder(ListRooms.this).create();
 						alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 						alertDialog.setTitle("Le serveur est : "+adr);
-						alertDialog.setMessage("Est ce que vous êtes sûr ?");
+						alertDialog.setMessage("Est ce que vous etes sur ?");
 						alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int which) {	
 								Parametres.nomDomaine = "http://"+adr;
@@ -440,8 +440,8 @@ public class ListRooms extends FragmentActivity{
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 		alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 		alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-		alertDialog.setTitle("Déconnexion");
-		alertDialog.setMessage("Est ce que vous êtes sûr ?");
+		alertDialog.setTitle("Dï¿½connexion");
+		alertDialog.setMessage("Est ce que vous etes sur ?");
 		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 

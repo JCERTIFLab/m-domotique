@@ -13,10 +13,12 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import org.codehaus.jackson.annotate.JsonAutoDetect;
 
 
 @Stateless
 @Path("users")
+@JsonAutoDetect
 public class UserFacadeREST extends AbstractFacade<User> {
 
     public UserFacadeREST() {

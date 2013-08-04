@@ -44,16 +44,16 @@ public class Parametres {
 	
 	public static void setUrls(){
 		
-		urlBase = nomDomaine+"/MDomotique-WS/";
+		urlBase = nomDomaine+"/mdomotique/rest/";
 		
-		getAllRooms = urlBase+"Rooms/getAllRooms";
+		getAllRooms = urlBase+"rooms/getAllRooms";
 		deleteRoom = urlBase+"Rooms/deleteRoom/";
 		updateRoom = urlBase+"Rooms/updateRoom/";
 		addRoom = urlBase+"Rooms/addRoom/";
 		
-		getAllRoomsCategories = urlBase+"RoomCategories/getAllRoomsCategories";
+		getAllRoomsCategories = urlBase+"typepieces/getAllTypes";
 		
-		getAllUsers = urlBase+"Users/getAllUsers";
+		getAllUsers = urlBase+"users/getAllUsers";
 		addUser = urlBase+"Users/addUser/";
 		updateUser = urlBase+"Users/updateUser/";
 		deleteUser = urlBase+"Users/deleteUser/";
@@ -65,7 +65,7 @@ public class Parametres {
 		updateEquipement = urlBase+"Equipments/updateEquipement/";
 		executAction = urlBase+"Equipments/action/";
 		
-		getAllEquipementCategories = urlBase+"EquipementCategories/getAllEquipementCategories";
+		getAllEquipementCategories = urlBase+"typeequipements/getAllTypesEquipements";
 	}
 	
 	

@@ -6,10 +6,83 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88a6592b-5beb-4ac3-853f-536ab7db9c58" name="Default" comment="" />
+    <list default="true" id="88a6592b-5beb-4ac3-853f-536ab7db9c58" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/RESTRequets.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="DELETED" beforePath="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\bin\MDomotique.apk" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\bin\R.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\bin\dexedLibs\actionbar_library-bd0bdb0a72ca7df8b079fb86a1da5120.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\bin\dexedLibs\actionbarsherlock-plugin-maps-4.1.0-7fa45c95c867ab06b1c145b5e847f02b.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\bin\dexedLibs\android-support-v13-77aaa9bb018d29a2bdf95f2835ce10fb.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\bin\dexedLibs\android-support-v4-23fd3862f668c1e3fd66645a2de9cebd.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\bin\dexedLibs\slidingmenu-35cc3c53d22a426f2ea8ce9a9fa702df.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\libs\android-support-v4.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/com/parseurs/EquipementCategoriesParseur.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/com/parseurs/EquipementCategoriesParseur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListEquipements$19$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListEquipements$19$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListEquipements$20$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListEquipements$20$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListEquipements.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListEquipements.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListRooms$8.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListRooms$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListRooms.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ListRooms.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementRooms$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementRooms$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementRooms$15$1$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementRooms$15$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementRooms$3.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementRooms$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementRooms.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementRooms.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementUsers$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementUsers$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementUsers$11$1$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementUsers$11$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementUsers.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/ManagementUsers.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/services/Parametres.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/services/Parametres.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/R$styleable.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/com/parseurs/RoomCategoriesParseur.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/com/parseurs/RoomCategoriesParseur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/com/parseurs/RoomsParseur.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/com/parseurs/RoomsParseur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$3.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$4.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$5.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$6$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$6$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$6$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$6$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$6.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$7.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$8.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/ihm/Splash.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/com/parseurs/UsersParseur.class" afterPath="$PROJECT_DIR$/bin/classes/com/jcertif/mdomotique/com/parseurs/UsersParseur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/dexedLibs/annotations-6b839f145ec0b836f6b53a42574bf32e.jar" afterPath="$PROJECT_DIR$/bin/dexedLibs/annotations-6b839f145ec0b836f6b53a42574bf32e.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes.dex" afterPath="$PROJECT_DIR$/bin/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/resources.ap_" afterPath="$PROJECT_DIR$/bin/resources.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/EquipementCategoriesParseur.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/EquipementCategoriesParseur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ListEquipements.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ListEquipements.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ListRooms.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ListRooms.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementRooms.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementRooms.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementUsers.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementUsers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/services/Parametres.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/services/Parametres.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomCategoriesParseur.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomCategoriesParseur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomsParseur.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomsParseur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/Splash.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/Splash.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../mdomotique-ws/src/main/java/com/jcertif/domotique/services/UserFacadeREST.java" afterPath="$PROJECT_DIR$/../../mdomotique-ws/src/main/java/com/jcertif/domotique/services/UserFacadeREST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/UsersParseur.java" afterPath="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/UsersParseur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jarlist.cache" afterPath="$PROJECT_DIR$/bin/jarlist.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../mdomotique-ws/nb-configuration.xml" afterPath="$PROJECT_DIR$/../../mdomotique-ws/nb-configuration.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../mdomotique-ws/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/../../mdomotique-ws/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../pom.xml" afterPath="$PROJECT_DIR$/../../pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="MDomotique.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/PageIndicator.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375474580897" ignored="false" />
+    <file path="/fragment.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375574497800" ignored="false" />
+    <file path="/Dummy.txt" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375612218588" ignored="false" />
+    <file path="/RESTRequets.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375608419959" ignored="false" />
+    <file path="/UsersParseur.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375611199732" ignored="false" />
+    <file path="/EquipementCategoriesParseur.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375611318995" ignored="false" />
+    <file path="/RoomCategoriesParseur.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375611490547" ignored="false" />
+    <file path="/RoomsParseur.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375611736630" ignored="false" />
+    <file path="/Splash.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375612074716" ignored="false" />
+    <file path="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/Authentification.java" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375615449720" ignored="false" />
+    <file path="$PROJECT_DIR$/bin/AndroidManifest.xml" changelist="88a6592b-5beb-4ac3-853f-536ab7db9c58" time="1375615449720" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +143,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="RESTRequets.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/RESTRequets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="20" selection-start="529" selection-end="529" vertical-scroll-proportion="-1.2028168">
+            <state line="23" column="27" selection-start="761" selection-end="766" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersParseur.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/UsersParseur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="36" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.6969697">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#781#787#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parametres.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/services/Parametres.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="34" selection-start="2351" selection-end="2360" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Splash.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/Splash.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="113" column="105" selection-start="4069" selection-end="4069" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3810#4078#0" expanded="true" />
+                <element signature="e#4073#4074#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagementRooms.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementRooms.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="25" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomsParseur.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomsParseur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="22" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#840#846#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomCategoriesParseur.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomCategoriesParseur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="60" selection-start="987" selection-end="1120" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#589#603#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquipementCategoriesParseur.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/EquipementCategoriesParseur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="45" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#635#655#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,11 +239,31 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/adabter/PageIndicator.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ListEquipements.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ListRooms.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementUsers.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementRooms.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/RESTRequets.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/services/Parametres.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/UsersParseur.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomCategoriesParseur.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/EquipementCategoriesParseur.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomsParseur.java" />
+        <option value="$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/Splash.java" />
       </list>
     </option>
   </component>
@@ -106,20 +279,6 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="M-Domotique Android" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
@@ -128,7 +287,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -154,18 +313,15 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="MDomotique" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -218,29 +374,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MDomotique" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MDomotique" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mdomotique" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+        <subPane subId="All" />
       </pane>
     </panes>
   </component>
@@ -256,13 +394,38 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\FirasGabsi\Documents\GitHub\m-domotique\mdomotique-android\MDomotique\src\com\jcertif\mdomotique\com" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.MDomotique">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -283,24 +446,6 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -375,11 +520,11 @@
       <method />
     </configuration>
     <configuration default="false" name="MDomotique" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="MDomotique" />
+      <module name="mdomotique-android" />
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -388,6 +533,8 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
     <list size="1">
@@ -408,44 +555,105 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="88a6592b-5beb-4ac3-853f-536ab7db9c58" name="Default" comment="" />
       <created>1375474020860</created>
       <updated>1375474020860</updated>
       <workItem from="1375474027559" duration="1780000" />
+      <workItem from="1375571797349" duration="7799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1780000" />
+    <option name="totallyTimeSpent" value="9579000" />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.560477" sideWeight="0.7265152" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.6712095" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3348485" sideWeight="0.6712095" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318182" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24318182" sideWeight="0.439523" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.560477" sideWeight="0.27348486" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.560477" sideWeight="0.7265152" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3348485" sideWeight="0.6712095" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318182" sideWeight="0.439523" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-    </layout>
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -510,8 +718,128 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="529" selection-end="529" vertical-scroll-proportion="-1.2028168">
+        <state line="11" column="20" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ic_launcher-web.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="20" selection-start="529" selection-end="529" vertical-scroll-proportion="0.34124088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ListEquipements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="514" column="38" selection-start="16827" selection-end="16827" vertical-scroll-proportion="-2.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ListRooms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="443" column="61" selection-start="13397" selection-end="13397" vertical-scroll-proportion="-2.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/Authentification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="17" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/RESTRequets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="27" selection-start="761" selection-end="766" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/services/MDomotiqueManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="16" selection-start="2857" selection-end="2857" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/services/Parametres.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="34" selection-start="2351" selection-end="2360" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/EquipementCategoriesParseur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="45" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#635#655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomCategoriesParseur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="60" selection-start="987" selection-end="1120" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#589#603#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/RoomsParseur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="22" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#840#846#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/Splash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="105" selection-start="4069" selection-end="4069" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3810#4078#0" expanded="true" />
+            <element signature="e#4073#4074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/ihm/ManagementRooms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="25" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jcertif/mdomotique/com/parseurs/UsersParseur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="36" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.6969697">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#781#787#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -580,7 +908,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>Maven Android 4.2.2 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

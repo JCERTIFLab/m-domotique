@@ -86,6 +86,7 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListRooms(new RoomsParseur().getRooms());
 				mDomotiqueManager.setParsingRoomsFinish(true);
+                System.out.println("-----------> Size Rooms : "+mDomotiqueManager.getListRooms().size());
 			}
 		}.start();
 		
@@ -93,6 +94,8 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListRoomsCategories(new RoomCategoriesParseur().getRoomCategories());
 				mDomotiqueManager.setParsingRoomCategoryFinish(true);
+                System.out.println("-----------> Size RoomsCategories : "+mDomotiqueManager.getListRoomsCategories().size());
+
 			}
 		}.start();
 		
@@ -100,6 +103,7 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListEquipementCategories(new EquipementCategoriesParseur().getEquipementCategories());
 				mDomotiqueManager.setParsingEquipementCategoryFinish(true);
+                System.out.println("-----------> Size Equipements categories : "+mDomotiqueManager.getListEquipementCategories().size());
 			}
 		}.start();
 		
@@ -107,6 +111,7 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListUsers(new UsersParseur().getUsers());
 				mDomotiqueManager.setParsingUsersFinish(true);
+                System.out.println("-----------> Size Users : "+mDomotiqueManager.getListUsers().size());
 			}
 		}.start();
 	}
@@ -114,7 +119,7 @@ public class Splash extends Activity {
 	public void loading(){
     	
 		String adr = ManagementFiles.readData("serveur.txt");
-		adr = "http://192.168.1.9";
+		adr = "http://192.168.1.3:8084";
     	if(adr.length()>0){
     		Parametres.nomDomaine = adr;  
     		Parametres.setUrls();
@@ -128,7 +133,7 @@ public class Splash extends Activity {
 		final Dialog dialog = new Dialog(Splash.this);
 		dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 		dialog.setContentView(R.layout.menu_add_adresse);
-		dialog.setTitle("Parmétre du serveur");
+		dialog.setTitle("Parmetre du serveur");
 		adresse = (EditText) dialog.findViewById(R.id.adresse);
 		 
 		add  	= (Button) dialog.findViewById(R.id.add);  
@@ -145,7 +150,7 @@ public class Splash extends Activity {
 						AlertDialog alertDialog = new AlertDialog.Builder(Splash.this).create();
 						alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 						alertDialog.setTitle("Le serveur est : "+adr);
-						alertDialog.setMessage("Est ce que vous êtes sûr ?");
+						alertDialog.setMessage("Est ce que vous etes sur ?");
 						alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int which) {
 								time = 2000;
