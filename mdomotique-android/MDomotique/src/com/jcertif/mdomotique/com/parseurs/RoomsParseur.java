@@ -27,29 +27,31 @@ public class RoomsParseur extends RESTRequets{
 
         ArrayList<Room> listRooms = new ArrayList<Room>();
 
-        try {
-            categories = json.getJSONArray("piece");
-            int sizeRooms = categories.length();
-
-            for(int i = 0; i < sizeRooms; i++){
-
-                JSONObject jsonObject = categories.getJSONObject(i);
-                Room room = new Room();
-                room.setId(jsonObject.getInt("id"));
-                room.setName(jsonObject.getString("nom"));
-
-                JSONObject category = jsonObject.getJSONObject("typePieceId");
-                RoomCategory roomCategory = new RoomCategory();
-                roomCategory.setId(category.getInt("id"));
-                roomCategory.setName(category.getString("nom"));
-                roomCategory.setImg(category.getString("imf"));
-                room.setRoomCategory(roomCategory);
-
-                listRooms.add(room);
-
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
+        if(json != null){
+	        try {
+	            categories = json.getJSONArray("piece");
+	            int sizeRooms = categories.length();
+	
+	            for(int i = 0; i < sizeRooms; i++){
+	
+	                JSONObject jsonObject = categories.getJSONObject(i);
+	                Room room = new Room();
+	                room.setId(jsonObject.getInt("id"));
+	                room.setName(jsonObject.getString("nom"));
+	
+	                JSONObject category = jsonObject.getJSONObject("typePieceId");
+	                RoomCategory roomCategory = new RoomCategory();
+	                roomCategory.setId(category.getInt("id"));
+	                roomCategory.setName(category.getString("nom"));
+	                roomCategory.setImg(category.getString("imf"));
+	                room.setRoomCategory(roomCategory);
+	
+	                listRooms.add(room);
+	
+	            }
+	        } catch (JSONException e) {
+	            e.printStackTrace();
+	        }
         }
 
         return listRooms;

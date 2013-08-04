@@ -19,24 +19,26 @@ public class RoomCategoriesParseur extends RESTRequets{
 
         ArrayList<RoomCategory> listRoomCategories = new ArrayList<RoomCategory>();
 
-        try {
-            categories = json.getJSONArray("typePiece");
-            int sizeCategories = categories.length();
-
-            for(int i = 0; i < sizeCategories; i++){
-                JSONObject jsonObject = categories.getJSONObject(i);
-
-                RoomCategory roomCategory = new RoomCategory();
-
-                roomCategory.setId(jsonObject.getInt("id"));
-                roomCategory.setName(jsonObject.getString("nom"));
-                roomCategory.setImg(jsonObject.getString("imf"));
-
-                listRoomCategories.add(roomCategory);
-
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
+        if(json != null){
+	        try {
+	            categories = json.getJSONArray("typePiece");
+	            int sizeCategories = categories.length();
+	
+	            for(int i = 0; i < sizeCategories; i++){
+	                JSONObject jsonObject = categories.getJSONObject(i);
+	
+	                RoomCategory roomCategory = new RoomCategory();
+	
+	                roomCategory.setId(jsonObject.getInt("id"));
+	                roomCategory.setName(jsonObject.getString("nom"));
+	                roomCategory.setImg(jsonObject.getString("imf"));
+	
+	                listRoomCategories.add(roomCategory);
+	
+	            }
+	        } catch (JSONException e) {
+	            e.printStackTrace();
+	        }
         }
 
         return listRoomCategories;

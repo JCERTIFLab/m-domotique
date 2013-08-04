@@ -18,24 +18,26 @@ public class EquipementCategoriesParseur extends RESTRequets {
 
         ArrayList<EquipementCategory> listEquipementCategories = new ArrayList<EquipementCategory>();
 
-        try {
-            categories = json.getJSONArray("typeEquipement");
-            int sizeCategories = categories.length();
-
-            for(int i = 0; i < sizeCategories; i++){
-                JSONObject jsonObject = categories.getJSONObject(i);
-
-                EquipementCategory equipementCategory = new EquipementCategory();
-
-                equipementCategory.setId(jsonObject.getInt("id"));
-                equipementCategory.setName(jsonObject.getString("nom"));
-                equipementCategory.setImg(jsonObject.getString("imf"));
-
-                listEquipementCategories.add(equipementCategory);
-
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
+        if(json != null){
+	        try {
+	            categories = json.getJSONArray("typeEquipement");
+	            int sizeCategories = categories.length();
+	
+	            for(int i = 0; i < sizeCategories; i++){
+	                JSONObject jsonObject = categories.getJSONObject(i);
+	
+	                EquipementCategory equipementCategory = new EquipementCategory();
+	
+	                equipementCategory.setId(jsonObject.getInt("id"));
+	                equipementCategory.setName(jsonObject.getString("nom"));
+	                equipementCategory.setImg(jsonObject.getString("imf"));
+	
+	                listEquipementCategories.add(equipementCategory);
+	
+	            }
+	        } catch (JSONException e) {
+	            e.printStackTrace();
+	        }
         }
 
         return listEquipementCategories;

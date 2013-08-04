@@ -45,8 +45,6 @@ public class RESTRequets {
 
                     InputStream instream = entity.getContent();
                     String result= convertStreamToString(instream);
-                    
-                    Log.i("test",">>>"+result);
 
                     jsonObject=new JSONObject(result);
                     instream.close();
@@ -84,22 +82,23 @@ public class RESTRequets {
         }
 	}
 	
-	public JSONObject doPost(String url, JSONObject c) throws ClientProtocolException, IOException {
+	public JSONObject doPost(String url, JSONObject c) {
 
         JSONObject jsonObject = null;
-
         HttpClient httpclient = new DefaultHttpClient();
-        HttpPost request = new HttpPost(url);
-        StringEntity stringEntity = new StringEntity(c.toString());
-
-        stringEntity.setContentEncoding("UTF-8");
-        stringEntity.setContentType("application/json");
-
-        request.setEntity(stringEntity);
-        request.addHeader("Content-Type", "application/json");
+        HttpResponse response;        
         
-        HttpResponse response;
 	    try {
+	    	
+	    	HttpPost request = new HttpPost(url);
+	        StringEntity stringEntity = new StringEntity(c.toString());
+
+	        stringEntity.setContentEncoding("UTF-8");
+	        stringEntity.setContentType("application/json");
+
+	        request.setEntity(stringEntity);
+	        request.addHeader("Content-Type", "application/json");
+	    	
 	        response = httpclient.execute(request);
             HttpEntity entity = response.getEntity();
 	        
@@ -112,6 +111,8 @@ public class RESTRequets {
 
                     InputStream instream = entity.getContent();
                     String result= convertStreamToString(instream);
+                    
+                    Log.i("test",">>>"+result);
 
                     jsonObject=new JSONObject(result);
                     instream.close();

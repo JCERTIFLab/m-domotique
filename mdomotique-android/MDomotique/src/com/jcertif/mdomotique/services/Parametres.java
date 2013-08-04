@@ -57,7 +57,7 @@ public class Parametres {
 		addUser = urlBase+"Users/addUser/";
 		updateUser = urlBase+"Users/updateUser/";
 		deleteUser = urlBase+"Users/deleteUser/";
-		authentification = urlBase+"Users/authentification/";
+		authentification = urlBase+"users/auth/";
 		
 		getEquipementsByRoom = urlBase+"Equipments/getEquipmentByRoom/";
 		deleteEquipement = urlBase+"Equipments/deleteEquipement/";
