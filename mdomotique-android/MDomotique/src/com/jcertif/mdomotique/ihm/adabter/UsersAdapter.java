@@ -3,6 +3,7 @@ package com.jcertif.mdomotique.ihm.adabter;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,8 @@ public class UsersAdapter extends ArrayAdapter<User>{
 		convertView = layoutInflater.inflate(R.layout.single_user, null);
 
 		TextView name = (TextView) convertView.findViewById(R.id.name);
+		
+	        Log.i("test",">>position "+position);	
 		
 		name.setText(mDomotiqueManager.getListUsers().get(position).getFirstname()+" "+mDomotiqueManager.getListUsers().get(position).getName());
 

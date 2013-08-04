@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,16 +81,16 @@ public class ManagementUsers extends Activity{
             	if(!isSelected){
             		isSelected = true;
             		if(showForm){
-            			//Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-                        //animation.reset();
-                        //list_users.clearAnimation();
-                        //list_users.startAnimation(animation);
+            			Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+                        animation.reset();
+                        list_users.clearAnimation();
+                        list_users.startAnimation(animation);
             			list_users.setVisibility(View.VISIBLE);
 
-                        //animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-                        //animation.reset();
-                        //info_user.clearAnimation();
-                        //info_user.startAnimation(animation);
+                        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+                        animation.reset();
+                        info_user.clearAnimation();
+                        info_user.startAnimation(animation);
             			info_user.setVisibility(View.GONE);
 
             			add.setVisibility(View.VISIBLE);
@@ -211,16 +212,16 @@ public class ManagementUsers extends Activity{
 			}.start();
 		}
 
-        //Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        //animation.reset();
-        //loading.clearAnimation();
-        //loading.startAnimation(animation);
+        Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+        animation.reset();
+        loading.clearAnimation();
+        loading.startAnimation(animation);
         loading.setVisibility(View.VISIBLE);
 
-        //animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        //animation.reset();
-        //info_user.clearAnimation();
-        //info_user.startAnimation(animation);
+        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+        animation.reset();
+        info_user.clearAnimation();
+        info_user.startAnimation(animation);
 		info_user.setVisibility(View.GONE);
 		
 		updateUserList();
@@ -287,16 +288,16 @@ public class ManagementUsers extends Activity{
 		loginUser.setText("");
 		passwordUser.setText("");
 
-        //Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        //animation.reset();
-        //list_users.clearAnimation();
-        //list_users.startAnimation(animation);
+        Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+        animation.reset();
+        list_users.clearAnimation();
+        list_users.startAnimation(animation);
         list_users.setVisibility(View.GONE);
 
-        //animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        //animation.reset();
-        //info_user.clearAnimation();
-        //info_user.startAnimation(animation);
+        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+        animation.reset();
+        info_user.clearAnimation();
+        info_user.startAnimation(animation);
 		info_user.setVisibility(View.VISIBLE);
 		
 		showForm = true;
@@ -312,16 +313,16 @@ public class ManagementUsers extends Activity{
 		loginUser.setText(userSelected.getLogin());
 		passwordUser.setText(userSelected.getPassword());
 
-        //Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        //animation.reset();
-        //info_user.clearAnimation();
-        //info_user.startAnimation(animation);
+        Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+        animation.reset();
+        info_user.clearAnimation();
+        info_user.startAnimation(animation);
 		info_user.setVisibility(View.VISIBLE);
 
-        //animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        //animation.reset();
-        //list_users.clearAnimation();
-        //list_users.startAnimation(animation);
+        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+        animation.reset();
+        list_users.clearAnimation();
+        list_users.startAnimation(animation);
 		list_users.setVisibility(View.GONE);
 		
 		showForm = true;
@@ -344,16 +345,16 @@ public class ManagementUsers extends Activity{
 		 						if(new UsersParseur().RemoveUser(userSelected.getId())){
 		 							showMessage(getResources().getString(R.string.user_deleted));
 
-                                    //Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-                                    //animation.reset();
-                                    //loading.clearAnimation();
-                                    //loading.startAnimation(animation);
+                                    Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+                                    animation.reset();
+                                    loading.clearAnimation();
+                                    loading.startAnimation(animation);
 		 							loading.setVisibility(View.VISIBLE);
 
-                                    //animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-                                    //animation.reset();
-                                    //list_users.clearAnimation();
-                                    //list_users.startAnimation(animation);
+                                    animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+                                    animation.reset();
+                                    list_users.clearAnimation();
+                                    list_users.startAnimation(animation);
 		 							list_users.setVisibility(View.GONE);
 		 							
 		 							updateUserList();
@@ -391,11 +392,13 @@ public class ManagementUsers extends Activity{
 	
 	private void updateUserList(){
 		
+		mDomotiqueManager.setParsingUsersFinish(false);
+		mDomotiqueManager.setListUsers(new ArrayList<User>());
+		mDomotiqueManager.setListUsers(new UsersParseur().getUsers());		
+        Log.i("test",">>Size : "+mDomotiqueManager.getListUsers().size());		
+		
 		new Thread(){
 			public void run(){
-				mDomotiqueManager.setParsingUsersFinish(false);
-				mDomotiqueManager.setListUsers(new ArrayList<User>());
-				mDomotiqueManager.setListUsers(new UsersParseur().getUsers());
 				
 				try{
 					sleep(1000);
@@ -404,8 +407,10 @@ public class ManagementUsers extends Activity{
 				ManagementUsers.this.runOnUiThread(new Runnable() {
  					@Override public void run(){
  						while(!mDomotiqueManager.isParsingUsersFinish()){}
+ 				        Log.i("test",">>1");	
  						list_users.setAdapter(new UsersAdapter(getApplicationContext(), R.layout.single_user, mDomotiqueManager.getListUsers()));
- 						
+
+ 				        Log.i("test",">>2");	
  						loading.setVisibility(View.GONE);
  						list_users.setVisibility(View.VISIBLE);
  						userSelected = null;						

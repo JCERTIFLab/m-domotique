@@ -14,6 +14,7 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -187,6 +188,7 @@ public class ListEquipements extends Activity{
 		list_equipement.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 				equipementSelected = mDomotiqueManager.getListEquipements().get(position);
+				equipementSelected.setRoom(mDomotiqueManager.getRoomSelected());
 				ShowDialog();
 			}
 		});
@@ -252,6 +254,8 @@ public class ListEquipements extends Activity{
 					equipement.setState(etatEquipement);
 					equipement.setRoom_id(mDomotiqueManager.getRoomSelected().getId());
 					equipement.setEquipement_type_id(mDomotiqueManager.getListEquipementCategories().get(typeEquipement.getSelectedItemPosition()).getId());
+					equipement.setEquipementCategory(mDomotiqueManager.getListEquipementCategories().get(typeEquipement.getSelectedItemPosition()));
+					equipement.setRoom(mDomotiqueManager.getRoomSelected());
 					
 					if(new EquipementsParseur().addEquipement(equipement)){						
 						ListEquipements.this.runOnUiThread(new Runnable() {
@@ -722,11 +726,11 @@ public class ListEquipements extends Activity{
 	
 	private void updateEquipementList(){
 		
+		mDomotiqueManager.setListEquipements(new ArrayList<Equipement>());
+		mDomotiqueManager.setListEquipements(new EquipementsParseur().getAllEquipements(mDomotiqueManager.getRoomSelected().getId()));
+		
 		new Thread(){
 			public void run(){
-
-				mDomotiqueManager.setListEquipements(new ArrayList<Equipement>());
-				mDomotiqueManager.setListEquipements(new EquipementsParseur().getAllEquipements(mDomotiqueManager.getRoomSelected().getId()));
 				
 				try{
 					sleep(1000);

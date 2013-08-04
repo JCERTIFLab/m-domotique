@@ -10,6 +10,7 @@ public class Equipement {
 	private int equipement_type_id;
 	private int room_id;
 	private EquipementCategory equipementCategory;
+	private Room room;
 	
 	public Equipement(){
 		id = 0;
@@ -84,6 +85,14 @@ public class Equipement {
 
 	public void setRoom_id(int room_id) {
 		this.room_id = room_id;
+	}
+
+	public Room getRoom() {
+		return room;
+	}
+
+	public void setRoom(Room room) {
+		this.room = room;
 	}
 
 }

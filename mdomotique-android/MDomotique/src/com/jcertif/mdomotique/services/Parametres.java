@@ -54,16 +54,16 @@ public class Parametres {
 		getAllRoomsCategories = urlBase+"typepieces/getAllTypes";
 		
 		getAllUsers = urlBase+"users/getAllUsers";
-		addUser = urlBase+"Users/addUser/";
-		updateUser = urlBase+"Users/updateUser/";
-		deleteUser = urlBase+"Users/deleteUser/";
+		addUser = urlBase+"users/add";
+		updateUser = urlBase+"users/update";
+		deleteUser = urlBase+"users/delete/";
 		authentification = urlBase+"users/auth/";
 		
 		getEquipementsByRoom = urlBase+"equipements/getEquipementsByRoom/";
-		deleteEquipement = urlBase+"Equipments/deleteEquipement/";
-		addEquipement = urlBase+"Equipments/addEquipement/";
-		updateEquipement = urlBase+"Equipments/updateEquipement/";
-		executAction = urlBase+"Equipments/action/";
+		deleteEquipement = urlBase+"equipements/delete/";
+		addEquipement = urlBase+"equipements/add";
+		updateEquipement = urlBase+"equipements/update";
+		executAction = urlBase+"equipements/action/";
 		
 		getAllEquipementCategories = urlBase+"typeequipements/getAllTypesEquipements";
 	}

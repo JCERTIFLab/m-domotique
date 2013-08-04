@@ -1,19 +1,12 @@
 package com.jcertif.mdomotique.com.parseurs;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
 
 import com.jcertif.mdomotique.com.RESTRequets;
-import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.User;
 import com.jcertif.mdomotique.services.Parametres;
 
@@ -23,7 +16,6 @@ public class UsersParseur extends RESTRequets{
 
         JSONArray users = null;
         JSONObject json = doGet(Parametres.getAllUsers);
-
         ArrayList<User> listUsers = new ArrayList<User>();
         if(json!=null){
 	        try {
@@ -60,7 +52,7 @@ public class UsersParseur extends RESTRequets{
 
         if(jsonObject!=null){
         	try{
-        		
+      		
 	        	user = new User();
 	        	user.setId(jsonObject.getInt("id"));
 	        	user.setLogin(jsonObject.getString("login"));
@@ -74,81 +66,65 @@ public class UsersParseur extends RESTRequets{
 		return user;
 		
 	}
-	
+
 	public boolean addUser(User user){
 		
-		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-		
-		if(user.getName().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("lastname", user.getName()));
-		
-		if(user.getFirstname().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("firstname", user.getFirstname()));
-		
-		if(user.getLogin().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("login", user.getLogin()));
-		
-		if(user.getPassword().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("password", user.getPassword()));
-
-		Document doc = XMLfunctions.XMLfromString(Parametres.postData(nameValuePairs, Parametres.addUser));  
-                
-		NodeList nodes = doc.getElementsByTagName("response");
-		
-		Element e = (Element)nodes.item(0);
-		
-		if(XMLfunctions.getValue(e, "status").equals("OK")){
-			return true;
-		}else
-			return false;
+		boolean reponse = false;   
+        try {
+        	JSONObject userObject=new JSONObject();
+        	userObject.put("login", user.getLogin());
+        	userObject.put("nom", user.getName());
+        	userObject.put("password", user.getPassword());
+        	userObject.put("prenom", user.getFirstname());
+        	
+        	JSONObject json = doPost(Parametres.addUser, userObject);
+            if(json.getString("state").equals("ok"))
+            	reponse = true;	            
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        
+		return reponse;
 		
 	}
 	
 	public boolean updateUser(User user){
 
-		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-		
-		nameValuePairs.add(new BasicNameValuePair("id", user.getId()+""));
-		
-		if(user.getName().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("lastname", user.getName()));
-		
-		if(user.getFirstname().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("firstname", user.getFirstname()));
-		
-		if(user.getLogin().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("login", user.getLogin()));
-		
-		if(user.getPassword().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("password", user.getPassword()));
-
-		
-		Document doc = XMLfunctions.XMLfromString(Parametres.postData(nameValuePairs, Parametres.updateUser));           
-                
-		NodeList nodes = doc.getElementsByTagName("response");
-		
-		Element e = (Element)nodes.item(0);
-		
-		if(XMLfunctions.getValue(e, "status").equals("OK"))	
-			return true;
-		else
-			return false;
+		boolean reponse = false;   
+        try {
+        	JSONObject userObject=new JSONObject();
+        	userObject.put("id", user.getId());
+        	userObject.put("login", user.getLogin());
+        	userObject.put("nom", user.getName());
+        	userObject.put("password", user.getPassword());
+        	userObject.put("prenom", user.getFirstname());
+        	
+        	JSONObject json = doPost(Parametres.updateUser, userObject);
+            if(json.getString("state").equals("ok"))
+            	reponse = true;	            
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        
+		return reponse;
 		
 	}
 	
 	public boolean RemoveUser(int idUser){
 		
-		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.deleteUser+idUser));              
-                
-		NodeList nodes = doc.getElementsByTagName("response");
-		
-		Element e = (Element)nodes.item(0);
-		
-		if(XMLfunctions.getValue(e, "status").equals("OK"))
-			return true;
-		else
-			return false;
-		
+		boolean reponse = false;   
+        try {
+        	
+        	JSONObject json = doPost(Parametres.deleteUser+idUser, new JSONObject());
+            if(json.getString("state").equals("ok"))
+            	reponse = true;	   
+        	         
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        
+        return reponse;
+        
 	}
 
 }

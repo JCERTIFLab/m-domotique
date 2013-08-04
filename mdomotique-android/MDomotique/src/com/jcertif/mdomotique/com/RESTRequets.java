@@ -45,6 +45,8 @@ public class RESTRequets {
 
                     InputStream instream = entity.getContent();
                     String result= convertStreamToString(instream);
+                    
+                    Log.i("test",">>>"+result);
 
                     jsonObject=new JSONObject(result);
                     instream.close();
