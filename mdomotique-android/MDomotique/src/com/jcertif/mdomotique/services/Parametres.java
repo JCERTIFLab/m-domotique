@@ -47,8 +47,8 @@ public class Parametres {
 		urlBase = nomDomaine+"/mdomotique/rest/";
 		
 		getAllRooms = urlBase+"rooms/getAllRooms";
-		deleteRoom = urlBase+"Rooms/deleteRoom/";
-		updateRoom = urlBase+"Rooms/updateRoom/";
+		deleteRoom = urlBase+"rooms/delete/";
+		updateRoom = urlBase+"rooms/update";
 		addRoom = urlBase+"rooms/add";
 		
 		getAllRoomsCategories = urlBase+"typepieces/getAllTypes";
