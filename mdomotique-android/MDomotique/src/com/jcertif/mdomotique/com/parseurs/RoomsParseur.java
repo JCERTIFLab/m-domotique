@@ -3,7 +3,6 @@ package com.jcertif.mdomotique.com.parseurs;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jcertif.mdomotique.com.RESTRequets;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
@@ -13,6 +12,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import android.util.Log;
+
+import com.jcertif.mdomotique.com.RESTRequets;
 import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.Room;
 import com.jcertif.mdomotique.persistance.RoomCategory;
@@ -75,24 +77,28 @@ public class RoomsParseur extends RESTRequets{
 	
 	public boolean addRoom(Room room){
 		
-		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-		
-		if(room.getName().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("name", room.getName()));
-		
-		if(room.getTypeId().length()>0)
-			nameValuePairs.add(new BasicNameValuePair("room_type_id", room.getTypeId()));
-
-		Document doc = XMLfunctions.XMLfromString(Parametres.postData(nameValuePairs, Parametres.addRoom));  
-                
-		NodeList nodes = doc.getElementsByTagName("response");
-		
-		Element e = (Element)nodes.item(0);
-		
-		if(XMLfunctions.getValue(e, "status").equals("OK"))
-			return true;
-		else
-			return false;
+		boolean reponse = false;   
+        try {
+        	JSONObject roomObject=new JSONObject();
+        	
+        	JSONObject categoryObject=new JSONObject();
+        	categoryObject.put("id", room.getRoomCategory().getId());
+        	categoryObject.put("nom", room.getRoomCategory().getName());
+        	categoryObject.put("imf", room.getRoomCategory().getImg());
+        	roomObject.put("typePieceId", categoryObject);
+        	
+        	roomObject.put("nom", room.getName());
+        	
+        	Log.i("test","str :: "+roomObject.toString());
+        	
+        	JSONObject json = doPost(Parametres.addRoom, roomObject);
+            if(json.getString("state").equals("ok"))
+            	reponse = true;	            
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        
+		return reponse;
 		
 	}
 	

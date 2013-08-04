@@ -91,16 +91,16 @@ public class ManagementRooms extends Activity{
             		isSelected = true;
             		if(showForm){
 
-                        //Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
-                        //animation.reset();
-                        //list_rooms.clearAnimation();
-                        //list_rooms.startAnimation(animation);
+                        Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
+                        animation.reset();
+                        list_rooms.clearAnimation();
+                        list_rooms.startAnimation(animation);
             			list_rooms.setVisibility(View.VISIBLE);
 
-                        //animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
-                        //animation.reset();
-                        //add_room.clearAnimation();
-                        //add_room.startAnimation(animation);
+                        animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
+                        animation.reset();
+                        add_room.clearAnimation();
+                        add_room.startAnimation(animation);
             			add_room.setVisibility(View.GONE);
             			
             			showForm = false;
@@ -236,7 +236,7 @@ public class ManagementRooms extends Activity{
 		
 					Room room = new Room();
 					room.setName(nameRoom.getText().toString());
-					room.setTypeId(mDomotiqueManager.getListRoomsCategories().get(typeRoom.getSelectedItemPosition()).getId()+"");
+					room.setRoomCategory(mDomotiqueManager.getListRoomsCategories().get(typeRoom.getSelectedItemPosition()));
 					
 					if(new RoomsParseur().addRoom(room)){						
 						ManagementRooms.this.runOnUiThread(new Runnable() {
@@ -279,16 +279,16 @@ public class ManagementRooms extends Activity{
 			}.start();
 		}
 
-        //Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
-        //animation.reset();
-        //loading.clearAnimation();
-        //loading.startAnimation(animation);
+        Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
+        animation.reset();
+        loading.clearAnimation();
+        loading.startAnimation(animation);
 		loading.setVisibility(View.VISIBLE);
 
-        //animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
-        //animation.reset();
-        //add_room.clearAnimation();
-        //add_room.startAnimation(animation);
+        animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
+        animation.reset();
+        add_room.clearAnimation();
+        add_room.startAnimation(animation);
 		add_room.setVisibility(View.GONE);
 		
 		updateRoomsList();
@@ -372,16 +372,16 @@ public class ManagementRooms extends Activity{
 			}
 		}.execute("");
 
-        //Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
-        //animation.reset();
-        //add_room.clearAnimation();
-        //add_room.startAnimation(animation);
+        Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
+        animation.reset();
+        add_room.clearAnimation();
+        add_room.startAnimation(animation);
 		add_room.setVisibility(View.VISIBLE);
 
-        //animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
-        //animation.reset();
-        //list_rooms.clearAnimation();
-        //list_rooms.startAnimation(animation);
+        animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
+        animation.reset();
+        list_rooms.clearAnimation();
+        list_rooms.startAnimation(animation);
 		list_rooms.setVisibility(View.GONE);
 		
 		showForm = true;
@@ -422,16 +422,16 @@ public class ManagementRooms extends Activity{
 			}
 		}.execute("");
 
-        //Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
-        //animation.reset();
-        //add_room.clearAnimation();
-        //add_room.startAnimation(animation);
+        Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
+        animation.reset();
+        add_room.clearAnimation();
+        add_room.startAnimation(animation);
 		add_room.setVisibility(View.VISIBLE);
 
-        //animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
-        //animation.reset();
-        //list_rooms.clearAnimation();
-        //list_rooms.startAnimation(animation);
+        animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
+        animation.reset();
+        list_rooms.clearAnimation();
+        list_rooms.startAnimation(animation);
 		list_rooms.setVisibility(View.GONE);
 		
 		showForm = true;

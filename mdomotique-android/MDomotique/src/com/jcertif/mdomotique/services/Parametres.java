@@ -49,7 +49,7 @@ public class Parametres {
 		getAllRooms = urlBase+"rooms/getAllRooms";
 		deleteRoom = urlBase+"Rooms/deleteRoom/";
 		updateRoom = urlBase+"Rooms/updateRoom/";
-		addRoom = urlBase+"Rooms/addRoom/";
+		addRoom = urlBase+"rooms/add";
 		
 		getAllRoomsCategories = urlBase+"typepieces/getAllTypes";
 		
