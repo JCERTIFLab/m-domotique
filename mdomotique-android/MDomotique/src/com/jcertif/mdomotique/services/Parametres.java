@@ -59,7 +59,7 @@ public class Parametres {
 		deleteUser = urlBase+"Users/deleteUser/";
 		authentification = urlBase+"users/auth/";
 		
-		getEquipementsByRoom = urlBase+"Equipments/getEquipmentByRoom/";
+		getEquipementsByRoom = urlBase+"equipements/getEquipementsByRoom/";
 		deleteEquipement = urlBase+"Equipments/deleteEquipement/";
 		addEquipement = urlBase+"Equipments/addEquipement/";
 		updateEquipement = urlBase+"Equipments/updateEquipement/";
@@ -74,7 +74,7 @@ public class Parametres {
 	}
 	
 	public static String getImgURL(String url){
-		return nomDomaine+"/MDomotique-WS"+url;
+		return nomDomaine+url;
 	}
 	
 	public static String postData(List<NameValuePair> nameValuePairs, String url) {

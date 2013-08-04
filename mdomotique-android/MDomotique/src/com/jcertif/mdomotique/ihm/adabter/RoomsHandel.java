@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -73,6 +74,7 @@ public final class RoomsHandel extends Fragment {
 			}
 			@Override
 			protected Bitmap doInBackground(String... params) { 
+				Log.i("test","URL : "+Parametres.getImgURL(mDomotiqueManager.getListRooms().get(Integer.parseInt(mContent)).getRoomCategory().getImg()));
 				return mDomotiqueApplication.ImageOperations(Parametres.getImgURL(mDomotiqueManager.getListRooms().get(Integer.parseInt(mContent)).getRoomCategory().getImg()));    
 			}
 		}.execute("");

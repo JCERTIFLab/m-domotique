@@ -5,63 +5,78 @@ import java.util.List;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import com.jcertif.mdomotique.com.RESTRequets;
 import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.Equipement;
 import com.jcertif.mdomotique.persistance.EquipementCategory;
 import com.jcertif.mdomotique.services.Parametres;
 
-public class EquipementsParseur {
+public class EquipementsParseur extends RESTRequets{
 
 	public ArrayList<Equipement> getAllEquipements(int idRoom){
 		
-		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.getEquipementsByRoom+idRoom));              
-                
-		NodeList nodes = doc.getElementsByTagName("Equipment");
-		
-		ArrayList<Equipement> listEquipements = new ArrayList<Equipement>();
-					
-		for (int i = 0; i < nodes.getLength(); i++) {						
-			
-			Element element = (Element)nodes.item(i);
-			
-			Equipement equipement = new Equipement();
+		JSONArray roomsArray = null;
+        JSONObject json = doPost(Parametres.getEquipementsByRoom+idRoom, new JSONObject());
 
-			equipement.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
-			equipement.setName(XMLfunctions.getValue(element, "name"));
-			equipement.setDescription(XMLfunctions.getValue(element, "description"));
-			if(XMLfunctions.getValue(element, "state").equals("0"))
-				equipement.setState(false);
-			else
-				equipement.setState(true);
-			equipement.setPin(Integer.parseInt(XMLfunctions.getValue(element, "pin")));
-			equipement.setRoom_id(Integer.parseInt(XMLfunctions.getValue(element, "room_id")));
-			equipement.setEquipement_type_id(Integer.parseInt(XMLfunctions.getValue(element, "equipement_type_id")));
-			
-			
-			listEquipements.add(equipement);
-		}	
-		
-		nodes = doc.getElementsByTagName("EquipementCategory");
-		
-		for (int i = 0; i < nodes.getLength(); i++) {
-			
-			Element element = (Element)nodes.item(i);
-			
-			EquipementCategory equipementCategory = new EquipementCategory();
+        ArrayList<Equipement> listEquipements = new ArrayList<Equipement>();
 
-			equipementCategory.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
-			equipementCategory.setName(XMLfunctions.getValue(element, "name"));
-			equipementCategory.setImg(XMLfunctions.getValue(element, "img"));				
-			
-			listEquipements.get(i).setEquipementCategory(equipementCategory);
-			
-		}
+        if(json != null){
+	        try {
+	        	if(json.length()>1){
+		        	roomsArray = json.getJSONArray("equipement");
+		            int sizeEquipements = roomsArray.length();
 		
-		return listEquipements;
+		            for(int i = 0; i < sizeEquipements; i++){
+		
+		                JSONObject jsonObject = roomsArray.getJSONObject(i);
+		                Equipement equipement = new Equipement();
+		                equipement.setId(jsonObject.getInt("id"));
+		                equipement.setName(jsonObject.getString("nom"));
+		                equipement.setDescription(jsonObject.getString("description"));	
+		                equipement.setState(jsonObject.getBoolean("etat"));
+		                equipement.setPin(jsonObject.getInt("relay"));
+		
+		                JSONObject category = jsonObject.getJSONObject("typeId");
+		                EquipementCategory equipementCategory = new EquipementCategory();
+		                equipementCategory.setId(category.getInt("id"));
+		                equipementCategory.setName(category.getString("nom"));
+		                equipementCategory.setImg(category.getString("imf"));
+		                equipement.setEquipementCategory(equipementCategory);
+		
+		                listEquipements.add(equipement);
+		
+		            }
+	        	}else{
+	        		 JSONObject jsonObject = json.getJSONObject("equipement");
+	        		 Equipement equipement = new Equipement();
+		             equipement.setId(jsonObject.getInt("id"));
+		             equipement.setName(jsonObject.getString("nom"));
+		             equipement.setDescription(jsonObject.getString("description"));	
+		             equipement.setState(jsonObject.getBoolean("etat"));
+		             equipement.setPin(jsonObject.getInt("relay"));
+		
+		             JSONObject category = jsonObject.getJSONObject("typeId");
+		             EquipementCategory equipementCategory = new EquipementCategory();
+		             equipementCategory.setId(category.getInt("id"));
+		             equipementCategory.setName(category.getString("nom"));
+		             equipementCategory.setImg(category.getString("imf"));
+		             equipement.setEquipementCategory(equipementCategory);
+		
+		             listEquipements.add(equipement);
+	        	}
+	        } catch (JSONException e) {
+	            e.printStackTrace();
+	        }
+        }
+
+        return listEquipements;
 		
 	}
 	

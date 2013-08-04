@@ -86,7 +86,6 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListRooms(new RoomsParseur().getRooms());
 				mDomotiqueManager.setParsingRoomsFinish(true);
-                System.out.println("-----------> Size Rooms : "+mDomotiqueManager.getListRooms().size());
 			}
 		}.start();
 		
@@ -94,7 +93,6 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListRoomsCategories(new RoomCategoriesParseur().getRoomCategories());
 				mDomotiqueManager.setParsingRoomCategoryFinish(true);
-                System.out.println("-----------> Size RoomsCategories : "+mDomotiqueManager.getListRoomsCategories().size());
 
 			}
 		}.start();
@@ -103,7 +101,6 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListEquipementCategories(new EquipementCategoriesParseur().getEquipementCategories());
 				mDomotiqueManager.setParsingEquipementCategoryFinish(true);
-                System.out.println("-----------> Size Equipements categories : "+mDomotiqueManager.getListEquipementCategories().size());
 			}
 		}.start();
 		
@@ -111,7 +108,6 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListUsers(new UsersParseur().getUsers());
 				mDomotiqueManager.setParsingUsersFinish(true);
-                System.out.println("-----------> Size Users : "+mDomotiqueManager.getListUsers().size());
 			}
 		}.start();
 	}
