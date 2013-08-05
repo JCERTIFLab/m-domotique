@@ -44,16 +44,19 @@
         
         <activity
             android:name="com.jcertif.mdomotique.ihm.ManagementRooms"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
         
         <activity
             android:name="com.jcertif.mdomotique.ihm.ManagementUsers"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
         
         <activity
             android:name="com.jcertif.mdomotique.ihm.ListEquipements"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
         

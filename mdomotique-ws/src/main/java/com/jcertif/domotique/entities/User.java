@@ -17,6 +17,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import org.codehaus.jackson.annotate.JsonManagedReference;
 
 /**
  *
@@ -33,6 +34,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "User.findByLogin", query = "SELECT u FROM User u WHERE u.login = :login"),
     @NamedQuery(name = "User.findByLoginPassword", query = "SELECT u FROM User u WHERE u.login = :login AND u.password = :password"),
     @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password")})
+
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

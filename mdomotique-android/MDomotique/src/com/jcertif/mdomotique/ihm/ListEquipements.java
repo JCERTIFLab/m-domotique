@@ -188,6 +188,7 @@ public class ListEquipements extends Activity{
 		list_equipement.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 				equipementSelected = mDomotiqueManager.getListEquipements().get(position);
+				Log.i("Test", "equipement : "+equipementSelected.getName());
 				equipementSelected.setRoom(mDomotiqueManager.getRoomSelected());
 				ShowDialog();
 			}
@@ -263,6 +264,10 @@ public class ListEquipements extends Activity{
 								showMessage(getResources().getString(R.string.equipement_added));
 		 					}
 						});
+						
+//						mDomotiqueManager.getListEquipements().add(equipement);
+						updateEquipementList();
+						
 					}else{
 						ListEquipements.this.runOnUiThread(new Runnable() {
 		 					@Override public void run(){
@@ -276,7 +281,9 @@ public class ListEquipements extends Activity{
 	
 			new Thread(){
 				public void run(){
-									
+
+					Log.i("Test", "equipement 2 : "+equipementSelected.getName());
+					
 					equipementSelected.setName(name.getText().toString());
 					equipementSelected.setDescription(description.getText().toString());
 					equipementSelected.setPin(Integer.parseInt(num_pin.getText().toString()));
@@ -289,6 +296,9 @@ public class ListEquipements extends Activity{
 		 						showMessage(getResources().getString(R.string.equipement_update));
 		 					}
 						});
+						
+//						mDomotiqueManager.getListEquipements().add(positionEquipement, equipementSelected);
+						updateEquipementList();
 						
 					}else{
 						ListEquipements.this.runOnUiThread(new Runnable() {
@@ -313,7 +323,6 @@ public class ListEquipements extends Activity{
 		forum.startAnimation(animation);
 		forum.setVisibility(View.GONE);
 		
-		updateEquipementList();
 		equipementSelected = null;
 		isSelected = false;
 		showForm = false;
@@ -728,6 +737,8 @@ public class ListEquipements extends Activity{
 		
 		mDomotiqueManager.setListEquipements(new ArrayList<Equipement>());
 		mDomotiqueManager.setListEquipements(new EquipementsParseur().getAllEquipements(mDomotiqueManager.getRoomSelected().getId()));
+		
+		Log.i("test","Size : "+mDomotiqueManager.getListEquipements().size());
 		
 		new Thread(){
 			public void run(){

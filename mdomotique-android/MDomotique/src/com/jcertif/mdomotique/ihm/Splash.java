@@ -26,7 +26,6 @@ import com.jcertif.mdomotique.R;
 import com.jcertif.mdomotique.com.parseurs.EquipementCategoriesParseur;
 import com.jcertif.mdomotique.com.parseurs.RoomCategoriesParseur;
 import com.jcertif.mdomotique.com.parseurs.RoomsParseur;
-import com.jcertif.mdomotique.com.parseurs.UsersParseur;
 import com.jcertif.mdomotique.services.MDomotiqueApplication;
 import com.jcertif.mdomotique.services.MDomotiqueManager;
 import com.jcertif.mdomotique.services.ManagementFiles;
@@ -101,13 +100,6 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListEquipementCategories(new EquipementCategoriesParseur().getEquipementCategories());
 				mDomotiqueManager.setParsingEquipementCategoryFinish(true);
-			}
-		}.start();
-		
-		new Thread(){
-			public void run(){
-				mDomotiqueManager.setListUsers(new UsersParseur().getUsers());
-				mDomotiqueManager.setParsingUsersFinish(true);
 			}
 		}.start();
 	}

@@ -5,12 +5,8 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
 
 import com.jcertif.mdomotique.com.RESTRequets;
-import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.Equipement;
 import com.jcertif.mdomotique.persistance.EquipementCategory;
 import com.jcertif.mdomotique.services.Parametres;
@@ -26,50 +22,53 @@ public class EquipementsParseur extends RESTRequets{
 
         if(json != null){
 	        try {
-	        	if(json.length()>1){
-		        	roomsArray = json.getJSONArray("equipement");
-		            int sizeEquipements = roomsArray.length();
+	        	roomsArray = json.getJSONArray("equipement");       	
+	            int sizeEquipements = roomsArray.length();
+	            
+	        	for(int i = 0; i < sizeEquipements; i++){
+	        		
+	        		JSONObject jsonObject = roomsArray.getJSONObject(i);
+		            Equipement equipement = new Equipement();
+		            equipement.setId(jsonObject.getInt("id"));
+		            equipement.setName(jsonObject.getString("nom"));
+		            equipement.setDescription(jsonObject.getString("description"));	
+		            equipement.setState(jsonObject.getBoolean("etat"));
+		            equipement.setPin(jsonObject.getInt("relay"));
 		
-		            for(int i = 0; i < sizeEquipements; i++){
+		            JSONObject category = jsonObject.getJSONObject("typeId");
+		            EquipementCategory equipementCategory = new EquipementCategory();
+		            equipementCategory.setId(category.getInt("id"));
+		            equipementCategory.setName(category.getString("nom"));
+		            equipementCategory.setImg(category.getString("imf"));
+		            equipement.setEquipementCategory(equipementCategory);
 		
-		                JSONObject jsonObject = roomsArray.getJSONObject(i);
-		                Equipement equipement = new Equipement();
-		                equipement.setId(jsonObject.getInt("id"));
-		                equipement.setName(jsonObject.getString("nom"));
-		                equipement.setDescription(jsonObject.getString("description"));	
-		                equipement.setState(jsonObject.getBoolean("etat"));
-		                equipement.setPin(jsonObject.getInt("relay"));
+		            listEquipements.add(equipement);
 		
-		                JSONObject category = jsonObject.getJSONObject("typeId");
-		                EquipementCategory equipementCategory = new EquipementCategory();
-		                equipementCategory.setId(category.getInt("id"));
-		                equipementCategory.setName(category.getString("nom"));
-		                equipementCategory.setImg(category.getString("imf"));
-		                equipement.setEquipementCategory(equipementCategory);
+		        }
+	        	
+	        } catch (JSONException e) {}
+	        
+	        if(roomsArray==null){
+	        	try {
+	        		
+		        	JSONObject jsonObject = json.getJSONObject("equipement");
+	       		 	Equipement equipement = new Equipement();
+		            equipement.setId(jsonObject.getInt("id"));
+		            equipement.setName(jsonObject.getString("nom"));
+		            equipement.setDescription(jsonObject.getString("description"));	
+		            equipement.setState(jsonObject.getBoolean("etat"));
+		            equipement.setPin(jsonObject.getInt("relay"));
 		
-		                listEquipements.add(equipement);
+		            JSONObject category = jsonObject.getJSONObject("typeId");
+		            EquipementCategory equipementCategory = new EquipementCategory();
+		            equipementCategory.setId(category.getInt("id"));
+		            equipementCategory.setName(category.getString("nom"));
+		            equipementCategory.setImg(category.getString("imf"));
+		            equipement.setEquipementCategory(equipementCategory);
 		
-		            }
-	        	}else{
-	        		 JSONObject jsonObject = json.getJSONObject("equipement");
-	        		 Equipement equipement = new Equipement();
-		             equipement.setId(jsonObject.getInt("id"));
-		             equipement.setName(jsonObject.getString("nom"));
-		             equipement.setDescription(jsonObject.getString("description"));	
-		             equipement.setState(jsonObject.getBoolean("etat"));
-		             equipement.setPin(jsonObject.getInt("relay"));
-		
-		             JSONObject category = jsonObject.getJSONObject("typeId");
-		             EquipementCategory equipementCategory = new EquipementCategory();
-		             equipementCategory.setId(category.getInt("id"));
-		             equipementCategory.setName(category.getString("nom"));
-		             equipementCategory.setImg(category.getString("imf"));
-		             equipement.setEquipementCategory(equipementCategory);
-		
-		             listEquipements.add(equipement);
-	        	}
-	        } catch (JSONException e) {
-	            e.printStackTrace();
+		            listEquipements.add(equipement);
+		            
+	        	 } catch (JSONException e) {}
 	        }
         }
 
@@ -78,15 +77,15 @@ public class EquipementsParseur extends RESTRequets{
 	}
 	
 	public boolean ExecuteAction(int pin, int etat){
-		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.executAction+"/"+pin+"/"+etat));
-		
-		NodeList nodes = doc.getElementsByTagName("response");
-		
-		Element e = (Element)nodes.item(0);
-		
-		if(XMLfunctions.getValue(e, "status").equals("OK"))
-			return true;
-		else
+//		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.executAction+"/"+pin+"/"+etat));
+//		
+//		NodeList nodes = doc.getElementsByTagName("response");
+//		
+//		Element e = (Element)nodes.item(0);
+//		
+//		if(XMLfunctions.getValue(e, "status").equals("OK"))
+//			return true;
+//		else
 			return false;
 	}
 	

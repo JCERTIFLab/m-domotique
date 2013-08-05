@@ -14,16 +14,17 @@ public class UsersParseur extends RESTRequets{
 	
 	public ArrayList<User> getUsers(){
 
-        JSONArray users = null;
+        JSONArray usersArray = null;
         JSONObject json = doGet(Parametres.getAllUsers);
         ArrayList<User> listUsers = new ArrayList<User>();
+       
         if(json!=null){
 	        try {
-	            users = json.getJSONArray("user");
-	            int sizeUsers = users.length();
+	        	usersArray = json.getJSONArray("user");
+	            int sizeUsers = usersArray.length();
 	
 	            for(int i = 0; i < sizeUsers; i++){
-	                JSONObject jsonObject = users.getJSONObject(i);
+	                JSONObject jsonObject = usersArray.getJSONObject(i);
 	
 	                User user = new User();
 	
@@ -38,6 +39,23 @@ public class UsersParseur extends RESTRequets{
 	            }
 	        } catch (JSONException e) {
 	            e.printStackTrace();
+	        }
+	        
+	        if(usersArray==null){
+	        	try {
+	        		
+	        		User user = new User();
+	        		
+	        		JSONObject jsonObject = json.getJSONObject("user");
+	                user.setId(jsonObject.getInt("id"));
+	                user.setLogin(jsonObject.getString("login"));
+	                user.setName(jsonObject.getString("nom"));
+	                user.setPassword(jsonObject.getString("password"));
+	                user.setFirstname(jsonObject.getString("prenom"));
+	
+	                listUsers.add(user);
+		            
+	        	 } catch (JSONException e) {}        
 	        }
         }
 		

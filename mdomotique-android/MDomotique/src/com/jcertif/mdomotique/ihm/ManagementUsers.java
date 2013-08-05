@@ -1,7 +1,5 @@
 package com.jcertif.mdomotique.ihm;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -9,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -130,6 +127,25 @@ public class ManagementUsers extends Activity{
             	}
             }
         });
+				
+		setContent();
+		
+		list_users.setOnItemClickListener(new OnItemClickListener() {
+            public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
+            	userSelected = mDomotiqueManager.getListUsers().get(position);
+            	ShowDialog();
+            }
+        });
+		
+	}
+	
+	private void setContent(){
+		new Thread(){
+			public void run(){
+				mDomotiqueManager.setListUsers(new UsersParseur().getUsers());
+				mDomotiqueManager.setParsingUsersFinish(true);
+			}
+		}.start();
 		
 		new Thread(){
 			public void run(){
@@ -146,18 +162,22 @@ public class ManagementUsers extends Activity{
 				});
 			}
 		}.start();
-		
-		list_users.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
-            	userSelected = mDomotiqueManager.getListUsers().get(position);
-            	ShowDialog();
-            }
-        });
-		
-	 }
+	}
 	
 	
 	private void managementRoom(){
+		
+		Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+        animation.reset();
+        loading.clearAnimation();
+        loading.startAnimation(animation);
+        loading.setVisibility(View.VISIBLE);
+
+        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+        animation.reset();
+        info_user.clearAnimation();
+        info_user.startAnimation(animation);
+		info_user.setVisibility(View.GONE);
 
 		if(userSelected==null){
 			new Thread(){
@@ -173,6 +193,7 @@ public class ManagementUsers extends Activity{
 						ManagementUsers.this.runOnUiThread(new Runnable() {
 		 					@Override public void run(){
 								showMessage(getResources().getString(R.string.user_added));
+								setContent();
 		 					}
 						});
 					}else{
@@ -188,7 +209,7 @@ public class ManagementUsers extends Activity{
 	
 			new Thread(){
 				public void run(){
-										
+					
 					userSelected.setName(nameUser.getText().toString());
 					userSelected.setFirstname(firstUser.getText().toString());
 					userSelected.setPassword(passwordUser.getText().toString());
@@ -198,6 +219,7 @@ public class ManagementUsers extends Activity{
 						ManagementUsers.this.runOnUiThread(new Runnable() {
 		 					@Override public void run(){
 		 						showMessage(getResources().getString(R.string.user_update));
+								setContent();
 		 					}
 						});
 						
@@ -208,25 +230,13 @@ public class ManagementUsers extends Activity{
 		 					}
 						});
 					}
+
+					userSelected = null;
+					isSelected = false;
 				}
 			}.start();
 		}
 
-        Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        animation.reset();
-        loading.clearAnimation();
-        loading.startAnimation(animation);
-        loading.setVisibility(View.VISIBLE);
-
-        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        animation.reset();
-        info_user.clearAnimation();
-        info_user.startAnimation(animation);
-		info_user.setVisibility(View.GONE);
-		
-		updateUserList();
-		userSelected = null;
-		isSelected = false;
 	}
 	
 	public void ShowDialog(){
@@ -356,8 +366,8 @@ public class ManagementUsers extends Activity{
                                     list_users.clearAnimation();
                                     list_users.startAnimation(animation);
 		 							list_users.setVisibility(View.GONE);
-		 							
-		 							updateUserList();
+
+									setContent();
 		 						}else
 		 							showMessage(getResources().getString(R.string.user_not_deleted));
 		 					}
@@ -388,37 +398,6 @@ public class ManagementUsers extends Activity{
 		toast.setDuration(Toast.LENGTH_LONG);
 		toast.setView(layout);
 		toast.show();
-	}
-	
-	private void updateUserList(){
-		
-		mDomotiqueManager.setParsingUsersFinish(false);
-		mDomotiqueManager.setListUsers(new ArrayList<User>());
-		mDomotiqueManager.setListUsers(new UsersParseur().getUsers());		
-        Log.i("test",">>Size : "+mDomotiqueManager.getListUsers().size());		
-		
-		new Thread(){
-			public void run(){
-				
-				try{
-					sleep(1000);
-				}catch(Exception e){}
-				
-				ManagementUsers.this.runOnUiThread(new Runnable() {
- 					@Override public void run(){
- 						while(!mDomotiqueManager.isParsingUsersFinish()){}
- 				        Log.i("test",">>1");	
- 						list_users.setAdapter(new UsersAdapter(getApplicationContext(), R.layout.single_user, mDomotiqueManager.getListUsers()));
-
- 				        Log.i("test",">>2");	
- 						loading.setVisibility(View.GONE);
- 						list_users.setVisibility(View.VISIBLE);
- 						userSelected = null;						
- 	        			add.setVisibility(View.VISIBLE);
- 					}
-				});
-			}
-		}.start();
 	}
 	
 }
