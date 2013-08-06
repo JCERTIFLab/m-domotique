@@ -57,7 +57,7 @@ public class UserFacadeREST extends AbstractFacade<User> {
     @GET
     @Path("getAllUsers")
     @Override
-    @Produces({"application/json"})
+    @Produces({"application/xml", "application/json"})
     public List<User> findAll() {
         return super.findAll();
     }
@@ -79,7 +79,7 @@ public class UserFacadeREST extends AbstractFacade<User> {
     
     @POST
     @Path("auth/{username}/{password}")
-    @Produces({"application/json"})
+    @Consumes({"application/json"})
     public User authentificate(@PathParam("username") String username, @PathParam("password") String password) {
        
             javax.persistence.Query cq = getEntityManager().createNamedQuery("User.findByLoginPassword").setParameter("login", username).setParameter("password", password);
