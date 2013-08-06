@@ -1,11 +1,9 @@
 package com.jcertif.mdomotique.ihm;
 
-import java.net.InetAddress;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -13,28 +11,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jcertif.mdomotique.R;
 import com.jcertif.mdomotique.ihm.adabter.PageIndicator;
 import com.jcertif.mdomotique.ihm.adabter.RoomsAdapter;
 import com.jcertif.mdomotique.ihm.adabter.TitlePageIndicator;
 import com.jcertif.mdomotique.services.MDomotiqueManager;
-import com.jcertif.mdomotique.services.ManagementFiles;
-import com.jcertif.mdomotique.services.Parametres;
 
 public class ListRooms extends FragmentActivity{
 	
@@ -43,15 +32,12 @@ public class ListRooms extends FragmentActivity{
 	private PageIndicator mIndicator;
 	private MDomotiqueManager mDomotiqueManager;
 	private LinearLayout menu, content, loading, action_bar;
-	private TextView user_name, managementRooms, managementUsers, setting, logout;
+	private TextView user_name, managementRooms, managementUsers, logout;
 	private ImageView settings;
 	private boolean subMenuVisble, isSelected;
 	private int btnSelected;
-	private String adr;
 	private Handler mHandler;
 	private Timer titleTimer;
-	private EditText adresse;
-	private Button add, fermer;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +57,6 @@ public class ListRooms extends FragmentActivity{
         user_name 		= (TextView) findViewById(R.id.user_name);
         managementRooms = (TextView) findViewById(R.id.managementRooms);
         managementUsers = (TextView) findViewById(R.id.managementUsers);
-        setting 		= (TextView) findViewById(R.id.setting);
         logout 			= (TextView) findViewById(R.id.logout);
         
         settings 	= (ImageView) findViewById(R.id.settings);
@@ -103,14 +88,6 @@ public class ListRooms extends FragmentActivity{
             public void onClick(View v) {       
             	if(!isSelected)
             		enableLogout();            	
-            }
-        });
-        
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {       
-            	if(!isSelected)
-            		enableSetting();
             }
         });
         
@@ -155,93 +132,6 @@ public class ListRooms extends FragmentActivity{
     	action_bar.startAnimation(animation);
     	action_bar.setVisibility(View.VISIBLE);
     }
-    
-    public void ShowParamesDialog(){
-		final Dialog dialog = new Dialog(ListRooms.this);
-		dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-		dialog.setContentView(R.layout.menu_add_adresse);
-		dialog.setTitle("Parmetre du serveur");
-		
-		adresse = (EditText) dialog.findViewById(R.id.adresse);
-		 
-		add  	= (Button) dialog.findViewById(R.id.add);  
-		fermer  = (Button) dialog.findViewById(R.id.fermer); 
-		
-		adresse.setText(Parametres.nomDomaine.substring(7, Parametres.nomDomaine.length()));
-		
-		add.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {				
-			
-				if(adresse.getText().toString().length()>0){		
-					adr = adresse.getText().toString();
-					if(testAdresse(adr)){
-						dialog.dismiss();
-						AlertDialog alertDialog = new AlertDialog.Builder(ListRooms.this).create();
-						alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-						alertDialog.setTitle("Le serveur est : "+adr);
-						alertDialog.setMessage("Est ce que vous etes sur ?");
-						alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int which) {	
-								Parametres.nomDomaine = "http://"+adr;
-					    		Parametres.setUrls();
-								ManagementFiles.writeData(Parametres.nomDomaine, "serveur.txt");
-								dialog.dismiss();
-								return;
-							} 
-						}); 
-						alertDialog.setButton2("Non", new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int which) {
-								dialog.dismiss();
-								return;
-							}
-						});
-	
-						alertDialog.show();
-					}else{
-						showMessage("Veuillez saisir une adresse valide");
-						adresse.setText("");
-					}
-				}else{
-					showMessage("Veuillez saisir l'adresse du serveur");
-				}
-				
-			}
-		});
-		
-		fermer.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				dialog.dismiss();
-			}
-		});
-
-		dialog.show();
-	}
-    
-    private void showMessage(String msg) {
-		LayoutInflater inflater = getLayoutInflater();
-		View layout = inflater.inflate(R.layout.toast_custom_layout, (ViewGroup) findViewById(R.id.toast_layout_root));
-
-		TextView text = (TextView) layout.findViewById(R.id.text);
-		text.setText(msg);
-
-		Toast toast = new Toast(getApplicationContext());
-		toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-		toast.setDuration(Toast.LENGTH_LONG);
-		toast.setView(layout);
-		toast.show();
-	}
-    
-    private boolean testAdresse(String hostName){
-		InetAddress inetAddress;
-		try {
-			inetAddress = InetAddress.getByName(hostName);
-			return inetAddress.isReachable(5000);
-		} catch (Exception e) {
-			return false;
-		}	 
-	}
     
     @Override
     public void onBackPressed() {
@@ -291,25 +181,6 @@ public class ListRooms extends FragmentActivity{
     	logout.setTextColor(Color.rgb(79, 129, 189));
     	
     	exit();
-    }
-	
-    private void enableSetting() {
-    	isSelected = true;
-    	setting.setBackgroundColor(Color.rgb(79, 129, 189));
-    	setting.setTextColor(Color.rgb(255, 255, 255));	
-		btnSelected = 2;
-		refreshTimer();
-	}
-    
-    private void disableSetting(){
- 
-    	setSubMenuInvisible();
-    	subMenuVisble = false;
-    	isSelected = false;
-    	setting.setBackgroundColor(Color.rgb(255, 255, 255));
-    	setting.setTextColor(Color.rgb(79, 129, 189));
-    	
-    	ShowParamesDialog();
     }
     
     private void enableManagementUsers() {
@@ -421,9 +292,6 @@ public class ListRooms extends FragmentActivity{
 			 switch(btnSelected){
 			 case 1:
 				 disableLogout();
-				 break;
-			 case 2:
-				 disableSetting();
 				 break;
 			 case 3:
 				 disableManagementUsers();

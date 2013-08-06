@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.util.LruCache;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,7 @@ public class Splash extends Activity {
     private Button fermer, add;
     private ImageView refresh;
     private LinearLayout loading;
+    private final String pathFileConfig = "/sdcard/serveur.txt";
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,7 +62,15 @@ public class Splash extends Activity {
 		mDomotiqueApplication.setmMemoryCache(mDomotiqueApplication.mMemoryCache);
         
         if(OutilsInternet.isNetworkAvailable(Splash.this)){
-        	loading();
+        	new Thread(){
+        		public void run(){
+        			try{
+        				sleep(1000);
+        			}catch(Exception e){}
+
+                	loading();
+        		}
+        	}.start();
         }else{
         	loading.setVisibility(View.VISIBLE);
         	refresh.setVisibility(View.VISIBLE);
@@ -106,14 +116,30 @@ public class Splash extends Activity {
 
 	public void loading(){
     	
-		String adr = ManagementFiles.readData("serveur.txt");
-		adr = "http://192.168.1.3:8084";
+		String adr = ManagementFiles.readData(pathFileConfig);
+//		adr = "http://192.168.1.3:8084";
     	if(adr.length()>0){
-    		Parametres.nomDomaine = adr;  
-    		Parametres.setUrls();
-			traitement();
-    	}else
-    		ShowDialog();
+    		Log.i("test","adr : "+adr);
+    		String adresse = adr.substring(7, adr.length()-5);
+    		Log.i("test","Addresse : "+adresse);
+    		if(testAdresse(adresse)){
+	    		Parametres.nomDomaine = adr;  
+	    		Parametres.setUrls();
+				traitement();
+    		}else{
+    			Splash.this.runOnUiThread(new Runnable() {
+ 					@Override public void run(){
+ 		        		ShowDialog();
+ 					}
+    			});
+    		}
+    	}else{
+			Splash.this.runOnUiThread(new Runnable() {
+					@Override public void run(){
+		        		ShowDialog();
+					}
+			});
+		}
     	
     }
 	
@@ -142,9 +168,9 @@ public class Splash extends Activity {
 						alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int which) {
 								time = 2000;
-								Parametres.nomDomaine = "http://"+adr;
+								Parametres.nomDomaine = "http://"+adr+":8084";
 					    		Parametres.setUrls();
-								ManagementFiles.writeData(Parametres.nomDomaine, "serveur.txt");
+								ManagementFiles.writeData(Parametres.nomDomaine, pathFileConfig);
 								traitement();
 								return;
 							} 

@@ -119,7 +119,7 @@
 	    android:layout_marginLeft="20dp"
 	    android:layout_marginRight="20dp"
 	    android:padding="5dp"
-	    android:visibility="gone">
+		android:visibility="gone">
 	    
  		<TextView
                 android:id="@+id/managementRooms"
@@ -145,20 +145,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:textStyle="bold" />
-            
-            <TextView
-                android:id="@+id/setting"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:singleLine="true"
-                android:text="@string/setting"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/blue"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold" />                    
             
             <TextView
                 android:id="@+id/logout"
