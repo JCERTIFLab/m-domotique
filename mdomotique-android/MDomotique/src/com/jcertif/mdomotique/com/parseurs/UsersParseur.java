@@ -2,84 +2,67 @@ package com.jcertif.mdomotique.com.parseurs;
 
 import java.util.ArrayList;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import com.jcertif.mdomotique.com.RESTRequets;
+import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.User;
 import com.jcertif.mdomotique.services.Parametres;
 
 public class UsersParseur extends RESTRequets{
 	
 	public ArrayList<User> getUsers(){
+		
+		Document doc = XMLfunctions.XMLfromString(Parametres.getAllUsers);              
+        
+		NodeList nodes = doc.getElementsByTagName("user");
 
-        JSONArray usersArray = null;
-        JSONObject json = doGet(Parametres.getAllUsers);
         ArrayList<User> listUsers = new ArrayList<User>();
-       
-        if(json!=null){
-	        try {
-	        	usersArray = json.getJSONArray("user");
-	            int sizeUsers = usersArray.length();
-	
-	            for(int i = 0; i < sizeUsers; i++){
-	                JSONObject jsonObject = usersArray.getJSONObject(i);
-	
-	                User user = new User();
-	
-	                user.setId(jsonObject.getInt("id"));
-	                user.setLogin(jsonObject.getString("login"));
-	                user.setName(jsonObject.getString("nom"));
-	                user.setPassword(jsonObject.getString("password"));
-	                user.setFirstname(jsonObject.getString("prenom"));
-	
-	                listUsers.add(user);
-	
-	            }
-	        } catch (JSONException e) {
-	            e.printStackTrace();
-	        }
-	        
-	        if(usersArray==null){
-	        	try {
-	        		
-	        		User user = new User();
-	        		
-	        		JSONObject jsonObject = json.getJSONObject("user");
-	                user.setId(jsonObject.getInt("id"));
-	                user.setLogin(jsonObject.getString("login"));
-	                user.setName(jsonObject.getString("nom"));
-	                user.setPassword(jsonObject.getString("password"));
-	                user.setFirstname(jsonObject.getString("prenom"));
-	
-	                listUsers.add(user);
-		            
-	        	 } catch (JSONException e) {}        
-	        }
-        }
+					
+		for (int i = 0; i < nodes.getLength(); i++) {						
+			
+			Element e = (Element)nodes.item(i);
+			
+			User user = new User();
+			
+			user.setId(Integer.parseInt(XMLfunctions.getValue(e, "id")));
+			user.setLogin(XMLfunctions.getValue(e, "login"));
+			user.setName(XMLfunctions.getValue(e, "nom"));
+            user.setPassword(XMLfunctions.getValue(e, "password"));
+            user.setFirstname(XMLfunctions.getValue(e, "prenom"));
+
+            listUsers.add(user);
+		}	
 		
 		return listUsers;
 	}
 	
 	public User authentification(String login, String password){
+		
+		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.getAuthentificationURL(login, password)));              
+        
+		User user = null;
+		
+		try{
+			
+			NodeList nodes = doc.getElementsByTagName("user");
+			
+			Element e = (Element)nodes.item(0);
+			
+			user = new User();
 
-        JSONObject jsonObject = doPost(Parametres.getAuthentificationURL(login, password), new JSONObject());
-
-        User user = null;
-
-        if(jsonObject!=null){
-        	try{
-      		
-	        	user = new User();
-	        	user.setId(jsonObject.getInt("id"));
-	        	user.setLogin(jsonObject.getString("login"));
-	        	user.setName(jsonObject.getString("nom"));
-	        	user.setPassword(jsonObject.getString("password"));
-	        	user.setFirstname(jsonObject.getString("prenom"));
-	        	
-        	}catch(Exception e){}
-        }
+			user.setId(Integer.parseInt(XMLfunctions.getValue(e, "id")));
+			user.setLogin(XMLfunctions.getValue(e, "login"));
+			user.setName(XMLfunctions.getValue(e, "nom"));
+	        user.setPassword(XMLfunctions.getValue(e, "password"));
+	        user.setFirstname(XMLfunctions.getValue(e, "prenom"));
+			
+		}catch(Exception e){}
+		
 		
 		return user;
 		
