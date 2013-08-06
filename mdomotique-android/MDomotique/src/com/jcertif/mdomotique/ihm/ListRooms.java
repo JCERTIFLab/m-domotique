@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -320,6 +321,43 @@ public class ListRooms extends FragmentActivity{
 		        overridePendingTransition(R.anim.right_in, R.anim.right_out);
 		    	finish();
 				
+				return;
+			} }); 
+		alertDialog.setButton2("Non", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				return;
+			}});
+
+
+		alertDialog.show();
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if(requestCode==1000){
+			finish();
+		}
+	}
+    
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+			exitApp();
+			return true;
+		}
+		return false;
+	}
+
+	private void exitApp(){
+		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+
+		alertDialog.setTitle("Quitter");
+		alertDialog.setMessage("Est ce que vous êtes sur ?");
+		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				System.exit(0);
+				finish();
 				return;
 			} }); 
 		alertDialog.setButton2("Non", new DialogInterface.OnClickListener() {

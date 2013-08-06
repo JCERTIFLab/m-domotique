@@ -12,11 +12,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -273,5 +276,42 @@ public class Authentification extends Activity{
 	            }
 	        return sb.toString();
 	  }
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if(requestCode==1000){
+			finish();
+		}
+	}
+    
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+			exitApp();
+			return true;
+		}
+		return false;
+	}
+
+	private void exitApp(){
+		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+
+		alertDialog.setTitle("Quitter");
+		alertDialog.setMessage("Est ce que vous êtes sur ?");
+		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				System.exit(0);
+				finish();
+				return;
+			} }); 
+		alertDialog.setButton2("Non", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				return;
+			}});
+
+
+		alertDialog.show();
+	}
 
 }

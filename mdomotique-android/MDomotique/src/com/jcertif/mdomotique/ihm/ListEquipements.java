@@ -16,6 +16,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -759,6 +760,43 @@ public class ListEquipements extends Activity{
 				});
 			}
 		}.start();
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if(requestCode==1000){
+			finish();
+		}
+	}
+    
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+			exitApp();
+			return true;
+		}
+		return false;
+	}
+
+	private void exitApp(){
+		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+
+		alertDialog.setTitle("Quitter");
+		alertDialog.setMessage("Est ce que vous êtes sur ?");
+		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				System.exit(0);
+				finish();
+				return;
+			} }); 
+		alertDialog.setButton2("Non", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				return;
+			}});
+
+
+		alertDialog.show();
 	}
 	
 }

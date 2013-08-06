@@ -10,8 +10,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.util.LruCache;
-import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -117,11 +117,8 @@ public class Splash extends Activity {
 	public void loading(){
     	
 		String adr = ManagementFiles.readData(pathFileConfig);
-//		adr = "http://192.168.1.3:8084";
     	if(adr.length()>0){
-    		Log.i("test","adr : "+adr);
     		String adresse = adr.substring(7, adr.length()-5);
-    		Log.i("test","Addresse : "+adresse);
     		if(testAdresse(adresse)){
 	    		Parametres.nomDomaine = adr;  
 	    		Parametres.setUrls();
@@ -248,6 +245,43 @@ public class Splash extends Activity {
 		toast.setDuration(Toast.LENGTH_LONG);
 		toast.setView(layout);
 		toast.show();
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if(requestCode==1000){
+			finish();
+		}
+	}
+    
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+			exitApp();
+			return true;
+		}
+		return false;
+	}
+
+	private void exitApp(){
+		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+
+		alertDialog.setTitle("Quitter");
+		alertDialog.setMessage("Est ce que vous êtes sur ?");
+		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				System.exit(0);
+				finish();
+				return;
+			} }); 
+		alertDialog.setButton2("Non", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				return;
+			}});
+
+
+		alertDialog.show();
 	}
 
 }
