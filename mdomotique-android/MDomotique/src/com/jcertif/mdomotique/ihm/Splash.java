@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.util.LruCache;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -41,7 +40,7 @@ public class Splash extends Activity {
     private int time = 2000;
     private String adr;
     private EditText adresse;
-    private Button fermer, add;
+    private Button add;
     private ImageView refresh;
     private LinearLayout loading;
     private final String pathFileConfig = "/sdcard/serveur.txt";
@@ -96,8 +95,6 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListRooms(new RoomsParseur().getRooms());
 				mDomotiqueManager.setParsingRoomsFinish(true);
-				
-				Log.i("test","Room Size >>>"+mDomotiqueManager.getListRooms().size());
 			}
 		}.start();
 		
@@ -106,8 +103,6 @@ public class Splash extends Activity {
 				mDomotiqueManager.setListRoomsCategories(new RoomCategoriesParseur().getRoomCategories());
 				mDomotiqueManager.setParsingRoomCategoryFinish(true);
 
-				Log.i("test","Room Type Size >>>"+mDomotiqueManager.getListRoomsCategories().size());
-
 			}
 		}.start();
 		
@@ -115,8 +110,6 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListEquipementCategories(new EquipementCategoriesParseur().getEquipementCategories());
 				mDomotiqueManager.setParsingEquipementCategoryFinish(true);
-				
-				Log.i("test","Equipement Type Size >>>"+mDomotiqueManager.getListEquipementCategories().size());
 			}
 		}.start();
 	}
@@ -155,7 +148,6 @@ public class Splash extends Activity {
 		adresse = (EditText) dialog.findViewById(R.id.adresse);
 		 
 		add  	= (Button) dialog.findViewById(R.id.add);  
-		fermer  = (Button) dialog.findViewById(R.id.fermer); 
 		
 		add.setOnClickListener(new OnClickListener() {
 			@Override
@@ -195,14 +187,6 @@ public class Splash extends Activity {
 					showMessage("Veuillez saisir l'adresse du serveur");
 				}
 				
-			}
-		});
-		
-		fermer.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				System.exit(0);
-				dialog.dismiss();
 			}
 		});
 

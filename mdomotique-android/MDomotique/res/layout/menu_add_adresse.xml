@@ -36,15 +36,9 @@
 
 		<Button
 		    android:id="@+id/add"
-		    android:layout_width="100dp"
+		    android:layout_width="120dp"
 		    android:layout_height="fill_parent"
 		    android:text="@string/add" />
-
-		<Button
-		    android:id="@+id/fermer"
-		    android:layout_width="100dp"
-		    android:layout_height="fill_parent"
-		    android:text="@string/close" />
 
 	</LinearLayout>
 

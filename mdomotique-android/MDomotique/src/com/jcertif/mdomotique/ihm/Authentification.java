@@ -170,6 +170,19 @@ public class Authentification extends Activity{
 				if(loginTxt.length()==0 || passwordTxt.length()==0){
 					Authentification.this.runOnUiThread(new Runnable() {
 	 					@Override public void run(){
+	 						
+	 						Animation animation = AnimationUtils.loadAnimation(Authentification.this, R.anim.translate_left);
+	 						animation.reset();
+	 						loading.clearAnimation();
+	 						loading.startAnimation(animation);
+	 						loading.setVisibility(View.GONE);
+	 						
+	 						animation = AnimationUtils.loadAnimation(Authentification.this, R.anim.translate_right);
+	 						animation.reset();
+	 						content.clearAnimation();
+	 						content.startAnimation(animation);
+	 						content.setVisibility(View.VISIBLE);
+	 						
 	 						showToast(getResources().getString(R.string.missing_login_password));
 	 					}
         			});

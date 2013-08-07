@@ -1,7 +1,14 @@
 package com.jcertif.mdomotique.com.parseurs;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Document;
@@ -17,26 +24,51 @@ public class UsersParseur extends RESTRequets{
 	
 	public ArrayList<User> getUsers(){
 		
-		Document doc = XMLfunctions.XMLfromString(Parametres.getAllUsers);              
+		ArrayList<User> listUsers = new ArrayList<User>();
+		HttpClient httpclient = new DefaultHttpClient();
+
+		HttpGet httpget = new HttpGet(Parametres.getAllUsers);
+		httpget.addHeader("Content-Type", "application/xml");
+		HttpResponse response;
+
+		try {
+			response = httpclient.execute(httpget);
+		    HttpEntity entity = response.getEntity();
+
+	        StatusLine responseStatus = response.getStatusLine();
+	        int statusCode = responseStatus != null ? responseStatus.getStatusCode() : 0;
+
+	        if(statusCode==200){
+	        	
+	        	if (entity != null) {
+	        		
+	        		InputStream instream = entity.getContent();
+	                String result= convertStreamToString(instream);
+
+	                Document doc = XMLfunctions.XMLfromString(result);             
         
-		NodeList nodes = doc.getElementsByTagName("user");
-
-        ArrayList<User> listUsers = new ArrayList<User>();
+					NodeList nodes = doc.getElementsByTagName("user");
+								
+					for (int i = 0; i < nodes.getLength(); i++) {						
+						
+						Element e = (Element)nodes.item(i);
+						
+						User user = new User();
+						
+						user.setId(Integer.parseInt(XMLfunctions.getValue(e, "id")));
+						user.setLogin(XMLfunctions.getValue(e, "login"));
+						user.setName(XMLfunctions.getValue(e, "nom"));
+			            user.setPassword(XMLfunctions.getValue(e, "password"));
+			            user.setFirstname(XMLfunctions.getValue(e, "prenom"));
+			
+			            listUsers.add(user);
+					}	
 					
-		for (int i = 0; i < nodes.getLength(); i++) {						
-			
-			Element e = (Element)nodes.item(i);
-			
-			User user = new User();
-			
-			user.setId(Integer.parseInt(XMLfunctions.getValue(e, "id")));
-			user.setLogin(XMLfunctions.getValue(e, "login"));
-			user.setName(XMLfunctions.getValue(e, "nom"));
-            user.setPassword(XMLfunctions.getValue(e, "password"));
-            user.setFirstname(XMLfunctions.getValue(e, "prenom"));
-
-            listUsers.add(user);
-		}	
+	        	}
+	        	
+	        }
+	        
+		}catch(Exception e){}
 		
 		return listUsers;
 	}

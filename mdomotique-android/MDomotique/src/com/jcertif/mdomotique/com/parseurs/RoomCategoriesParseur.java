@@ -13,8 +13,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import android.util.Log;
-
 import com.jcertif.mdomotique.com.RESTRequets;
 import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.RoomCategory;

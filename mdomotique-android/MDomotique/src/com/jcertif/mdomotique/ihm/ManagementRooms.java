@@ -230,10 +230,26 @@ public class ManagementRooms extends Activity{
 	}
 	
 	private void managementRoom(){
+		
+		Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
+        animation.reset();
+        loading.clearAnimation();
+        loading.startAnimation(animation);
+        loading.setVisibility(View.VISIBLE);
+
+        animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
+        animation.reset();
+        add_room.clearAnimation();
+        add_room.startAnimation(animation);
+        add_room.setVisibility(View.GONE);
 
 		if(roomSelected==null){
 			new Thread(){
 				public void run(){
+					
+					try{
+						sleep(1000);
+					}catch(Exception e){}
 		
 					Room room = new Room();
 					room.setName(nameRoom.getText().toString());
@@ -243,6 +259,8 @@ public class ManagementRooms extends Activity{
 						ManagementRooms.this.runOnUiThread(new Runnable() {
 		 					@Override public void run(){
 								showMessage(getResources().getString(R.string.room_added));
+		 						setContent();
+		 						roomSelected = null;
 		 					}
 						});
 					}else{
@@ -258,14 +276,21 @@ public class ManagementRooms extends Activity{
 	
 			new Thread(){
 				public void run(){
+					
+					try{
+						sleep(1000);
+					}catch(Exception e){}
 										
 					roomSelected.setName(nameRoom.getText().toString());
 					roomSelected.setTypeId(mDomotiqueManager.getListRoomsCategories().get(typeRoom.getSelectedItemPosition()).getId()+"");
+					roomSelected.setRoomCategory(mDomotiqueManager.getListRoomsCategories().get(typeRoom.getSelectedItemPosition()));
 					
 					if(new RoomsParseur().updateRoom(roomSelected)){						
 						ManagementRooms.this.runOnUiThread(new Runnable() {
 		 					@Override public void run(){
 		 						showMessage(getResources().getString(R.string.room_update));
+		 						setContent();
+		 						roomSelected = null;
 		 					}
 						});
 						
@@ -280,20 +305,7 @@ public class ManagementRooms extends Activity{
 			}.start();
 		}
 
-        Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
-        animation.reset();
-        loading.clearAnimation();
-        loading.startAnimation(animation);
-		loading.setVisibility(View.VISIBLE);
-
-        animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
-        animation.reset();
-        add_room.clearAnimation();
-        add_room.startAnimation(animation);
-		add_room.setVisibility(View.GONE);
-		
-		updateRoomsList();
-		roomSelected = null;
+		showForm = false;
 		isSelected = false;
 	}
 	
@@ -445,7 +457,7 @@ public class ManagementRooms extends Activity{
 		alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 		alertDialog.setTitle("Supprimer");
 		alertDialog.setMessage(getResources().getString(R.string.ask_delete_room));
-		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
+		alertDialog.setButton("Non", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				new Thread(){
 					@Override
@@ -455,21 +467,21 @@ public class ManagementRooms extends Activity{
 		 						if(new RoomsParseur().RemoveRoom(roomSelected.getId())){
 		 							showMessage(getResources().getString(R.string.room_deleted));
 
-                                    //Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
-                                    //animation.reset();
-                                    //loading.clearAnimation();
-                                    //loading.startAnimation(animation);
+                                    Animation animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_right);
+                                    animation.reset();
+                                    loading.clearAnimation();
+                                    loading.startAnimation(animation);
 		 							loading.setVisibility(View.VISIBLE);
 
-                                    //animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
-                                    //animation.reset();
-                                    //list_rooms.clearAnimation();
-                                    //list_rooms.startAnimation(animation);
+                                    animation = AnimationUtils.loadAnimation(ManagementRooms.this, R.anim.translate_left);
+                                    animation.reset();
+                                    list_rooms.clearAnimation();
+                                    list_rooms.startAnimation(animation);
 		 							list_rooms.setVisibility(View.GONE);
 		 							
 		 							mDomotiqueManager.getListRooms().remove(roomSelected);
 		 							
-		 							updateRoomsList();
+		 							setContent();
 		 						}else
 		 							showMessage(getResources().getString(R.string.room_not_deleted));
 		 					}
@@ -478,7 +490,7 @@ public class ManagementRooms extends Activity{
 				}.start();
 				return;
 			} }); 
-		alertDialog.setButton2("Non", new DialogInterface.OnClickListener() {
+		alertDialog.setButton2("Oui", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				dialog.dismiss();
 				return;
@@ -502,17 +514,22 @@ public class ManagementRooms extends Activity{
 		toast.show();
 	}
 	
-	private void updateRoomsList(){
+	private void setContent(){
+		
+		mDomotiqueManager.setParsingRoomsFinish(false);
 		
 		new Thread(){
 			public void run(){
-
 				mDomotiqueManager.setListRooms(new ArrayList<Room>());
 				mDomotiqueManager.setListRooms(new RoomsParseur().getRooms());
+				mDomotiqueManager.setParsingRoomsFinish(true);
+			}
+		}.start();
+		
+		new Thread(){
+			public void run(){
 				
-				try{
-					sleep(1000);
-				}catch(Exception e){}
+				while(!mDomotiqueManager.isParsingRoomsFinish()){}
 				
 				ManagementRooms.this.runOnUiThread(new Runnable() {
  					@Override public void run(){
@@ -530,7 +547,7 @@ public class ManagementRooms extends Activity{
 			}
 		}.start();
 	}
-	
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if(requestCode==1000){

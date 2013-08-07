@@ -79,17 +79,18 @@ public class ManagementUsers extends Activity{
             	if(!isSelected){
             		isSelected = true;
             		if(showForm){
-            			Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-                        animation.reset();
-                        list_users.clearAnimation();
-                        list_users.startAnimation(animation);
-            			list_users.setVisibility(View.VISIBLE);
+            			
+            			Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_right);
+            	        animation.reset();
+            	        list_users.clearAnimation();
+            	        list_users.startAnimation(animation);
+            	        list_users.setVisibility(View.VISIBLE);
 
-                        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-                        animation.reset();
-                        info_user.clearAnimation();
-                        info_user.startAnimation(animation);
-            			info_user.setVisibility(View.GONE);
+            	        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+            	        animation.reset();
+            	        info_user.clearAnimation();
+            	        info_user.startAnimation(animation);
+            	        info_user.setVisibility(View.GONE);        	       
 
             			add.setVisibility(View.VISIBLE);
             			showForm = false;
@@ -167,8 +168,8 @@ public class ManagementUsers extends Activity{
 	
 	
 	private void managementRoom(){
-		
-		Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+		        
+        Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_right);
         animation.reset();
         loading.clearAnimation();
         loading.startAnimation(animation);
@@ -178,11 +179,15 @@ public class ManagementUsers extends Activity{
         animation.reset();
         info_user.clearAnimation();
         info_user.startAnimation(animation);
-		info_user.setVisibility(View.GONE);
+        info_user.setVisibility(View.GONE);  
 
 		if(userSelected==null){
 			new Thread(){
 				public void run(){
+					
+					try{
+						sleep(1000);
+					}catch(Exception e){}
 		
 					User user = new User();
 					user.setName(nameUser.getText().toString());
@@ -204,12 +209,19 @@ public class ManagementUsers extends Activity{
 		 					}
 						});
 					}
+					
+					userSelected = null;
+					isSelected = false;					
 				}
 			}.start();
 		}else{
 	
 			new Thread(){
 				public void run(){
+					
+					try{
+						sleep(1000);
+					}catch(Exception e){}
 					
 					userSelected.setName(nameUser.getText().toString());
 					userSelected.setFirstname(firstUser.getText().toString());
@@ -299,17 +311,17 @@ public class ManagementUsers extends Activity{
 		loginUser.setText("");
 		passwordUser.setText("");
 
-        Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+		Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_right);
+        animation.reset();
+        info_user.clearAnimation();
+        info_user.startAnimation(animation);
+        info_user.setVisibility(View.VISIBLE);
+
+        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
         animation.reset();
         list_users.clearAnimation();
         list_users.startAnimation(animation);
         list_users.setVisibility(View.GONE);
-
-        animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
-        animation.reset();
-        info_user.clearAnimation();
-        info_user.startAnimation(animation);
-		info_user.setVisibility(View.VISIBLE);
 		
 		showForm = true;
 		
@@ -324,17 +336,17 @@ public class ManagementUsers extends Activity{
 		loginUser.setText(userSelected.getLogin());
 		passwordUser.setText(userSelected.getPassword());
 
-        Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
+		Animation animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_right);
         animation.reset();
         info_user.clearAnimation();
         info_user.startAnimation(animation);
-		info_user.setVisibility(View.VISIBLE);
+        info_user.setVisibility(View.VISIBLE);
 
         animation = AnimationUtils.loadAnimation(ManagementUsers.this, R.anim.translate_left);
         animation.reset();
         list_users.clearAnimation();
         list_users.startAnimation(animation);
-		list_users.setVisibility(View.GONE);
+        list_users.setVisibility(View.GONE);
 		
 		showForm = true;
 		
