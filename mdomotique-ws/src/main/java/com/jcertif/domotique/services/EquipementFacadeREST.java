@@ -56,7 +56,7 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
     @GET
     @Override
     @Path("getAllEquipements")
-    @Produces({"application/json"})
+    @Produces({"application/xml"})
     public List<Equipement> findAll() {
         return super.findAll();
     }

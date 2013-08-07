@@ -56,7 +56,7 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
     @GET
     @Override
     @Path("getAllRooms")
-    @Produces({"application/json"})
+    @Produces({"application/xml"})
     public List<Piece> findAll() {
         return super.findAll();
     }

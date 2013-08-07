@@ -54,7 +54,7 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
     @GET
     @Path("getAllTypes")
     @Override
-    @Produces({ "application/json"})
+    @Produces({ "application/xml"})
     public List<TypePiece> findAll() {
         return super.findAll();
     }

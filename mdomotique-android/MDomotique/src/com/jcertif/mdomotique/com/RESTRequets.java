@@ -29,7 +29,7 @@ public class RESTRequets {
 	    HttpClient httpclient = new DefaultHttpClient();
 
 	    HttpGet httpget = new HttpGet(url);
-	    httpget.addHeader("accept", "application/json");
+	    httpget.addHeader("Content-Type", "application/json");
 	    HttpResponse response;
 
 	    try {
@@ -45,8 +45,6 @@ public class RESTRequets {
 
                     InputStream instream = entity.getContent();
                     String result= convertStreamToString(instream);
-                    
-                    Log.i("test",">>>"+result);
 
                     jsonObject=new JSONObject(result);
                     instream.close();

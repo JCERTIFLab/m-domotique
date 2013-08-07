@@ -50,7 +50,8 @@ public class TypePiece implements Serializable {
     @Size(min = 1, max = 60)
     @Column(name = "IMG")
     private String img;
-    @OneToMany(mappedBy = "typePieceId",cascade = CascadeType.REMOVE)
+//    @OneToMany(mappedBy = "typePieceId",cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "typePieceId")
     private Collection<Piece> pieceCollection;
 
     public TypePiece() {

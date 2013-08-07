@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.util.LruCache;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -95,6 +96,8 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListRooms(new RoomsParseur().getRooms());
 				mDomotiqueManager.setParsingRoomsFinish(true);
+				
+				Log.i("test","Room Size >>>"+mDomotiqueManager.getListRooms().size());
 			}
 		}.start();
 		
@@ -103,6 +106,8 @@ public class Splash extends Activity {
 				mDomotiqueManager.setListRoomsCategories(new RoomCategoriesParseur().getRoomCategories());
 				mDomotiqueManager.setParsingRoomCategoryFinish(true);
 
+				Log.i("test","Room Type Size >>>"+mDomotiqueManager.getListRoomsCategories().size());
+
 			}
 		}.start();
 		
@@ -110,6 +115,8 @@ public class Splash extends Activity {
 			public void run(){
 				mDomotiqueManager.setListEquipementCategories(new EquipementCategoriesParseur().getEquipementCategories());
 				mDomotiqueManager.setParsingEquipementCategoryFinish(true);
+				
+				Log.i("test","Equipement Type Size >>>"+mDomotiqueManager.getListEquipementCategories().size());
 			}
 		}.start();
 	}

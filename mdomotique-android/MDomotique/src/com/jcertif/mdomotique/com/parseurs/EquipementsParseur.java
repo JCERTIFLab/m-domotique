@@ -1,12 +1,22 @@
 package com.jcertif.mdomotique.com.parseurs;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
-import org.json.JSONArray;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import com.jcertif.mdomotique.com.RESTRequets;
+import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.Equipement;
 import com.jcertif.mdomotique.persistance.EquipementCategory;
 import com.jcertif.mdomotique.services.Parametres;
@@ -14,64 +24,79 @@ import com.jcertif.mdomotique.services.Parametres;
 public class EquipementsParseur extends RESTRequets{
 
 	public ArrayList<Equipement> getAllEquipements(int idRoom){
-		
-		JSONArray roomsArray = null;
-        JSONObject json = doPost(Parametres.getEquipementsByRoom+idRoom, new JSONObject());
 
-        ArrayList<Equipement> listEquipements = new ArrayList<Equipement>();
+		ArrayList<Equipement> listEquipements = new ArrayList<Equipement>();
+		
+		HttpClient httpclient = new DefaultHttpClient();
 
-        if(json != null){
-	        try {
-	        	roomsArray = json.getJSONArray("equipement");       	
-	            int sizeEquipements = roomsArray.length();
-	            
-	        	for(int i = 0; i < sizeEquipements; i++){
-	        		
-	        		JSONObject jsonObject = roomsArray.getJSONObject(i);
-		            Equipement equipement = new Equipement();
-		            equipement.setId(jsonObject.getInt("id"));
-		            equipement.setName(jsonObject.getString("nom"));
-		            equipement.setDescription(jsonObject.getString("description"));	
-		            equipement.setState(jsonObject.getBoolean("etat"));
-		            equipement.setPin(jsonObject.getInt("relay"));
-		
-		            JSONObject category = jsonObject.getJSONObject("typeId");
-		            EquipementCategory equipementCategory = new EquipementCategory();
-		            equipementCategory.setId(category.getInt("id"));
-		            equipementCategory.setName(category.getString("nom"));
-		            equipementCategory.setImg(category.getString("imf"));
-		            equipement.setEquipementCategory(equipementCategory);
-		
-		            listEquipements.add(equipement);
-		
-		        }
+		HttpGet httpget = new HttpGet(Parametres.getAllEquipementCategories);
+		httpget.addHeader("Content-Type", "application/xml");
+		HttpResponse response;
+
+		try {
+			response = httpclient.execute(httpget);
+		    HttpEntity entity = response.getEntity();
+
+	        StatusLine responseStatus = response.getStatusLine();
+	        int statusCode = responseStatus != null ? responseStatus.getStatusCode() : 0;
+
+	        if(statusCode==200){
 	        	
-	        } catch (JSONException e) {}
-	        
-	        if(roomsArray==null){
-	        	try {
+	        	if (entity != null) {
 	        		
-		        	JSONObject jsonObject = json.getJSONObject("equipement");
-	       		 	Equipement equipement = new Equipement();
-		            equipement.setId(jsonObject.getInt("id"));
-		            equipement.setName(jsonObject.getString("nom"));
-		            equipement.setDescription(jsonObject.getString("description"));	
-		            equipement.setState(jsonObject.getBoolean("etat"));
-		            equipement.setPin(jsonObject.getInt("relay"));
+	        		InputStream instream = entity.getContent();
+	                String result= convertStreamToString(instream);
 		
-		            JSONObject category = jsonObject.getJSONObject("typeId");
-		            EquipementCategory equipementCategory = new EquipementCategory();
-		            equipementCategory.setId(category.getInt("id"));
-		            equipementCategory.setName(category.getString("nom"));
-		            equipementCategory.setImg(category.getString("imf"));
-		            equipement.setEquipementCategory(equipementCategory);
-		
-		            listEquipements.add(equipement);
-		            
-	        	 } catch (JSONException e) {}
-	        }
-        }
+	                Document doc = XMLfunctions.XMLfromString(result);              
+        
+	                NodeList nodes = doc.getElementsByTagName("equipement");
 
+		
+					int nbrMax = nodes.getLength();
+			    	for (int i = 0; i < nbrMax; i++) {						
+			    		
+			    		Element element = (Element)nodes.item(i);
+			
+			    		Equipement equipement = new Equipement();
+			    		
+			            equipement.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
+			            equipement.setName(XMLfunctions.getValue(element, "nom"));
+			            equipement.setDescription(XMLfunctions.getValue(element, "description"));	
+			            if(XMLfunctions.getValue(element, "etat").equals("oui"))
+			            	equipement.setState(true);
+			            else
+			            	equipement.setState(false);
+			            equipement.setPin(Integer.parseInt(XMLfunctions.getValue(element, "relay")));
+			            
+			            listEquipements.add(equipement);
+			                
+			    	}
+			    	
+			    	nodes = doc.getElementsByTagName("typeId");
+					
+			    	nbrMax = nodes.getLength();
+			    	for (int i = 0; i < nbrMax; i++) {			
+			    			
+			    		Element element = (Element)nodes.item(i);
+			            
+			            EquipementCategory equipementCategory = new EquipementCategory();
+			    			
+			            equipementCategory.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
+			            equipementCategory.setName(XMLfunctions.getValue(element, "name"));
+			            equipementCategory.setImg(XMLfunctions.getValue(element, "imf"));
+			    			
+			            listEquipements.get(i).setEquipementCategory(equipementCategory);
+			    			
+			    	}
+			    	
+	        	}   
+		        
+	        }
+
+		} catch (Exception e) {
+		        e.printStackTrace();
+		} 
+		
         return listEquipements;
 		
 	}

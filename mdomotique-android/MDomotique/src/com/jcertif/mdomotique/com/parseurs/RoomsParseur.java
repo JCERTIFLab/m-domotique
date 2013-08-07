@@ -1,12 +1,22 @@
 package com.jcertif.mdomotique.com.parseurs;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
-import org.json.JSONArray;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import com.jcertif.mdomotique.com.RESTRequets;
+import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.Room;
 import com.jcertif.mdomotique.persistance.RoomCategory;
 import com.jcertif.mdomotique.services.Parametres;
@@ -14,40 +24,72 @@ import com.jcertif.mdomotique.services.Parametres;
 public class RoomsParseur extends RESTRequets{
 
 	public ArrayList<Room> getRooms(){
+		
+		ArrayList<Room> listRooms = new ArrayList<Room>();
+		HttpClient httpclient = new DefaultHttpClient();
 
-        JSONArray categories = null;
-        JSONObject json = doGet(Parametres.getAllRooms);
+		HttpGet httpget = new HttpGet(Parametres.getAllRooms);
+		httpget.addHeader("Content-Type", "application/xml");
+		HttpResponse response;
 
-        ArrayList<Room> listRooms = new ArrayList<Room>();
+		try {
+			response = httpclient.execute(httpget);
+		    HttpEntity entity = response.getEntity();
 
-        if(json != null){
-	        try {
-	            categories = json.getJSONArray("piece");
-	            int sizeRooms = categories.length();
-	
-	            for(int i = 0; i < sizeRooms; i++){
-	
-	                JSONObject jsonObject = categories.getJSONObject(i);
-	                Room room = new Room();
-	                room.setId(jsonObject.getInt("id"));
-	                room.setName(jsonObject.getString("nom"));
-	
-	                JSONObject category = jsonObject.getJSONObject("typePieceId");
-	                RoomCategory roomCategory = new RoomCategory();
-	                roomCategory.setId(category.getInt("id"));
-	                roomCategory.setName(category.getString("nom"));
-	                roomCategory.setImg(category.getString("imf"));
-	                room.setRoomCategory(roomCategory);
-	
-	                listRooms.add(room);
-	
-	            }
-	        } catch (JSONException e) {
-	            e.printStackTrace();
+	        StatusLine responseStatus = response.getStatusLine();
+	        int statusCode = responseStatus != null ? responseStatus.getStatusCode() : 0;
+
+	        if(statusCode==200){
+	        	
+	        	if (entity != null) {
+	        		
+	        		InputStream instream = entity.getContent();
+	                String result= convertStreamToString(instream);
+
+	                Document doc = XMLfunctions.XMLfromString(result);   
+	                    
+	            	NodeList nodes = doc.getElementsByTagName("piece");
+
+	            	int nbrMax = nodes.getLength();
+	            	for (int i = 0; i < nbrMax; i++) {						
+	            		
+	            		Element element = (Element)nodes.item(i);
+	            			
+	            		Room room = new Room();
+	            			
+	            		room.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
+	            		room.setName(XMLfunctions.getValue(element, "nom"));  
+
+	                    listRooms.add(room);
+	                        
+	            	}	            		
+	            	
+	            	nodes = doc.getElementsByTagName("typePieceId");
+	            		
+	            	nbrMax = nodes.getLength();
+	            	for (int i = 0; i < nbrMax; i++) {			
+	            			
+	            		Element element = (Element)nodes.item(i);
+	            			
+	            		RoomCategory roomCategory = new RoomCategory();
+	            			
+	            		roomCategory.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
+	            		roomCategory.setName(XMLfunctions.getValue(element, "name"));
+	            		roomCategory.setImg(XMLfunctions.getValue(element, "imf"));
+	            			
+	            		listRooms.get(i).setRoomCategory(roomCategory);
+	            			
+	            	}	
+	            	
+	        	}   
+	        
 	        }
-        }
 
-        return listRooms;
+		} catch (Exception e) {
+		        e.printStackTrace();
+		} 
+		
+		return listRooms;
 		
 	}
 	
