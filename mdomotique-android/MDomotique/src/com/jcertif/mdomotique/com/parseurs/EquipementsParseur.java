@@ -1,19 +1,14 @@
 package com.jcertif.mdomotique.com.parseurs;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import android.util.Log;
 
 import com.jcertif.mdomotique.com.RESTRequets;
 import com.jcertif.mdomotique.com.XMLfunctions;
@@ -24,83 +19,57 @@ import com.jcertif.mdomotique.services.Parametres;
 public class EquipementsParseur extends RESTRequets{
 
 	public ArrayList<Equipement> getAllEquipements(int idRoom){
-
+		
 		ArrayList<Equipement> listEquipements = new ArrayList<Equipement>();
 		
-		HttpClient httpclient = new DefaultHttpClient();
-
-		HttpGet httpget = new HttpGet(Parametres.getAllEquipementCategories);
-		httpget.addHeader("Content-Type", "application/xml");
-		HttpResponse response;
-
-		try {
-			response = httpclient.execute(httpget);
-		    HttpEntity entity = response.getEntity();
-
-	        StatusLine responseStatus = response.getStatusLine();
-	        int statusCode = responseStatus != null ? responseStatus.getStatusCode() : 0;
-
-	        if(statusCode==200){
-	        	
-	        	if (entity != null) {
-	        		
-	        		InputStream instream = entity.getContent();
-	                String result= convertStreamToString(instream);
-		
-	                Document doc = XMLfunctions.XMLfromString(result);              
+		String str = XMLfunctions.getXML(Parametres.getEquipementsByRoom+idRoom);
+		Log.i("test","STR : "+str);
+		Document doc = XMLfunctions.XMLfromString(str);              
         
-	                NodeList nodes = doc.getElementsByTagName("equipement");
+		NodeList nodes = doc.getElementsByTagName("equipement");
+		
+		int nbrMax = nodes.getLength();
+		
+    	for (int i = 0; i < nbrMax; i++) {						
+    		
+    		Element element = (Element)nodes.item(i);
 
+    		Equipement equipement = new Equipement();
+    		
+            equipement.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
+            equipement.setName(XMLfunctions.getValue(element, "nom"));
+            equipement.setDescription(XMLfunctions.getValue(element, "description"));	
+            if(XMLfunctions.getValue(element, "etat").equals("oui"))
+            	equipement.setState(true);
+            else
+            	equipement.setState(false);
+            equipement.setPin(Integer.parseInt(XMLfunctions.getValue(element, "relay")));
+            
+            listEquipements.add(equipement);
+                
+    	}
+    	
+    	nodes = doc.getElementsByTagName("typeId");
 		
-					int nbrMax = nodes.getLength();
-			    	for (int i = 0; i < nbrMax; i++) {						
-			    		
-			    		Element element = (Element)nodes.item(i);
-			
-			    		Equipement equipement = new Equipement();
-			    		
-			            equipement.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
-			            equipement.setName(XMLfunctions.getValue(element, "nom"));
-			            equipement.setDescription(XMLfunctions.getValue(element, "description"));	
-			            if(XMLfunctions.getValue(element, "etat").equals("oui"))
-			            	equipement.setState(true);
-			            else
-			            	equipement.setState(false);
-			            equipement.setPin(Integer.parseInt(XMLfunctions.getValue(element, "relay")));
-			            
-			            listEquipements.add(equipement);
-			                
-			    	}
-			    	
-			    	nodes = doc.getElementsByTagName("typeId");
-					
-			    	nbrMax = nodes.getLength();
-			    	for (int i = 0; i < nbrMax; i++) {			
-			    			
-			    		Element element = (Element)nodes.item(i);
-			            
-			            EquipementCategory equipementCategory = new EquipementCategory();
-			    			
-			            equipementCategory.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
-			            equipementCategory.setName(XMLfunctions.getValue(element, "name"));
-			            equipementCategory.setImg(XMLfunctions.getValue(element, "imf"));
-			    			
-			            listEquipements.get(i).setEquipementCategory(equipementCategory);
-			    			
-			    	}
-			    	
-	        	}   
-		        
-	        }
-
-		} catch (Exception e) {
-		        e.printStackTrace();
-		} 
-		
-        return listEquipements;
-		
-	}
-	
+    	nbrMax = nodes.getLength();
+    	for (int i = 0; i < nbrMax; i++) {			
+    			
+    		Element element = (Element)nodes.item(i);
+            
+            EquipementCategory equipementCategory = new EquipementCategory();
+    			
+            equipementCategory.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
+            equipementCategory.setName(XMLfunctions.getValue(element, "name"));
+            equipementCategory.setImg(XMLfunctions.getValue(element, "imf"));
+    			
+            listEquipements.get(i).setEquipementCategory(equipementCategory);
+    			
+    	}
+    	
+    	return listEquipements;
+    	
+	}	
+    	
 	public boolean ExecuteAction(int pin, int etat){
 //		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.executAction+"/"+pin+"/"+etat));
 //		

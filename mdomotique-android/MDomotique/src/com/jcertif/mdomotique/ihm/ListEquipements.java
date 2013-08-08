@@ -266,7 +266,6 @@ public class ListEquipements extends Activity{
 		 					}
 						});
 						
-//						mDomotiqueManager.getListEquipements().add(equipement);
 						updateEquipementList();
 						
 					}else{
@@ -298,7 +297,6 @@ public class ListEquipements extends Activity{
 		 					}
 						});
 						
-//						mDomotiqueManager.getListEquipements().add(positionEquipement, equipementSelected);
 						updateEquipementList();
 						
 					}else{
@@ -308,6 +306,11 @@ public class ListEquipements extends Activity{
 		 					}
 						});
 					}
+
+					equipementSelected = null;
+					isSelected = false;
+					showForm = false;
+					
 				}
 			}.start();
 		}
@@ -324,9 +327,6 @@ public class ListEquipements extends Activity{
 		forum.startAnimation(animation);
 		forum.setVisibility(View.GONE);
 		
-		equipementSelected = null;
-		isSelected = false;
-		showForm = false;
 	}
 	
 	private void setSpinner(){
@@ -622,7 +622,7 @@ public class ListEquipements extends Activity{
 	}
 	
 	protected void showAddForm() {
-		
+		equipementSelected = null;
 		action.setText("Ajouter");
 		add.setVisibility(View.INVISIBLE);
 		name.setText("");

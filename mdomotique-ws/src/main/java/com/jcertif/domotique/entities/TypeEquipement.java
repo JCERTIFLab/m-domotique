@@ -50,7 +50,7 @@ public class TypeEquipement implements Serializable {
     @Size(min = 1, max = 60)
     @Column(name = "IMG")
     private String img;
-    @OneToMany(mappedBy = "typeId",cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "typeId")
     private Collection<Equipement> equipementCollection;
 
     public TypeEquipement() {

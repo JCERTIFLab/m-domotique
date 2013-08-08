@@ -77,7 +77,7 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
 
     @POST
     @Path("getEquipementsByRoom/{piece_id}")
-    @Produces({"application/json"})
+    @Produces({"application/xml"})
     public List<Equipement> findByPiece(@PathParam("piece_id") Integer piece_id) {
         javax.persistence.Query cq = getEntityManager().createNamedQuery("Equipement.findByPiece").setParameter("piece_id", piece_id);
         return (List<Equipement>) cq.getResultList();
