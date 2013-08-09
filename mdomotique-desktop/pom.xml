@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.jcertif.mdomotique</groupId>
+        <artifactId>mdomotique-parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.jcertif</groupId>
+    <artifactId>mdomotique-desktop</artifactId>
+
+    <name>M-Domotique Desktop</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Adding JavaFX to JRE Classpath and generate executable FX Jar
+            (Java 7 update 9 minimum) -->
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.jcertif.mdomotique.desktop.MDomotiqueApplication</mainClass>
+                    <silentJfxFix>true</silentJfxFix>
+                    <vendor>M-Domotique</vendor>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>fix-classpath</goal>
+                            <goal>build-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
