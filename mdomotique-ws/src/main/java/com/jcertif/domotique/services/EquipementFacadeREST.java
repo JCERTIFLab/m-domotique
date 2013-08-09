@@ -95,7 +95,7 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
         
         try {
             Equipement equipement = super.find(id);
-            Runtime.getRuntime().exec("sudo java -jar /home/pi/Desktop/MyLed.jar " + equipement.getRelay() + " " + etat);
+            Runtime.getRuntime().exec("sudo java -jar /home/pi/Desktop/GPIOControleurAPI.jar " + equipement.getRelay() + " " + etat);
             equipement.setEtat(Boolean.valueOf(etat));
             return super.edit(equipement);
         } catch (Exception ex) {
