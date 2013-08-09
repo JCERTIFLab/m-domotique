@@ -14,7 +14,6 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -189,7 +188,6 @@ public class ListEquipements extends Activity{
 		list_equipement.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 				equipementSelected = mDomotiqueManager.getListEquipements().get(position);
-				Log.i("Test", "equipement : "+equipementSelected.getName());
 				equipementSelected.setRoom(mDomotiqueManager.getRoomSelected());
 				ShowDialog();
 			}
@@ -281,8 +279,6 @@ public class ListEquipements extends Activity{
 	
 			new Thread(){
 				public void run(){
-
-					Log.i("Test", "equipement 2 : "+equipementSelected.getName());
 					
 					equipementSelected.setName(name.getText().toString());
 					equipementSelected.setDescription(description.getText().toString());
@@ -738,9 +734,7 @@ public class ListEquipements extends Activity{
 		
 		mDomotiqueManager.setListEquipements(new ArrayList<Equipement>());
 		mDomotiqueManager.setListEquipements(new EquipementsParseur().getAllEquipements(mDomotiqueManager.getRoomSelected().getId()));
-		
-		Log.i("test","Size : "+mDomotiqueManager.getListEquipements().size());
-		
+				
 		new Thread(){
 			public void run(){
 				

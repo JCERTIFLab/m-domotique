@@ -8,8 +8,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import android.util.Log;
-
 import com.jcertif.mdomotique.com.RESTRequets;
 import com.jcertif.mdomotique.com.XMLfunctions;
 import com.jcertif.mdomotique.persistance.Equipement;
@@ -21,10 +19,7 @@ public class EquipementsParseur extends RESTRequets{
 	public ArrayList<Equipement> getAllEquipements(int idRoom){
 		
 		ArrayList<Equipement> listEquipements = new ArrayList<Equipement>();
-		
-		String str = XMLfunctions.getXML(Parametres.getEquipementsByRoom+idRoom);
-		Log.i("test","STR : "+str);
-		Document doc = XMLfunctions.XMLfromString(str);              
+		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.getEquipementsByRoom+idRoom));              
         
 		NodeList nodes = doc.getElementsByTagName("equipement");
 		
