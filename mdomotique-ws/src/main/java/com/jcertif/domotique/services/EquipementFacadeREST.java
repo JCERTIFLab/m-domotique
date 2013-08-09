@@ -95,13 +95,65 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
         
         try {
             Equipement equipement = super.find(id);
-            Runtime.getRuntime().exec("sudo java -jar /home/pi/Desktop/GPIOControleurAPI.jar " + equipement.getRelay() + " " + etat);
-            equipement.setEtat(Boolean.valueOf(etat));
-            return super.edit(equipement);
+            if(executeAction(equipement.getRelay(), etat)){
+                equipement.setEtat(Boolean.valueOf(etat));
+                return super.edit(equipement);
+            }else
+                return "{\"state\":\"erreur\"}";
         } catch (Exception ex) {
             return "{\"state\":\"erreur\"}";
         } 
 
+    }
+    
+    public boolean executeAction(String pin, String etat){
+        
+        final String GPIO_OUT = "out";
+        final String GPIO_ON = "1";
+        final String GPIO_OFF = "0";
+        
+        boolean responce = false;
+        
+        try {
+            // Open file handles to GPIO port unexport and export controls  
+            FileWriter unexportFile = new FileWriter("/sys/class/gpio/unexport");
+            FileWriter exportFile = new FileWriter("/sys/class/gpio/export");
+
+            // Reset the port, if needed  
+            File exportFileCheck = new File("/sys/class/gpio/gpio" + pin);
+            if (exportFileCheck.exists()) {
+                unexportFile.write(pin);
+                unexportFile.flush();
+            }
+
+            // Set the port for use  
+            exportFile.write(pin);
+            exportFile.flush();
+
+            // Open file handle to port input/output control  
+            FileWriter directionFile = new FileWriter("/sys/class/gpio/gpio" + pin + "/direction");
+
+            // Set port for output  
+            directionFile.write(GPIO_OUT);
+            directionFile.flush();
+
+            // Set up a GPIO port as a command channel  
+            FileWriter commandChannel = new FileWriter("/sys/class/gpio/gpio" + pin + "/value");
+            
+            if(etat.equals("1")){
+                commandChannel.write(GPIO_ON);
+                commandChannel.flush();
+            }else{
+                commandChannel.write(GPIO_OFF);
+                commandChannel.flush();
+            }
+            
+            responce = true;
+
+        } catch (Exception exception) { }
+        
+        return responce;
+        
     }
 
 }

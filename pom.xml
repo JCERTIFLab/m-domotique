@@ -9,14 +9,9 @@
 
     <name>M-Domotique</name>
 
-
     <scm>
         <url>scm:git@github.com:JCERTIFLab/m-domotique.git</url>
     </scm>
-
-    <modules>
-        <module>mdomotique-desktop</module>
-    </modules>
 
     <properties>
         <!-- Project properties -->
