@@ -2,10 +2,8 @@ package com.jcertif.mdomotique.ihm.adabter;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -56,28 +54,24 @@ public final class RoomsHandel extends Fragment {
     	final ImageView img 	= (ImageView) mViewGroupe.findViewById(R.id.imgRoom);
     	final ProgressBar loading = (ProgressBar) mViewGroupe.findViewById(R.id.loading);
     	
-    	new AsyncTask<String, Long, Bitmap>() {
-			protected void onPostExecute(final Bitmap result) {
-				getActivity().runOnUiThread(new Runnable() {
- 					@Override public void run(){
- 						
- 						if(result != null)
- 							img.setImageBitmap(result);
- 						
- 						img.setVisibility(View.VISIBLE);
- 						loading.setVisibility(View.GONE);
- 					}
-				});
-						
-				this.cancel(true);
- 					
-			}
-			@Override
-			protected Bitmap doInBackground(String... params) { 
-				Log.i("test","URL : "+Parametres.getImgURL(mDomotiqueManager.getListRooms().get(Integer.parseInt(mContent)).getRoomCategory().getImg()));
-				return mDomotiqueApplication.ImageOperations(Parametres.getImgURL(mDomotiqueManager.getListRooms().get(Integer.parseInt(mContent)).getRoomCategory().getImg()));    
-			}
-		}.execute("");
+    	new Thread(){
+    		public void run(){
+    			final Bitmap btm = mDomotiqueApplication.ImageOperations(Parametres.getImgURL(mDomotiqueManager.getListRooms().get(Integer.parseInt(mContent)).getRoomCategory().getImg()));  
+    			
+    			if(!mDomotiqueManager.isStopLoading()){
+	    			getActivity().runOnUiThread(new Runnable() {
+	 					@Override public void run(){
+	 						
+	 						if(btm != null)
+	 							img.setImageBitmap(btm);
+	 						
+	 						img.setVisibility(View.VISIBLE);
+	 						loading.setVisibility(View.GONE);
+	 					}
+					});
+    			}
+    		}
+    	}.start();
     	
     	img.setOnClickListener(new OnClickListener() {
 			@Override

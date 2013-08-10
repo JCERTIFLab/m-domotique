@@ -40,7 +40,7 @@
 		        android:gravity="center"
 		        android:paddingLeft="5dp"
 		        android:textColor="#FFFFFF"
-		        android:textSize="16sp"
+		        android:textSize="18sp"
 		        android:textStyle="bold"
 		        android:singleLine="true"
 		        android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -123,6 +123,7 @@
 	                    android:ems="10" 
 	                    android:paddingLeft="5dp"
 	                    android:inputType="text"
+	                    android:textColor="@color/blue"
 	                    android:background="@drawable/search"/>
 					
 	            </LinearLayout>
@@ -152,6 +153,7 @@
 	                    android:ems="10" 
 	                    android:paddingLeft="5dp"
 	                    android:inputType="text"
+	                    android:textColor="@color/blue"
 	                    android:background="@drawable/search"/>
 					
 	            </LinearLayout>
@@ -181,6 +183,7 @@
 	                    android:ems="10" 
 	                    android:paddingLeft="5dp"
 	                    android:inputType="text"
+	                    android:textColor="@color/blue"
 	                    android:background="@drawable/search"/>
 					
 	            </LinearLayout>
@@ -210,6 +213,7 @@
 	                    android:ems="10" 
 	                    android:paddingLeft="5dp"
 	                    android:inputType="textPassword"
+	                    android:textColor="@color/blue"
 	                    android:background="@drawable/search"/>
 					
 	            </LinearLayout>
@@ -223,9 +227,11 @@
 	
 	                <Button
 	                    android:id="@+id/addUser"
-	                    android:layout_width="100dp"
+	                    android:layout_width="120dp"
 	                    android:layout_height="fill_parent"
-	                    android:text="@string/add" />
+	                    android:text="@string/add" 
+	                    android:textStyle="bold" 
+	                    android:textColor="@color/blue"/>
 	                
 	           	</LinearLayout>
 	           	

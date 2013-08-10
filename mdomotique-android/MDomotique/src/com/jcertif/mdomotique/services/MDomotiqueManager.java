@@ -34,6 +34,8 @@ public class MDomotiqueManager {
 	
 	private boolean parsingEquipementCategoryFinish = false;
 	
+	private boolean stopLoading = false;
+	
 	public static MDomotiqueManager mDomotiqueManager;
 	
 	public static MDomotiqueManager getInstance() {
@@ -131,6 +133,14 @@ public class MDomotiqueManager {
 
 	public void setParsingUsersFinish(boolean parsingUsersFinish) {
 		this.parsingUsersFinish = parsingUsersFinish;
+	}
+
+	public boolean isStopLoading() {
+		return stopLoading;
+	}
+
+	public void setStopLoading(boolean stopLoading) {
+		this.stopLoading = stopLoading;
 	}
 
 }

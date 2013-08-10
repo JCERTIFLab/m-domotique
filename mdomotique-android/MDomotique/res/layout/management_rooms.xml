@@ -40,7 +40,7 @@
 		        android:gravity="center"
 		        android:paddingLeft="5dp"
 		        android:textColor="#FFFFFF"
-		        android:textSize="16sp"
+		        android:textSize="18sp"
 		        android:textStyle="bold"
 		        android:singleLine="true"
 		        android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -67,7 +67,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
-		android:layout_marginTop="52dp"
+		android:layout_marginTop="50dp"
 		android:gravity="center"
 		android:orientation="vertical">
 		
@@ -90,20 +90,45 @@
 			android:orientation="vertical"
             android:visibility="gone" >
 		   	
-            <LinearLayout
-            	android:id="@+id/img"
+            <RelativeLayout
 		        android:layout_width="fill_parent"
 				android:layout_height="180dp"
-				android:gravity="center"
 				android:orientation="vertical">
 				
-                <ProgressBar
-		            android:id="@+id/loading_img"
-		            android:layout_width="35dp"
-			        android:layout_height="35dp"
-			        android:indeterminateDrawable="@drawable/loading_progress"  />
-				
-            </LinearLayout>
+                <LinearLayout
+			        android:id="@+id/content_img"
+			        android:layout_width="fill_parent"
+					android:layout_height="180dp"
+					android:gravity="center"
+					android:orientation="vertical">
+					
+                    <ImageView
+		            	android:id="@+id/img"
+				        android:layout_width="160dp"
+						android:layout_height="160dp"
+						android:gravity="center"
+						android:layout_gravity="center"
+						android:orientation="vertical"
+						android:contentDescription="@string/app_name"/>
+                    
+                </LinearLayout>        
+                
+                <LinearLayout
+			        android:id="@+id/loading_img"
+			        android:layout_width="fill_parent"
+					android:layout_height="180dp"
+					android:gravity="center"
+					android:orientation="vertical">
+					
+                     <ProgressBar
+			            android:layout_width="35dp"
+				        android:layout_height="35dp"
+						android:layout_gravity="center"
+				        android:indeterminateDrawable="@drawable/loading_progress"  />
+                    
+                </LinearLayout>
+
+            </RelativeLayout>
             
             <LinearLayout
 		        android:layout_width="fill_parent"
@@ -130,6 +155,7 @@
                     android:layout_height="fill_parent"
                     android:ems="10" 
                     android:inputType="text"
+                    android:textColor="@color/blue"
                     android:paddingLeft="5dp"
                     android:background="@drawable/search"/>
 				

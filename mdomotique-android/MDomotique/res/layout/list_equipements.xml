@@ -371,7 +371,7 @@
 		            android:layout_weight="0.8"
 		            android:gravity="center"
 		            android:textColor="#FFFFFF"
-		            android:textSize="20sp"
+		            android:textSize="18sp"
 		            android:textStyle="bold"
 		            android:singleLine="true"
 		            android:textAppearance="?android:attr/textAppearanceMedium" />

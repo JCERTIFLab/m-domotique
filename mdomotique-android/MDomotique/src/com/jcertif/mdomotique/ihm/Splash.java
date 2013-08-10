@@ -116,20 +116,21 @@ public class Splash extends Activity {
 
 	public void loading(){
     	
-		String adr = ManagementFiles.readData(pathFileConfig);
+//		String adr = ManagementFiles.readData(pathFileConfig);
+		String adr = "http://mdomotique.firas-gabsi.cloudbees.net/";
     	if(adr.length()>0){
-    		String adresse = adr.substring(7, adr.length()-5);
-    		if(testAdresse(adresse)){
+//    		String adresse = adr.substring(7, adr.length()-5);
+//    		if(testAdresse(adresse)){
 	    		Parametres.nomDomaine = adr;  
 	    		Parametres.setUrls();
 				traitement();
-    		}else{
-    			Splash.this.runOnUiThread(new Runnable() {
- 					@Override public void run(){
- 		        		ShowDialog();
- 					}
-    			});
-    		}
+//    		}else{
+//    			Splash.this.runOnUiThread(new Runnable() {
+// 					@Override public void run(){
+// 		        		ShowDialog();
+// 					}
+//    			});
+//    		}
     	}else{
 			Splash.this.runOnUiThread(new Runnable() {
 					@Override public void run(){

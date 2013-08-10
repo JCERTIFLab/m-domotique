@@ -273,8 +273,12 @@ public class ListEquipements extends Activity{
 		 					}
 						});
 					}
+
+					isSelected = false;
+					showForm = false;
 				}
 			}.start();
+			
 		}else{
 	
 			new Thread(){
@@ -285,6 +289,9 @@ public class ListEquipements extends Activity{
 					equipementSelected.setPin(Integer.parseInt(num_pin.getText().toString()));
 					equipementSelected.setState(etatEquipement);
 					equipementSelected.setEquipement_type_id(mDomotiqueManager.getListEquipementCategories().get(typeEquipement.getSelectedItemPosition()).getId());
+					equipementSelected.setEquipementCategory(mDomotiqueManager.getListEquipementCategories().get(typeEquipement.getSelectedItemPosition()));
+					equipementSelected.setRoom(mDomotiqueManager.getRoomSelected());
+					equipementSelected.setRoom_id(mDomotiqueManager.getRoomSelected().getId());
 					
 					if(new EquipementsParseur().updateEquipement(equipementSelected)){						
 						ListEquipements.this.runOnUiThread(new Runnable() {
@@ -335,13 +342,17 @@ public class ListEquipements extends Activity{
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		typeEquipement.setAdapter(dataAdapter);
 		
+		loading_img.setVisibility(View.VISIBLE);
+		img.setVisibility(View.GONE);
+		
 		new AsyncTask<String, Long, Bitmap>() {
-
+			
 			protected void onPostExecute(Bitmap result) {
 				if (result != null) {
 					BitmapDrawable background = new BitmapDrawable(result);
 					img.setBackgroundDrawable(background);
-					loading_img.setVisibility(View.INVISIBLE);
+					loading_img.setVisibility(View.GONE);
+					img.setVisibility(View.VISIBLE);
 				} 
 
 				result = null;
@@ -355,7 +366,9 @@ public class ListEquipements extends Activity{
 		
 		typeEquipement.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 		    public void onItemSelected(AdapterView<?> parent, View view, final int pos, long id) {
-		        loading_img.setVisibility(View.VISIBLE);
+		        
+		    	loading_img.setVisibility(View.VISIBLE);
+		    	img.setVisibility(View.GONE);
 		        
 		        new AsyncTask<String, Long, Bitmap>() {
 
@@ -363,7 +376,8 @@ public class ListEquipements extends Activity{
 						if (result != null) {
 							BitmapDrawable background = new BitmapDrawable(result);
 							img.setBackgroundDrawable(background);
-							loading_img.setVisibility(View.INVISIBLE);
+							loading_img.setVisibility(View.GONE);
+					    	img.setVisibility(View.VISIBLE);
 						} 
 
 						result = null;

@@ -26,6 +26,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -44,10 +45,11 @@ import com.jcertif.mdomotique.services.Parametres;
 
 public class ManagementRooms extends Activity{
 	
-	private LinearLayout back, add, add_room, img;
+	private LinearLayout back, add, add_room, content_img, loading_img;
+	private ImageView img;
 	private TextView name;
 	private Button action;
-	private ProgressBar loading, loading_img;
+	private ProgressBar loading;
 	private EditText nameRoom;
 	private Spinner typeRoom;
 	private ListView list_rooms;
@@ -67,16 +69,18 @@ public class ManagementRooms extends Activity{
 		isSelected = false;
 		showForm = false;
 	    
+		content_img = (LinearLayout) findViewById(R.id.content_img);
 		back 	 = (LinearLayout) findViewById(R.id.back);
 		add  	 = (LinearLayout) findViewById(R.id.add);
 		add_room = (LinearLayout) findViewById(R.id.add_room);
-		img  	 = (LinearLayout) findViewById(R.id.img);
+		loading_img = (LinearLayout) findViewById(R.id.loading_img);
 		
 		name   = (TextView) findViewById(R.id.name);
 		action = (Button) findViewById(R.id.action);
+
+		img  	 = (ImageView) findViewById(R.id.img);
 		
 		loading 	= (ProgressBar) findViewById(R.id.loading);
-		loading_img = (ProgressBar) findViewById(R.id.loading_img);
 		
 		nameRoom  = (EditText) findViewById(R.id.nameRoom);
 		typeRoom  = (Spinner) findViewById(R.id.typeRoom);
@@ -148,15 +152,17 @@ public class ManagementRooms extends Activity{
 		
 		typeRoom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 		    public void onItemSelected(AdapterView<?> parent, View view, final int pos, long id) {
-		        loading_img.setVisibility(View.VISIBLE);
+		    	
+				loading_img.setVisibility(View.VISIBLE);
+				content_img.setVisibility(View.GONE);
 		        
 		        new AsyncTask<String, Long, Bitmap>() {
 
 					protected void onPostExecute(Bitmap result) {
 						if (result != null) {
-							BitmapDrawable background = new BitmapDrawable(result);
-							img.setBackgroundDrawable(background);
-							loading_img.setVisibility(View.INVISIBLE);
+							img.setImageBitmap(result);
+							loading_img.setVisibility(View.GONE);
+							content_img.setVisibility(View.VISIBLE);
 						} 
 
 						result = null;
@@ -209,14 +215,17 @@ public class ManagementRooms extends Activity{
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, list);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		typeRoom.setAdapter(dataAdapter);
+
+		loading_img.setVisibility(View.VISIBLE);
+		content_img.setVisibility(View.GONE);
 		
 		new AsyncTask<String, Long, Bitmap>() {
 
 			protected void onPostExecute(Bitmap result) {
 				if (result != null) {
-					BitmapDrawable background = new BitmapDrawable(result);
-					img.setBackgroundDrawable(background);
-					loading_img.setVisibility(View.INVISIBLE);
+					img.setImageBitmap(result);
+					loading_img.setVisibility(View.GONE);
+					content_img.setVisibility(View.VISIBLE);
 				} 
 
 				result = null;
@@ -457,7 +466,7 @@ public class ManagementRooms extends Activity{
 		alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 		alertDialog.setTitle("Supprimer");
 		alertDialog.setMessage(getResources().getString(R.string.ask_delete_room));
-		alertDialog.setButton("Non", new DialogInterface.OnClickListener() {
+		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				new Thread(){
 					@Override
@@ -490,7 +499,7 @@ public class ManagementRooms extends Activity{
 				}.start();
 				return;
 			} }); 
-		alertDialog.setButton2("Oui", new DialogInterface.OnClickListener() {
+		alertDialog.setButton2("Non", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				dialog.dismiss();
 				return;

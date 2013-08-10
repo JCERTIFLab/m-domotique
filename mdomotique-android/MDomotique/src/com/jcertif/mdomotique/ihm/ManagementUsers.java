@@ -142,6 +142,9 @@ public class ManagementUsers extends Activity{
 	}
 	
 	private void setContent(){
+		
+		mDomotiqueManager.setParsingUsersFinish(false);
+		
 		new Thread(){
 			public void run(){
 				mDomotiqueManager.setListUsers(new UsersParseur().getUsers());
@@ -249,6 +252,8 @@ public class ManagementUsers extends Activity{
 				}
 			}.start();
 		}
+		
+		showForm = false;
 
 	}
 	
@@ -381,6 +386,7 @@ public class ManagementUsers extends Activity{
 		 							list_users.setVisibility(View.GONE);
 
 									setContent();
+									showForm = false;
 		 						}else
 		 							showMessage(getResources().getString(R.string.user_not_deleted));
 		 					}

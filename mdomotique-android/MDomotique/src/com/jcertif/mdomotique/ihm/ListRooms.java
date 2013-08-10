@@ -47,6 +47,8 @@ public class ListRooms extends FragmentActivity{
         
         mDomotiqueManager = MDomotiqueManager.getInstance();
         
+        mDomotiqueManager.setStopLoading(false);
+        
         titleTimer = new Timer();
 		mHandler = new Handler();
 
@@ -210,6 +212,8 @@ public class ListRooms extends FragmentActivity{
  				    	managementUsers.setBackgroundColor(Color.rgb(255, 255, 255));
  				    	managementUsers.setTextColor(Color.rgb(79, 129, 189));
  				    	
+ 				        mDomotiqueManager.setStopLoading(true);
+ 				    	
  				    	Intent intent = new Intent(ListRooms.this, ManagementUsers.class);
  						intent.putExtra("anim id in", R.anim.right_in);
  						intent.putExtra("anim id out", R.anim.right_out);
@@ -249,6 +253,8 @@ public class ListRooms extends FragmentActivity{
  				    	isSelected = false;
  				    	managementRooms.setBackgroundColor(Color.rgb(255, 255, 255));
  				    	managementRooms.setTextColor(Color.rgb(79, 129, 189));
+
+ 				        mDomotiqueManager.setStopLoading(true);
  				    	
  				    	Intent intent = new Intent(ListRooms.this, ManagementRooms.class);
  						intent.putExtra("anim id in", R.anim.right_in);
@@ -309,11 +315,13 @@ public class ListRooms extends FragmentActivity{
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 		alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 		alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-		alertDialog.setTitle("Dï¿½connexion");
-		alertDialog.setMessage("Est ce que vous etes sur ?");
+		alertDialog.setTitle("Déconnexion");
+		alertDialog.setMessage("Est ce que vous êtes sûr ?");
 		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 
+		        mDomotiqueManager.setStopLoading(true);
+				
 				Intent intent = new Intent(ListRooms.this, Authentification.class);
 				intent.putExtra("anim id in", R.anim.left_in);
 				intent.putExtra("anim id out", R.anim.left_out);

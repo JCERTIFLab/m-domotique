@@ -74,7 +74,7 @@ public class RoomsParseur extends RESTRequets{
 	            		RoomCategory roomCategory = new RoomCategory();
 	            			
 	            		roomCategory.setId(Integer.parseInt(XMLfunctions.getValue(element, "id")));
-	            		roomCategory.setName(XMLfunctions.getValue(element, "name"));
+	            		roomCategory.setName(XMLfunctions.getValue(element, "nom"));
 	            		roomCategory.setImg(XMLfunctions.getValue(element, "imf"));
 	            			
 	            		listRooms.get(i).setRoomCategory(roomCategory);

@@ -14,25 +14,25 @@
     <string name="setting">Paramétres</string>
     <string name="wrong_action">L\'action n\'a pas pu être effectuée</string>
     
-    <string name="management_rooms">Gestion des piéces</string>
-    <string name="add_room">Ajouter un piéce</string>
-    <string name="update_room">Modifier piéce</string>
-    <string name="delete_room">Supprimer piéce</string>   
-    <string name="room_added">Piéce ajoutée avec succés</string>
-    <string name="room_not_add">Echec lord de l\'ajout de la nouvelle piéce</string>
-    <string name="room_update">Piéce modifiée avec succés</string>
-    <string name="room_not_update">Echec lord de la modification de la piéce</string>
-  	<string name="room_deleted">Piéce supprimée avec succés</string>
-  	<string name="room_not_deleted">Echec lord de la supprission de la piéce</string>
-  	<string name="ask_delete_room">Supprimer cette piéce ?</string>
+    <string name="management_rooms">Gestion des locaux</string>
+    <string name="add_room">Ajouter un local</string>
+    <string name="update_room">Modifier un local</string>
+    <string name="delete_room">Supprimer un local</string>   
+    <string name="room_added">Local ajouté avec succés</string>
+    <string name="room_not_add">Echec lors de l\'ajout du nouveau local</string>
+    <string name="room_update">Local modifié avec succés</string>
+    <string name="room_not_update">Echec lors de la modification du local</string>
+  	<string name="room_deleted">Local supprimé avec succés</string>
+  	<string name="room_not_deleted">Echec lors de la supprission du local</string>
+  	<string name="ask_delete_room">Supprimer ce local ?</string>
   	
-  	<string name="equipement_added">Equipement ajoutée avec succés</string>
-    <string name="equipement_not_add">Echec lord de l\'ajout du nouveau equipement</string>
-    <string name="equipement_update">Equipement modifiée avec succés</string>
-    <string name="equipement_not_update">Echec lord de la modification de l\'equipement</string>
-  	<string name="equipement_deleted">Equipement supprimée avec succés</string>
-  	<string name="equipement_not_deleted">Echec lord de la supprission de l\'equipement</string>
-  	<string name="ask_delete_equipement">Supprimer cette equipement ?</string>
+  	<string name="equipement_added">Equipement ajouté avec succés</string>
+    <string name="equipement_not_add">Echec lors de l\'ajout du nouveau equipement</string>
+    <string name="equipement_update">Equipement modifié avec succés</string>
+    <string name="equipement_not_update">Echec lors de la modification de l\'equipement</string>
+  	<string name="equipement_deleted">Equipement supprimé avec succés</string>
+  	<string name="equipement_not_deleted">Echec lors de la supprission de l\'equipement</string>
+  	<string name="ask_delete_equipement">Supprimer cet equipement ?</string>
   	<string name="msg_adresse">Veuillez introduire l\'adresse du serveur</string>
     <string name="cancel">Annuler</string>
     
@@ -40,11 +40,11 @@
     <string name="update_user">Modifier un utilisateur</string>
     <string name="delete_user">Supprimer un utilisateur</string>   
     <string name="user_added">Utilisateur ajouté avec succés</string>
-    <string name="user_not_add">Echec lord de l\'ajout du nouvelle utilisateur</string>
+    <string name="user_not_add">Echec lors de l\'ajout du nouvelle utilisateur</string>
     <string name="user_update">Utilisateur modifié avec succés</string>
-    <string name="user_not_update">Echec lord de la modification de l\'utilisateur</string>
-  	<string name="user_deleted">Utilisateur supprimée avec succés</string>
-  	<string name="user_not_deleted">Echec lord de la supprission de l\'utilisateur</string>
+    <string name="user_not_update">Echec lors de la modification de l\'utilisateur</string>
+  	<string name="user_deleted">Utilisateur supprimé avec succés</string>
+  	<string name="user_not_deleted">Echec lors de la supprission de l\'utilisateur</string>
   	<string name="ask_delete_user">Supprimer cet utilisateur ?</string>
   	
     <string name="name">"Nom : "</string>

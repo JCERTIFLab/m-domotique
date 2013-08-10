@@ -9,10 +9,10 @@
     <class>com.jcertif.domotique.entities.User</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/domotiquedb"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://ec2-23-21-211-172.compute-1.amazonaws.com:3306/domotiquedb"/>
       <property name="javax.persistence.jdbc.password" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.user" value="firas.gabsi"/>
       <property name="eclipselink.ddl-generation" value="create-tables"/>
     </properties>
   </persistence-unit>
