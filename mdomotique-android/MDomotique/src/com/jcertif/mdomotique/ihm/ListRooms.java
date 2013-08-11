@@ -315,8 +315,8 @@ public class ListRooms extends FragmentActivity{
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 		alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 		alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-		alertDialog.setTitle("Déconnexion");
-		alertDialog.setMessage("Est ce que vous êtes sûr ?");
+		alertDialog.setTitle(getResources().getString(R.string.logout));
+		alertDialog.setMessage(getResources().getString(R.string.confirmation));
 		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 
@@ -361,7 +361,7 @@ public class ListRooms extends FragmentActivity{
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 
 		alertDialog.setTitle("Quitter");
-		alertDialog.setMessage("Est ce que vous êtes sur ?");
+		alertDialog.setMessage(getResources().getString(R.string.confirmation));
 		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				System.exit(0);

@@ -13,7 +13,7 @@
     <string name="management_users">Gestion des utilisateurs</string>
     <string name="setting">Paramétres</string>
     <string name="wrong_action">L\'action n\'a pas pu être effectuée</string>
-    
+    <string name="confirmation">Est ce que vous étes sur ?</string>    
     <string name="management_rooms">Gestion des locaux</string>
     <string name="add_room">Ajouter un local</string>
     <string name="update_room">Modifier un local</string>

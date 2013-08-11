@@ -310,7 +310,7 @@ public class Authentification extends Activity{
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 
 		alertDialog.setTitle("Quitter");
-		alertDialog.setMessage("Est ce que vous êtes sur ?");
+		alertDialog.setMessage(getResources().getString(R.string.confirmation));
 		alertDialog.setButton("Oui", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				System.exit(0);
