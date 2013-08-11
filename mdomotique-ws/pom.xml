@@ -8,6 +8,13 @@
     <packaging>war</packaging>
 
     <name>M-DomotiqueWS</name>
+    <parent>
+        <groupId>com.jcertif.mdomotique</groupId>
+        <artifactId>mdomotique-parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    
 
     <repositories>
         <repository>

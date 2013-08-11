@@ -12,6 +12,11 @@
     <scm>
         <url>scm:git@github.com:JCERTIFLab/m-domotique.git</url>
     </scm>
+    
+    <modules>
+        <module>mdomotique-android/MDomotique</module>
+        <module>mdomotique-ws</module>
+    </modules>
 
     <properties>
         <!-- Project properties -->
