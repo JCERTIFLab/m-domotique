@@ -27,7 +27,7 @@ public class RoomsParseur extends RESTRequets{
 		
 		ArrayList<Room> listRooms = new ArrayList<Room>();
 		HttpClient httpclient = new DefaultHttpClient();
-
+		
 		HttpGet httpget = new HttpGet(Parametres.getAllRooms);
 		httpget.addHeader("Content-Type", "application/xml");
 		HttpResponse response;

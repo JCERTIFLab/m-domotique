@@ -487,16 +487,30 @@ public class ListEquipements extends Activity{
 			
 	}
 	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+	    if (progressDialog != null) {
+	    	progressDialog.dismiss();
+	    	progressDialog = null;
+	    }
+	}
+	
 	private void on(){	
 		
-		progressDialog=new ProgressDialog(this);
+		progressDialog=new ProgressDialog(ListEquipements.this);
 		progressDialog.setCancelable(true);
-		progressDialog.setMessage("Ex�cution ....");
+		progressDialog.setMessage("Execution ....");
 		progressDialog.show();
 		
     	new Thread(){
     		public void run(){
-    			if(new EquipementsParseur().ExecuteAction(equipementSelected.getPin(), 1)){
+    			
+    			try{
+    				sleep(500);
+    			}catch(Exception e){}
+    			
+    			if(new EquipementsParseur().ExecuteAction(equipementSelected.getId(), 1)){
     	    		equipementSelected.setState(true);
     	    		new EquipementsParseur().updateEquipement(equipementSelected);
     	    		ListEquipements.this.runOnUiThread(new Runnable() {
@@ -541,7 +555,12 @@ public class ListEquipements extends Activity{
 
     	new Thread(){
     		public void run(){
-    			if(new EquipementsParseur().ExecuteAction(equipementSelected.getPin(), 0)){
+    			
+    			try{
+    				sleep(500);
+    			}catch(Exception e){}
+    			
+    			if(new EquipementsParseur().ExecuteAction(equipementSelected.getId(), 0)){
     	    		equipementSelected.setState(false);
     	    		new EquipementsParseur().updateEquipement(equipementSelected);
     	    		ListEquipements.this.runOnUiThread(new Runnable() {

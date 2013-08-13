@@ -44,9 +44,9 @@ public class Parametres {
 	
 	public static void setUrls(){
 		
-//		urlBase = nomDomaine+"/mdomotique/rest/";
+		urlBase = nomDomaine+"/M-DomotiqueWS-1.0-SNAPSHOT/rest/";
 		
-		urlBase = nomDomaine+"/rest/";
+//		urlBase = nomDomaine+"/rest/";
 		
 		getAllRooms = urlBase+"rooms/getAllRooms";
 		deleteRoom = urlBase+"rooms/delete/";
@@ -76,8 +76,8 @@ public class Parametres {
 	}
 	
 	public static String getImgURL(String url){
-//		return nomDomaine+url;
-		return url;
+		return nomDomaine+url;
+//		return url;
 	}
 	
 	public static String postData(List<NameValuePair> nameValuePairs, String url) {

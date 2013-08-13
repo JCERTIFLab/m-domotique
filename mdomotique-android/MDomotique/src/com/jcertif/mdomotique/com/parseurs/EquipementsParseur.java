@@ -65,17 +65,22 @@ public class EquipementsParseur extends RESTRequets{
     	
 	}	
     	
-	public boolean ExecuteAction(int pin, int etat){
-//		Document doc = XMLfunctions.XMLfromString(XMLfunctions.getXML(Parametres.executAction+"/"+pin+"/"+etat));
-//		
-//		NodeList nodes = doc.getElementsByTagName("response");
-//		
-//		Element e = (Element)nodes.item(0);
-//		
-//		if(XMLfunctions.getValue(e, "status").equals("OK"))
-//			return true;
-//		else
-			return false;
+	public boolean ExecuteAction(int id, int etat){
+
+
+		boolean reponse = false;   
+        try {
+        	
+        	JSONObject json = doPost(Parametres.executAction+"/"+id+"/"+etat, new JSONObject());
+            if(json.getString("state").equals("ok"))
+            	reponse = true;	   
+        	         
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        
+        return reponse;
+        
 	}
 	
 	public boolean RemoveEquipement(int idEquipement){
