@@ -9,6 +9,8 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -72,6 +74,26 @@ public class EquipementCategoriesParseur extends RESTRequets {
 		} 
 
         return listEquipementCategories;
+		
+	}
+	
+	public boolean addEquipementCategory(EquipementCategory equipementCategory){
+		
+		boolean reponse = false;   
+        try {
+        	JSONObject equipementCategoryObject=new JSONObject();
+        	equipementCategoryObject.put("id", equipementCategory.getId());
+        	equipementCategoryObject.put("nom", equipementCategory.getName());
+        	equipementCategoryObject.put("imf", equipementCategory.getImg());
+        	
+        	JSONObject json = doPost(Parametres.addEquipementCategory, equipementCategoryObject);
+            if(json.getString("state").equals("ok"))
+            	reponse = true;	            
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        
+		return reponse;
 		
 	}
 

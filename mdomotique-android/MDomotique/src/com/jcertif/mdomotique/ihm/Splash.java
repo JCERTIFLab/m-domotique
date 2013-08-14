@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.util.LruCache;
@@ -27,9 +28,10 @@ import com.jcertif.mdomotique.R;
 import com.jcertif.mdomotique.com.parseurs.EquipementCategoriesParseur;
 import com.jcertif.mdomotique.com.parseurs.RoomCategoriesParseur;
 import com.jcertif.mdomotique.com.parseurs.RoomsParseur;
+import com.jcertif.mdomotique.persistance.EquipementCategory;
+import com.jcertif.mdomotique.persistance.RoomCategory;
 import com.jcertif.mdomotique.services.MDomotiqueApplication;
 import com.jcertif.mdomotique.services.MDomotiqueManager;
-import com.jcertif.mdomotique.services.ManagementFiles;
 import com.jcertif.mdomotique.services.OutilsInternet;
 import com.jcertif.mdomotique.services.Parametres;
 
@@ -43,7 +45,8 @@ public class Splash extends Activity {
     private Button add;
     private ImageView refresh;
     private LinearLayout loading;
-    private final String pathFileConfig = "/sdcard/serveur.txt";
+    
+    public final String PREFS_NAME = "serveur";
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -101,6 +104,12 @@ public class Splash extends Activity {
 		new Thread(){
 			public void run(){
 				mDomotiqueManager.setListRoomsCategories(new RoomCategoriesParseur().getRoomCategories());
+				if(mDomotiqueManager.getListRoomsCategories().isEmpty()){
+					mDomotiqueManager.setListInitialRoomsCategories();
+					RoomCategoriesParseur roomCategoriesParseur = new RoomCategoriesParseur();
+					for(RoomCategory roomCategory : mDomotiqueManager.getListInitialRoomsCategories())
+						roomCategoriesParseur.addRoomCategory(roomCategory);
+				}
 				mDomotiqueManager.setParsingRoomCategoryFinish(true);
 
 			}
@@ -109,6 +118,12 @@ public class Splash extends Activity {
 		new Thread(){
 			public void run(){
 				mDomotiqueManager.setListEquipementCategories(new EquipementCategoriesParseur().getEquipementCategories());
+				if(mDomotiqueManager.getListEquipementCategories().isEmpty()){
+					mDomotiqueManager.setListInitialEquipementCategories();
+					EquipementCategoriesParseur equipementCategoriesParseur = new EquipementCategoriesParseur();
+					for(EquipementCategory equipementCategory : mDomotiqueManager.getListInitialEquipementCategories())
+						equipementCategoriesParseur.addEquipementCategory(equipementCategory);
+				}
 				mDomotiqueManager.setParsingEquipementCategoryFinish(true);
 			}
 		}.start();
@@ -116,8 +131,9 @@ public class Splash extends Activity {
 
 	public void loading(){
     	
-		String adr = ManagementFiles.readData(pathFileConfig);
-//		String adr = "http://mdomotique.firas-gabsi.cloudbees.net/";
+		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+	    String adr = settings.getString("adresse", "");
+		
     	if(adr.length()>0){
     		String adresse = adr.substring(7, adr.length()-5);
     		if(testAdresse(adresse)){
@@ -167,7 +183,7 @@ public class Splash extends Activity {
 								time = 2000;
 								Parametres.nomDomaine = "http://"+adr+":8181";
 					    		Parametres.setUrls();
-								ManagementFiles.writeData(Parametres.nomDomaine, pathFileConfig);
+					    		saveData();
 								traitement();
 								return;
 							} 
@@ -192,6 +208,13 @@ public class Splash extends Activity {
 		});
 
 		dialog.show();
+	}
+	
+	private void saveData(){
+		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+	    SharedPreferences.Editor editor = settings.edit();
+	    editor.putString("adresse", Parametres.nomDomaine);
+	    editor.commit();
 	}
 	
 	private void traitement(){

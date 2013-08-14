@@ -12,6 +12,12 @@ public class EquipementCategory {
 		img = "";
 	}
 	
+	public EquipementCategory(int id, String name, String img){
+		this.id = id;
+		this.name = name;
+		this.img = img;
+	}
+	
 	public int getId() {
 		return id;
 	}

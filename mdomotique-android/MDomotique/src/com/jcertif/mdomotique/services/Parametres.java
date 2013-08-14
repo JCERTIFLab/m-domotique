@@ -26,6 +26,7 @@ public class Parametres {
 	public static String addRoom;
 	
 	public static String getAllRoomsCategories;
+	public static String addRoomCategory;
 	
 	public static String getAllUsers;
 	public static String addUser;
@@ -40,11 +41,14 @@ public class Parametres {
 	public static String executAction;
 	
 	public static String getAllEquipementCategories;
+	public static String addEquipementCategory;
+	
+	public static String projectName = "M-DomotiqueWS-1.0-SNAPSHOT";
 	
 	
 	public static void setUrls(){
 		
-		urlBase = nomDomaine+"/M-DomotiqueWS-1.0-SNAPSHOT/rest/";
+		urlBase = nomDomaine+"/"+projectName+"/rest/";
 		
 //		urlBase = nomDomaine+"/rest/";
 		
@@ -54,6 +58,7 @@ public class Parametres {
 		addRoom = urlBase+"rooms/add";
 		
 		getAllRoomsCategories = urlBase+"typepieces/getAllTypes";
+		addRoomCategory = urlBase+"typepieces/add";
 		
 		getAllUsers = urlBase+"users/getAllUsers";
 		addUser = urlBase+"users/add";
@@ -68,6 +73,7 @@ public class Parametres {
 		executAction = urlBase+"equipements/action/";
 		
 		getAllEquipementCategories = urlBase+"typeequipements/getAllTypesEquipements";
+		addEquipementCategory = urlBase+"typeequipements/add";
 	}
 	
 	

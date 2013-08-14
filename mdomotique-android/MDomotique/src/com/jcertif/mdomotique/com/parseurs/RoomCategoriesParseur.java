@@ -9,6 +9,8 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -71,6 +73,26 @@ public class RoomCategoriesParseur extends RESTRequets{
 		} 
 		
         return listRoomCategories;
+		
+	}
+	
+	public boolean addRoomCategory(RoomCategory roomCategory){
+		
+		boolean reponse = false;   
+        try {
+        	JSONObject roomCategoryObject=new JSONObject();
+        	roomCategoryObject.put("id", roomCategory.getId());
+        	roomCategoryObject.put("nom", roomCategory.getName());
+        	roomCategoryObject.put("imf", roomCategory.getImg());
+        	
+        	JSONObject json = doPost(Parametres.addRoomCategory, roomCategoryObject);
+            if(json.getString("state").equals("ok"))
+            	reponse = true;	            
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        
+		return reponse;
 		
 	}
 
