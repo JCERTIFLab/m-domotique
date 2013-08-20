@@ -13,6 +13,8 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 import org.codehaus.jackson.annotate.JsonAutoDetect;
 
 
@@ -28,7 +30,7 @@ public class UserFacadeREST extends AbstractFacade<User> {
     @POST
     @Path("add")
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public String create(User entity) {
         return super.create(entity);
     }
@@ -36,7 +38,7 @@ public class UserFacadeREST extends AbstractFacade<User> {
     @POST
     @Path("update")
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public String edit(User entity) {
         return super.edit(entity);
     }
@@ -49,7 +51,7 @@ public class UserFacadeREST extends AbstractFacade<User> {
 
     @GET
     @Path("{id}")
-    @Produces({"application/json"})
+    @Produces({MediaType.APPLICATION_JSON})
     public User find(@PathParam("id") Integer id) {
         return super.find(id);
     }
@@ -57,14 +59,14 @@ public class UserFacadeREST extends AbstractFacade<User> {
     @GET
     @Path("getAllUsers")
     @Override
-    @Produces({"application/xml", "application/json"})
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<User> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
-    @Produces({"application/json"})
+    @Produces({MediaType.APPLICATION_JSON})
     public List<User> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
@@ -79,7 +81,7 @@ public class UserFacadeREST extends AbstractFacade<User> {
     
     @POST
     @Path("auth/{username}/{password}")
-    @Consumes({"application/json"})
+    @Consumes({MediaType.APPLICATION_JSON})
     public User authentificate(@PathParam("username") String username, @PathParam("password") String password) {
        
             javax.persistence.Query cq = getEntityManager().createNamedQuery("User.findByLoginPassword").setParameter("login", username).setParameter("password", password);

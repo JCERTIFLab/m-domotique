@@ -8,13 +8,12 @@ import com.jcertif.domotique.entities.Piece;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 @Stateless
 @Path("rooms")
@@ -27,7 +26,7 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
     @POST
     @Path("add")
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public String create(Piece entity) {
         return super.create(entity);
     }
@@ -35,7 +34,7 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
     @POST
     @Path("update")
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public String edit(Piece entity) {
         return super.edit(entity);
     }
@@ -48,7 +47,7 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
 
     @GET
     @Path("{id}")
-    @Produces({ "application/json"})
+    @Produces({ MediaType.APPLICATION_JSON})
     public Piece find(@PathParam("id") Integer id) {
         return super.find(id);
     }
@@ -56,14 +55,14 @@ public class PieceFacadeREST extends AbstractFacade<Piece> {
     @GET
     @Override
     @Path("getAllRooms")
-    @Produces({"application/xml"})
+    @Produces({MediaType.APPLICATION_XML})
     public List<Piece> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
-    @Produces({ "application/json"})
+    @Produces({ MediaType.APPLICATION_JSON})
     public List<Piece> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }

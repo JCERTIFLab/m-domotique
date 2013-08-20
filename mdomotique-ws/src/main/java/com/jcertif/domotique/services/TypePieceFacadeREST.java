@@ -13,6 +13,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 @Stateless
 @Path("typepieces")
@@ -25,7 +26,7 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
     @POST
     @Path("add")
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public String create(TypePiece entity) {
         return super.create(entity);
     }
@@ -33,7 +34,7 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
     @POST
     @Path("update")
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public String edit(TypePiece entity) {
         return super.edit(entity);
     }
@@ -46,7 +47,7 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
 
     @GET
     @Path("{id}")
-    @Produces({ "application/json"})
+    @Produces({ MediaType.APPLICATION_JSON})
     public TypePiece find(@PathParam("id") Integer id) {
         return super.find(id);
     }
@@ -54,14 +55,14 @@ public class TypePieceFacadeREST extends AbstractFacade<TypePiece> {
     @GET
     @Path("getAllTypes")
     @Override
-    @Produces({"application/xml"})
+    @Produces({MediaType.APPLICATION_XML})
     public List<TypePiece> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
-    @Produces({ "application/json"})
+    @Produces({ MediaType.APPLICATION_JSON})
     public List<TypePiece> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }

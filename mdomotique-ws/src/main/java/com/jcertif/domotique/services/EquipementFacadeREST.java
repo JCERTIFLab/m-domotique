@@ -5,6 +5,7 @@
 package com.jcertif.domotique.services;
 
 import com.jcertif.domotique.entities.Equipement;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -20,6 +21,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 @Stateless
 @Path("equipements")
@@ -32,7 +34,7 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
     @POST
     @Path("add")
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public String create(Equipement entity) {
         return super.create(entity);
     }
@@ -40,7 +42,7 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
     @POST
     @Path("update")
     @Override
-    @Consumes({"application/xml", "application/json"})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public String edit(Equipement entity) {
         return super.edit(entity);
     }
@@ -53,7 +55,7 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
 
     @GET
     @Path("{id}")
-    @Produces({"application/json"})
+    @Produces({MediaType.APPLICATION_JSON})
     public Equipement find(@PathParam("id") Integer id) {
         return super.find(id);
     }
@@ -61,14 +63,14 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
     @GET
     @Override
     @Path("getAllEquipements")
-    @Produces({"application/xml"})
+    @Produces({MediaType.APPLICATION_XML})
     public List<Equipement> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
-    @Produces({"application/json"})
+    @Produces({MediaType.APPLICATION_JSON})
     public List<Equipement> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
@@ -82,7 +84,7 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
 
     @POST
     @Path("getEquipementsByRoom/{piece_id}")
-    @Produces({"application/xml"})
+    @Produces({MediaType.APPLICATION_XML})
     public List<Equipement> findByPiece(@PathParam("piece_id") Integer piece_id) {
         javax.persistence.Query cq = getEntityManager().createNamedQuery("Equipement.findByPiece").setParameter("piece_id", piece_id);
         return (List<Equipement>) cq.getResultList();
@@ -90,30 +92,30 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
 
     @POST
     @Path("action/{id}/{etat}")
-    @Produces({"application/json"})
+    @Produces({MediaType.APPLICATION_JSON})
     public String edit(@PathParam("id") Integer id, @PathParam("etat") String etat) {
-        
+
         try {
             Equipement equipement = super.find(id);
-            if(executeAction(equipement.getRelay(), etat)){
+            if (executeAction(equipement.getRelay(), etat)) {
                 equipement.setEtat(Boolean.valueOf(etat));
                 return super.edit(equipement);
-            }else
+            } else
                 return "{\"state\":\"erreur\"}";
         } catch (Exception ex) {
             return "{\"state\":\"erreur\"}";
-        } 
+        }
 
     }
-    
-    public boolean executeAction(String pin, String etat){
-        
+
+    public boolean executeAction(String pin, String etat) {
+
         final String GPIO_OUT = "out";
         final String GPIO_ON = "1";
         final String GPIO_OFF = "0";
-        
+
         boolean responce = false;
-        
+
         try {
             // Open file handles to GPIO port unexport and export controls  
             FileWriter unexportFile = new FileWriter("/sys/class/gpio/unexport");
@@ -139,21 +141,22 @@ public class EquipementFacadeREST extends AbstractFacade<Equipement> {
 
             // Set up a GPIO port as a command channel  
             FileWriter commandChannel = new FileWriter("/sys/class/gpio/gpio" + pin + "/value");
-            
-            if(etat.equals("1")){
+
+            if (etat.equals("1")) {
                 commandChannel.write(GPIO_ON);
                 commandChannel.flush();
-            }else{
+            } else {
                 commandChannel.write(GPIO_OFF);
                 commandChannel.flush();
             }
-            
+
             responce = true;
 
-        } catch (Exception exception) { }
-        
+        } catch (Exception exception) {
+        }
+
         return responce;
-        
+
     }
 
 }
