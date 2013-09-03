@@ -86,7 +86,7 @@ public class RoomCategoriesParseur extends RESTRequets{
         	roomCategoryObject.put("imf", roomCategory.getImg());
         	
         	JSONObject json = doPost(Parametres.addRoomCategory, roomCategoryObject);
-            if(json.getString("state").equals("ok"))
+            if(json != null && json.getString("state").equals("ok"))
             	reponse = true;	            
         } catch (JSONException e) {
             e.printStackTrace();
