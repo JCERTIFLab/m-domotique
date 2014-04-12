@@ -1,3 +1,8 @@
+Build Status
+------------
+[![Build Status](http://ns395624.ip-176-31-120.eu:8080/jenkins/buildStatus/icon?job=JCertif Smart House)](http://ns395624.ip-176-31-120.eu:8080/jenkins/view/All/job/JCertif%20Smart%20House/)
+
+
 JCertif prend l'initiative dans le domaine de la domotique et propose une solution plus efficace, simple à utiliser et moins coûteuse que celles commercialisées actuellement.
 Cette dernière offre la passibilité à son utilisateur d’administrer et de gérer n’importe quelle surface
 de son choix (son domicile, son usine ou même un ensemble de bâtiments). Ce contrôle peut être
