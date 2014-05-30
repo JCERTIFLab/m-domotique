@@ -1,4 +1,4 @@
-JCertif Smart House
+JCertif Domotique
 =============================
 
 [![Build Status](http://ns395624.ip-176-31-120.eu:8080/jenkins/job/JCertif%20Smart%20House/badge/icon)](http://ns395624.ip-176-31-120.eu:8080/jenkins/job/JCertif%20Smart%20House/)
